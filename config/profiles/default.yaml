@@ -1,0 +1,29 @@
+# Default configuration profile for spectrum optimization
+# Used when no specific service type is specified
+
+# Frequency band parameters
+band:
+  min_mhz: 88.0      # Default to FM band
+  max_mhz: 108.0
+  step_khz: 200      # 200 kHz channel spacing
+
+# Directional geometry parameters
+geometry:
+  r_main_km: 50      # Main lobe interference radius
+  r_off_km: 20       # Off-lobe interference radius
+  az_tolerance_deg: 5.0  # Angular tolerance for lobe calculations
+
+# Adjacent channel protection
+interference:
+  guard_offsets: [-1, 1]  # Protect ±1 adjacent channels
+  
+# Solver parameters
+solver:
+  timeout_seconds: 60
+  num_workers: 4
+  
+# Optimization weights
+weights:
+  w_span: 100      # Weight for spectrum span minimization
+  w_count: 10      # Weight for channel count minimization
+  w_surplus: 1     # Weight for reuse surplus minimization

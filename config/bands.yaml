@@ -1,0 +1,90 @@
+# Spectrum Band Configuration
+# All frequencies in kHz for consistency
+# These are defaults - can be overridden via CLI flags
+
+services:
+  AM:
+    band_start_khz: 540
+    band_end_khz: 1700
+    step_khz: 10
+    cochannel_sep_khz: 0  # Same channel cannot share
+    adjchannel_sep_khz: 10  # Adjacent channel guard band
+    default_bandwidth_khz: 10
+    description: "AM Radio Broadcasting"
+    
+  FM:
+    band_start_khz: 88000  # 88 MHz
+    band_end_khz: 108000   # 108 MHz
+    step_khz: 200          # 0.2 MHz = 200 kHz
+    cochannel_sep_khz: 0
+    adjchannel_sep_khz: 200
+    default_bandwidth_khz: 200
+    description: "FM Radio Broadcasting"
+    
+  TV_VHF:
+    band_start_khz: 54000   # 54 MHz
+    band_end_khz: 216000    # 216 MHz
+    step_khz: 6000          # 6 MHz channels
+    cochannel_sep_khz: 0
+    adjchannel_sep_khz: 6000
+    default_bandwidth_khz: 6000
+    description: "Television VHF Band"
+    
+  TV_UHF:
+    band_start_khz: 470000  # 470 MHz
+    band_end_khz: 806000    # 806 MHz
+    step_khz: 6000          # 6 MHz channels
+    cochannel_sep_khz: 0
+    adjchannel_sep_khz: 6000
+    default_bandwidth_khz: 6000
+    description: "Television UHF Band"
+    
+  CELLULAR_850:
+    band_start_khz: 824000  # 824 MHz
+    band_end_khz: 894000    # 894 MHz
+    step_khz: 1000          # 1 MHz
+    cochannel_sep_khz: 0
+    adjchannel_sep_khz: 1000
+    default_bandwidth_khz: 5000
+    description: "Cellular 850 MHz Band"
+    
+  CELLULAR_1900:
+    band_start_khz: 1850000 # 1850 MHz
+    band_end_khz: 1990000   # 1990 MHz
+    step_khz: 1000          # 1 MHz
+    cochannel_sep_khz: 0
+    adjchannel_sep_khz: 1000
+    default_bandwidth_khz: 5000
+    description: "Cellular 1900 MHz Band"
+    
+  AWS:
+    band_start_khz: 2496000 # 2496 MHz
+    band_end_khz: 2690000   # 2690 MHz
+    step_khz: 5000          # 5 MHz
+    cochannel_sep_khz: 0
+    adjchannel_sep_khz: 5000
+    default_bandwidth_khz: 10000
+    description: "AWS Advanced Wireless Services"
+    
+  MICROWAVE:
+    band_start_khz: 3700000 # 3.7 GHz
+    band_end_khz: 4200000   # 4.2 GHz
+    step_khz: 10000         # 10 MHz
+    cochannel_sep_khz: 0
+    adjchannel_sep_khz: 10000
+    default_bandwidth_khz: 20000
+    description: "Microwave C-Band"
+
+# Default interference parameters (can be overridden)
+interference:
+  default_distance_threshold_km: 50.0
+  default_k_neighbors: 20
+  power_based_separation: false  # Future enhancement
+
+# Solver defaults
+solver:
+  default_threads: 8
+  default_time_limit_seconds: 300
+  default_w_span: 1000
+  default_w_count: 10
+  default_w_surplus: 1

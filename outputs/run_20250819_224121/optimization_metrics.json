@@ -1,0 +1,106 @@
+{
+  "timestamp": "2025-08-19T22:41:22.134692",
+  "input_stations": 9,
+  "output_stations": 9,
+  "spectrum_usage": 0.2,
+  "reuse_metrics": {
+    "avg_reuse": 9.0,
+    "max_reuse": 9,
+    "min_reuse": 9,
+    "unique_frequencies": 1
+  },
+  "constraint_validation": {
+    "violations": [
+      {
+        "station1_id": "KRTM        ",
+        "station2_id": "K201AD",
+        "frequency": 88.0,
+        "distance_km": 178.96367878498566,
+        "type": "co-channel_interference"
+      },
+      {
+        "station1_id": "K201BV",
+        "station2_id": "KWTF        ",
+        "frequency": 88.0,
+        "distance_km": 82.63160874721854,
+        "type": "co-channel_interference"
+      },
+      {
+        "station1_id": "K201BV",
+        "station2_id": "KECG        ",
+        "frequency": 88.0,
+        "distance_km": 17.32216166138473,
+        "type": "co-channel_interference"
+      },
+      {
+        "station1_id": "K201BV",
+        "station2_id": "K201HR",
+        "frequency": 88.0,
+        "distance_km": 214.55434593936175,
+        "type": "co-channel_interference"
+      },
+      {
+        "station1_id": "KWTF        ",
+        "station2_id": "KECG        ",
+        "frequency": 88.0,
+        "distance_km": 78.19183206348366,
+        "type": "co-channel_interference"
+      },
+      {
+        "station1_id": "KWTF        ",
+        "station2_id": "KMUE        ",
+        "frequency": 88.0,
+        "distance_km": 276.69744814596277,
+        "type": "co-channel_interference"
+      },
+      {
+        "station1_id": "KWTF        ",
+        "station2_id": "K201HR",
+        "frequency": 88.0,
+        "distance_km": 140.56366229777836,
+        "type": "co-channel_interference"
+      },
+      {
+        "station1_id": "K201AD",
+        "station2_id": "KFCF        ",
+        "frequency": 88.0,
+        "distance_km": 236.47864857266794,
+        "type": "co-channel_interference"
+      },
+      {
+        "station1_id": "KECG        ",
+        "station2_id": "K201HR",
+        "frequency": 88.0,
+        "distance_km": 215.32831642129585,
+        "type": "co-channel_interference"
+      },
+      {
+        "station1_id": "KMUE        ",
+        "station2_id": "K201HR",
+        "frequency": 88.0,
+        "distance_km": 141.26113769301017,
+        "type": "co-channel_interference"
+      }
+    ],
+    "total_violations": 10,
+    "interference_pairs_checked": 10,
+    "same_freq_pairs": 10,
+    "violation_rate": 1.0,
+    "sampling_used": false
+  },
+  "optimality_analysis": {
+    "actual_spectrum_mhz": 0.2,
+    "theoretical_minimum_mhz": 0.2,
+    "chromatic_number_bound": 1,
+    "optimality_gap_percent": 0.0
+  },
+  "frequency_parameters": {
+    "band_name": "FM",
+    "min_freq": 88.0,
+    "max_freq": 108.0,
+    "channel_step": 0.2,
+    "typical_bandwidth": 0.2,
+    "detected": true
+  },
+  "assignment_success_rate": 100.0
+}

@@ -1,0 +1,10 @@
+,station_id,y_coord,x_coord,frequency_mhz,bandwidth_mhz,azimuth_deg,state,licensee
+40,KRTM        ,34.03777777777780,-116.81419444444400,88.1,0.01,774.0,CA ,"PENFOLD COMMUNICATIONS, INC.                                                "
+41,K201BV,38.006861111111100,-122.14383333333300,88.1,0.01,0.0,CA ,KQED INC.                                                                   
+42,KWTF        ,38.36075,-122.97516666666700,88.1,0.01,0.0,CA ,KWTF RADIO                                                                  
+43,KDUP        ,41.636833333333300,-120.09213888888900,88.1,0.01,-32.0,CA ,SURPRISE VALLEY CULTURE AND ARTS                                            
+44,K201AD,35.47994444444450,-117.68394444444400,88.1,0.01,0.0,CA ,"INDIAN WELLS VALLEY TV BOOSTER, INC.                                        "
+45,KECG        ,37.90547222222220,-122.29383333333300,88.1,0.01,-29.0,CA ,WEST CONTRA COSTA UNIFIED SCHOOL DISTRICT                                   
+46,KMUE        ,40.727361111111100,-123.97255555555600,88.1,0.01,494.0,CA ,REDWOOD COMMUNITY RADIO                                                     
+47,K201HR,39.46736111111110,-123.76055555555600,88.1,0.01,139.8,CA ,MENDOCINO COUNTY PUBLIC BROADCASTING                                        
+48,KFCF        ,37.073,-119.43177777777800,88.1,0.01,579.0,CA ,FRESNO FREE COLLEGE FOUNDATION                                              

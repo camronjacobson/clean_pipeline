@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spectrum Optimization Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        .header .subtitle {
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+        
+        .tab-container {
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .tab-buttons {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .tab-button {
+            padding: 15px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: #495057;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .tab-button:hover {
+            background: #e9ecef;
+        }
+        
+        .tab-button.active {
+            color: #667eea;
+            background: white;
+        }
+        
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #667eea;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+            animation: fadeIn 0.3s;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .metric-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .metric-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .metric-card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 10px 0;
+        }
+        
+        .metric-card .label {
+            color: #6c757d;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        .summary-table td {
+            padding: 10px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .summary-table td:first-child {
+            font-weight: 500;
+            color: #495057;
+        }
+        
+        .summary-table td:last-child {
+            text-align: right;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        #map-container {
+            height: 600px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .info-panel {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .info-panel h3 {
+            margin-top: 0;
+            color: #495057;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🛰️ Spectrum Optimization Dashboard</h1>
+        <div class="subtitle">
+            10 Stations | 1 Frequencies | 
+            10.0 Stations/Channel
+        </div>
+    </div>
+    
+    <div class="tab-container">
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="showTab('overview')">📊 Overview</button>
+            <button class="tab-button" onclick="showTab('map')">🗺️ Map View</button>
+            <button class="tab-button" onclick="showTab('spectrum')">📡 Spectrum Analysis</button>
+            <button class="tab-button" onclick="showTab('network')">🔗 Network</button>
+            <button class="tab-button" onclick="showTab('metrics')">📈 Metrics</button>
+        </div>
+        
+        <!-- Overview Tab -->
+        <div id="overview" class="tab-content active">
+            <h2>Optimization Overview</h2>
+            
+            <div class="metric-cards">
+                <div class="metric-card">
+                    <div class="label">Total Stations</div>
+                    <div class="value">10</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Channels Used</div>
+                    <div class="value">1</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Efficiency</div>
+                    <div class="value">10.0x</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Spectrum Span</div>
+                    <div class="value">0 kHz</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Avg Neighbors</div>
+                    <div class="value">0.0</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Solve Time</div>
+                    <div class="value">0.5s</div>
+                </div>
+            </div>
+            
+            <div class="chart-container"><div>                            <div id="397a5d39-239f-4666-ae79-626d14818dc6" class="plotly-graph-div" style="height:300px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("397a5d39-239f-4666-ae79-626d14818dc6")) {                    Plotly.newPlot(                        "397a5d39-239f-4666-ae79-626d14818dc6",                        [{"domain":{"x":[0,0.45],"y":[0,1]},"gauge":{"axis":{"range":[0,10]},"bar":{"color":"darkblue"},"steps":[{"color":"lightgray","range":[0,2]},{"color":"gray","range":[2,5]},{"color":"lightgreen","range":[5,10]}],"threshold":{"line":{"color":"red","width":4},"thickness":0.75,"value":8}},"mode":"gauge+number","title":{"text":"Channel Efficiency (Stations\u002fChannel)"},"value":10.0,"type":"indicator"},{"domain":{"x":[0.55,1],"y":[0,1]},"gauge":{"axis":{"range":[0,10]},"bar":{"color":"green"},"steps":[{"color":"salmon","range":[0,2]},{"color":"yellow","range":[2,5]},{"color":"lightgreen","range":[5,10]}]},"mode":"gauge+number","title":{"text":"Frequency Reuse Factor"},"value":10.0,"type":"indicator"}],                        {"height":300,"margin":{"b":20,"l":20,"r":20,"t":40},"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","template":{"data":{"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}}},                        {"responsive": true}                    )                };            </script>        </div></div>
+            
+        <div class="chart-container">
+            <h3>Optimization Statistics</h3>
+            <table class="summary-table">
+                <tr><td>Total Stations</td><td>10</td></tr>
+                <tr><td>Unique Frequencies</td><td>1</td></tr>
+                <tr><td>Channels Used</td><td>1</td></tr>
+                <tr><td>Spectrum Span</td><td>0 kHz</td></tr>
+                <tr><td>Channel Efficiency</td><td>10.00 stations/channel</td></tr>
+                <tr><td>Average Neighbors</td><td>0.00</td></tr>
+                <tr><td>Total Interference Edges</td><td>0</td></tr>
+                <tr><td>Complexity Class</td><td>O(1) - sparse</td></tr>
+                <tr><td>Optimization Time</td><td>0.48 seconds</td></tr>
+            </table>
+        </div>
+        
+        </div>
+        
+        <!-- Map Tab -->
+        <div id="map" class="tab-content">
+            <h2>Station Map</h2>
+            <div class="info-panel">
+                <h3>Interactive Map Controls</h3>
+                <p>• Click markers for station details | • Zoom to see clustering | • Colors represent frequency assignments</p>
+            </div>
+            <div id="map-container">
+                <div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+    
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-1.12.4.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_d83b62c8ae6d8fcf9d02f0ee59517661 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_d83b62c8ae6d8fcf9d02f0ee59517661&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_d83b62c8ae6d8fcf9d02f0ee59517661 = L.map(
+                &quot;map_d83b62c8ae6d8fcf9d02f0ee59517661&quot;,
+                {
+                    center: [36.69955277777778, -110.66718611111108],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3b47e060985eef0bdac1f7cd528e5501 = L.tileLayer(
+                &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;Data by \u0026copy; \u003ca target=\&quot;_blank\&quot; href=\&quot;http://openstreetmap.org\&quot;\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\&quot;_blank\&quot; href=\&quot;http://www.openstreetmap.org/copyright\&quot;\u003eODbL\u003c/a\u003e.&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            ).addTo(map_d83b62c8ae6d8fcf9d02f0ee59517661);
+        
+    
+            var circle_marker_a2b9ffb79235e525a8964ccf551d4dda = L.circleMarker(
+                [35.9047777777778, -100.388194444444],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#8000ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#8000ff&quot;, &quot;fillOpacity&quot;: 0.7, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 8, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_d83b62c8ae6d8fcf9d02f0ee59517661);
+        
+    
+        var popup_446d35eaf1b0b76bcb758a1288240308 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_94e87c935aab10f826b8331171022e2c = $(`&lt;div id=&quot;html_94e87c935aab10f826b8331171022e2c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;                     &lt;b&gt;Station:&lt;/b&gt; K201BM&lt;br&gt;                     &lt;b&gt;Frequency:&lt;/b&gt; 88.00 MHz&lt;br&gt;                     &lt;b&gt;Location:&lt;/b&gt; 35.9048, -100.3882                     &lt;/div&gt;`)[0];
+                popup_446d35eaf1b0b76bcb758a1288240308.setContent(html_94e87c935aab10f826b8331171022e2c);
+            
+        
+
+        circle_marker_a2b9ffb79235e525a8964ccf551d4dda.bindPopup(popup_446d35eaf1b0b76bcb758a1288240308)
+        ;
+
+        
+    
+    
+            var circle_marker_1b57ce41a41dc10ed591bbaddc7d427a = L.circleMarker(
+                [21.3270833333333, -157.753916666667],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#8000ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#8000ff&quot;, &quot;fillOpacity&quot;: 0.7, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 8, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_d83b62c8ae6d8fcf9d02f0ee59517661);
+        
+    
+        var popup_8b22b3d880e7405aaf15f62f50eb768a = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_5dbe3d1f613415fda7171f164c02efb2 = $(`&lt;div id=&quot;html_5dbe3d1f613415fda7171f164c02efb2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;                     &lt;b&gt;Station:&lt;/b&gt; K203EL&lt;br&gt;                     &lt;b&gt;Frequency:&lt;/b&gt; 88.00 MHz&lt;br&gt;                     &lt;b&gt;Location:&lt;/b&gt; 21.3271, -157.7539                     &lt;/div&gt;`)[0];
+                popup_8b22b3d880e7405aaf15f62f50eb768a.setContent(html_5dbe3d1f613415fda7171f164c02efb2);
+            
+        
+
+        circle_marker_1b57ce41a41dc10ed591bbaddc7d427a.bindPopup(popup_8b22b3d880e7405aaf15f62f50eb768a)
+        ;
+
+        
+    
+    
+            var circle_marker_7bee4d7de38a04107a54487010117f31 = L.circleMarker(
+                [35.9886111111111, -94.9388888888889],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#8000ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#8000ff&quot;, &quot;fillOpacity&quot;: 0.7, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 8, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_d83b62c8ae6d8fcf9d02f0ee59517661);
+        
+    
+        var popup_b20825e7c3e494ba1ef79346b1142a1d = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_a39827030981e65c1bc0f53ba0e4cf9d = $(`&lt;div id=&quot;html_a39827030981e65c1bc0f53ba0e4cf9d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;                     &lt;b&gt;Station:&lt;/b&gt; K203FE&lt;br&gt;                     &lt;b&gt;Frequency:&lt;/b&gt; 88.00 MHz&lt;br&gt;                     &lt;b&gt;Location:&lt;/b&gt; 35.9886, -94.9389                     &lt;/div&gt;`)[0];
+                popup_b20825e7c3e494ba1ef79346b1142a1d.setContent(html_a39827030981e65c1bc0f53ba0e4cf9d);
+            
+        
+
+        circle_marker_7bee4d7de38a04107a54487010117f31.bindPopup(popup_b20825e7c3e494ba1ef79346b1142a1d)
+        ;
+
+        
+    
+    
+            var circle_marker_065800bdc34714e8fc11164d3aaf2369 = L.circleMarker(
+                [48.1416944444445, -103.89325],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#8000ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#8000ff&quot;, &quot;fillOpacity&quot;: 0.7, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 8, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_d83b62c8ae6d8fcf9d02f0ee59517661);
+        
+    
+        var popup_f8cc8b6dbdd85b58c4fabaa68045d651 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_bed175d9b764cf5c9208628ec778db95 = $(`&lt;div id=&quot;html_bed175d9b764cf5c9208628ec778db95&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;                     &lt;b&gt;Station:&lt;/b&gt; K206EI&lt;br&gt;                     &lt;b&gt;Frequency:&lt;/b&gt; 88.00 MHz&lt;br&gt;                     &lt;b&gt;Location:&lt;/b&gt; 48.1417, -103.8932                     &lt;/div&gt;`)[0];
+                popup_f8cc8b6dbdd85b58c4fabaa68045d651.setContent(html_bed175d9b764cf5c9208628ec778db95);
+            
+        
+
+        circle_marker_065800bdc34714e8fc11164d3aaf2369.bindPopup(popup_f8cc8b6dbdd85b58c4fabaa68045d651)
+        ;
+
+        
+    
+    
+            var circle_marker_0c0c469edcdff07de3b6166bf9497cdc = L.circleMarker(
+                [42.7846666666667, -103.996583333333],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#8000ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#8000ff&quot;, &quot;fillOpacity&quot;: 0.7, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 8, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_d83b62c8ae6d8fcf9d02f0ee59517661);
+        
+    
+        var popup_5edbd1c2ebeef33ae865f4f79392a637 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_fc0590820650a7d641388de8e9a1644a = $(`&lt;div id=&quot;html_fc0590820650a7d641388de8e9a1644a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;                     &lt;b&gt;Station:&lt;/b&gt; K208CB&lt;br&gt;                     &lt;b&gt;Frequency:&lt;/b&gt; 88.00 MHz&lt;br&gt;                     &lt;b&gt;Location:&lt;/b&gt; 42.7847, -103.9966                     &lt;/div&gt;`)[0];
+                popup_5edbd1c2ebeef33ae865f4f79392a637.setContent(html_fc0590820650a7d641388de8e9a1644a);
+            
+        
+
+        circle_marker_0c0c469edcdff07de3b6166bf9497cdc.bindPopup(popup_5edbd1c2ebeef33ae865f4f79392a637)
+        ;
+
+        
+    
+    
+            var circle_marker_e42a0ccf84e3f269b94fbbd6020a1de8 = L.circleMarker(
+                [37.0635833333333, -113.573],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#8000ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#8000ff&quot;, &quot;fillOpacity&quot;: 0.7, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 8, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_d83b62c8ae6d8fcf9d02f0ee59517661);
+        
+    
+        var popup_c73bc307450f78e74c903d31fc25866b = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_646375d129d4e263a1ae1240844a5616 = $(`&lt;div id=&quot;html_646375d129d4e263a1ae1240844a5616&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;                     &lt;b&gt;Station:&lt;/b&gt; K215CF&lt;br&gt;                     &lt;b&gt;Frequency:&lt;/b&gt; 88.00 MHz&lt;br&gt;                     &lt;b&gt;Location:&lt;/b&gt; 37.0636, -113.5730                     &lt;/div&gt;`)[0];
+                popup_c73bc307450f78e74c903d31fc25866b.setContent(html_646375d129d4e263a1ae1240844a5616);
+            
+        
+
+        circle_marker_e42a0ccf84e3f269b94fbbd6020a1de8.bindPopup(popup_c73bc307450f78e74c903d31fc25866b)
+        ;
+
+        
+    
+    
+            var circle_marker_65338d6007624e37ec1da23ebf20fa9e = L.circleMarker(
+                [34.5475, -118.216666666667],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#8000ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#8000ff&quot;, &quot;fillOpacity&quot;: 0.7, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 8, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_d83b62c8ae6d8fcf9d02f0ee59517661);
+        
+    
+        var popup_e85e13cb69777e536a4f3fbc59b97c57 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_dd6c9b3be270fdd785773334deb527d6 = $(`&lt;div id=&quot;html_dd6c9b3be270fdd785773334deb527d6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;                     &lt;b&gt;Station:&lt;/b&gt; K216FA&lt;br&gt;                     &lt;b&gt;Frequency:&lt;/b&gt; 88.00 MHz&lt;br&gt;                     &lt;b&gt;Location:&lt;/b&gt; 34.5475, -118.2167                     &lt;/div&gt;`)[0];
+                popup_e85e13cb69777e536a4f3fbc59b97c57.setContent(html_dd6c9b3be270fdd785773334deb527d6);
+            
+        
+
+        circle_marker_65338d6007624e37ec1da23ebf20fa9e.bindPopup(popup_e85e13cb69777e536a4f3fbc59b97c57)
+        ;
+
+        
+    
+    
+            var circle_marker_db5dc06882a9caa1cb26ca368f24a3be = L.circleMarker(
+                [39.9417222222222, -91.5843333333333],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#8000ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#8000ff&quot;, &quot;fillOpacity&quot;: 0.7, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 8, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_d83b62c8ae6d8fcf9d02f0ee59517661);
+        
+    
+        var popup_87ea2cb20c04fc193836bf25566719dd = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_a3ebb6c3147abe6f5f0c80240b54bfd7 = $(`&lt;div id=&quot;html_a3ebb6c3147abe6f5f0c80240b54bfd7&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;                     &lt;b&gt;Station:&lt;/b&gt; K216GM&lt;br&gt;                     &lt;b&gt;Frequency:&lt;/b&gt; 88.00 MHz&lt;br&gt;                     &lt;b&gt;Location:&lt;/b&gt; 39.9417, -91.5843                     &lt;/div&gt;`)[0];
+                popup_87ea2cb20c04fc193836bf25566719dd.setContent(html_a3ebb6c3147abe6f5f0c80240b54bfd7);
+            
+        
+
+        circle_marker_db5dc06882a9caa1cb26ca368f24a3be.bindPopup(popup_87ea2cb20c04fc193836bf25566719dd)
+        ;
+
+        
+    
+    
+            var circle_marker_4945b11d226e1b06969ec0b9e32df976 = L.circleMarker(
+                [42.4345277777778, -124.421194444444],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#8000ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#8000ff&quot;, &quot;fillOpacity&quot;: 0.7, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 8, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_d83b62c8ae6d8fcf9d02f0ee59517661);
+        
+    
+        var popup_ae627f7c65c725593cfa3fb417e343b8 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_203fb30feb80ec8ed099f40f3c10dfae = $(`&lt;div id=&quot;html_203fb30feb80ec8ed099f40f3c10dfae&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;                     &lt;b&gt;Station:&lt;/b&gt; K218AH&lt;br&gt;                     &lt;b&gt;Frequency:&lt;/b&gt; 88.00 MHz&lt;br&gt;                     &lt;b&gt;Location:&lt;/b&gt; 42.4345, -124.4212                     &lt;/div&gt;`)[0];
+                popup_ae627f7c65c725593cfa3fb417e343b8.setContent(html_203fb30feb80ec8ed099f40f3c10dfae);
+            
+        
+
+        circle_marker_4945b11d226e1b06969ec0b9e32df976.bindPopup(popup_ae627f7c65c725593cfa3fb417e343b8)
+        ;
+
+        
+    
+    
+            var circle_marker_6e304ffdc2a88b66c939c105e9939a36 = L.circleMarker(
+                [28.8613611111111, -97.9058333333333],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#8000ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#8000ff&quot;, &quot;fillOpacity&quot;: 0.7, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 8, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_d83b62c8ae6d8fcf9d02f0ee59517661);
+        
+    
+        var popup_2effd76a0fc0625f2c24514d4da00123 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_18440f1c007e4172100cbdd40e12ad88 = $(`&lt;div id=&quot;html_18440f1c007e4172100cbdd40e12ad88&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;                     &lt;b&gt;Station:&lt;/b&gt; K219LI&lt;br&gt;                     &lt;b&gt;Frequency:&lt;/b&gt; 88.00 MHz&lt;br&gt;                     &lt;b&gt;Location:&lt;/b&gt; 28.8614, -97.9058                     &lt;/div&gt;`)[0];
+                popup_2effd76a0fc0625f2c24514d4da00123.setContent(html_18440f1c007e4172100cbdd40e12ad88);
+            
+        
+
+        circle_marker_6e304ffdc2a88b66c939c105e9939a36.bindPopup(popup_2effd76a0fc0625f2c24514d4da00123)
+        ;
+
+        
+    
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
+            </div>
+        </div>
+        
+        <!-- Spectrum Tab -->
+        <div id="spectrum" class="tab-content">
+            <h2>Spectrum Analysis</h2>
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <div>                            <div id="6a869dc0-3f26-4671-8cf3-80823d99d509" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("6a869dc0-3f26-4671-8cf3-80823d99d509")) {                    Plotly.newPlot(                        "6a869dc0-3f26-4671-8cf3-80823d99d509",                        [{"hovertemplate":"\u003cb\u003eFrequency:\u003c\u002fb\u003e %{x:.2f} MHz\u003cbr\u003e\u003cb\u003eStations:\u003c\u002fb\u003e %{y}\u003cbr\u003e\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":[10],"colorbar":{"title":{"text":"Stations"}},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"showscale":true},"text":["10"],"textposition":"auto","x":[88.0],"y":[10],"type":"bar"}],                        {"height":400,"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","showlegend":false,"template":{"data":{"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"title":{"text":"Spectrum Allocation by Frequency"},"xaxis":{"title":{"text":"Frequency (MHz)"}},"yaxis":{"title":{"text":"Number of Stations"}}},                        {"responsive": true}                    )                };            </script>        </div>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-container"><div>                            <div id="41f1a4f8-951f-4c7f-bed2-3c4e946c2594" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("41f1a4f8-951f-4c7f-bed2-3c4e946c2594")) {                    Plotly.newPlot(                        "41f1a4f8-951f-4c7f-bed2-3c4e946c2594",                        [{"hoverinfo":"text","line":{"color":"rgba(100,100,100,0.3)","width":1},"marker":{"color":{"dtype":"i1","bdata":"Cg=="},"colorbar":{"title":{"text":"Stations"}},"colorscale":[[0.0,"rgb(165,0,38)"],[0.1,"rgb(215,48,39)"],[0.2,"rgb(244,109,67)"],[0.3,"rgb(253,174,97)"],[0.4,"rgb(254,224,139)"],[0.5,"rgb(255,255,191)"],[0.6,"rgb(217,239,139)"],[0.7,"rgb(166,217,106)"],[0.8,"rgb(102,189,99)"],[0.9,"rgb(26,152,80)"],[1.0,"rgb(0,104,55)"]],"showscale":true,"size":{"dtype":"i1","bdata":"Mg=="}},"mode":"markers+lines","text":["Freq: 88.0 MHz\u003cbr\u003eReuse: 10 stations\u003cbr\u003eAvg Sep: 2550.7 km"],"x":{"dtype":"f8","bdata":"AAAAAAAAVkA="},"y":{"dtype":"f8","bdata":"MFJmpV7to0A="},"type":"scatter"}],                        {"height":400,"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","template":{"data":{"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"title":{"text":"Frequency Reuse Analysis"},"xaxis":{"title":{"text":"Frequency (MHz)"}},"yaxis":{"title":{"text":"Average Separation (km)"}}},                        {"responsive": true}                    )                };            </script>        </div></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Network Tab -->
+        <div id="network" class="tab-content">
+            <h2>Interference Network</h2>
+            <div class="info-panel">
+                <h3>Network Statistics</h3>
+                <p>Total Edges: 0 | Average Degree: 0.0 | Complexity: O(1) - sparse</p>
+            </div>
+            
+            <div class="chart-container">
+                <p style="text-align: center; color: #6c757d; padding: 40px;">
+                    No interference edges detected
+                </p>
+            </div>
+            
+        </div>
+        
+        <!-- Metrics Tab -->
+        <div id="metrics" class="tab-content">
+            <h2>Detailed Metrics</h2>
+            
+        <div class="charts-grid">
+            <div class="chart-container">
+                <h3>Frequency Distribution</h3>
+                <table class="summary-table">
+                    <thead>
+                        <tr style="background: #f8f9fa;">
+                            <th>Frequency</th>
+                            <th>Stations</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr>
+                    <td>88.00 MHz</td>
+                    <td>10</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Performance Metrics</h3>
+                <table class="summary-table">
+                    <tr><td>Total Optimization Time</td><td>0.482 seconds</td></tr>
+                    <tr><td>Constraints Generated</td><td>0</td></tr>
+                    <tr><td>Solver Status</td><td>OPTIMAL</td></tr>
+                    <tr><td>Geographic Span (Lat)</td><td>26.81°</td></tr>
+                    <tr><td>Geographic Span (Lon)</td><td>66.17°</td></tr>
+                    <tr><td>Min Frequency</td><td>88.00 MHz</td></tr>
+                    <tr><td>Max Frequency</td><td>88.00 MHz</td></tr>
+                </table>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+            
+            // Special handling for map tab
+            if (tabName === 'map') {
+                initMap();
+            }
+            
+            // Trigger Plotly relayout for proper rendering
+            window.dispatchEvent(new Event('resize'));
+        }
+        
+        // Initialize map when map tab is clicked
+        function initMap() {
+            const mapContainer = document.getElementById('map-container');
+            if (!mapContainer.hasChildNodes()) {
+                // Map is already embedded in the HTML
+                return;
+            }
+        }
+        
+        // Ensure Plotly charts resize properly
+        window.addEventListener('resize', function() {
+            const plots = document.querySelectorAll('.plotly');
+            plots.forEach(plot => {
+                Plotly.Plots.resize(plot);
+            });
+        });
+    </script>
+</body>
+</html>

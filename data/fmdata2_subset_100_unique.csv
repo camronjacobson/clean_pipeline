@@ -1,0 +1,101 @@
+,station_id,y_coord,x_coord,frequency_mhz,bandwidth_mhz,azimuth_deg,state,licensee
+0,KKQA        _0,54.135,-165.7727777777780,88.1,0.01,-102.0,AK ,"ALEUTIAN PENINSULA BROADCASTING, INC.                                       "
+1,KRUA        _1,61.33577777777780,-149.5156111111110,88.1,0.01,297.0,AK ,UNIVERSITY OF ALASKA                                                        
+2,K201CH_2,60.065194444444400,-148.01230555555600,88.1,0.01,-136.0,AK ,"TERMINAL RADIO, INC.                                                        "
+3,KCUK        _3,61.52861111111110,-165.59122222222200,88.1,0.01,24.0,AK ,KASHUNAMIUT SCHOOL DISTRICT                                                 
+4,KCUK        _4,61.52177777777780,-166.09630555555600,88.1,0.01,14.0,AK ,KASHUNAMIUT SCHOOL DISTRICT                                                 
+5,KCUK        _5,61.531194444444400,-165.5855277777780,88.1,0.01,15.0,AK ,KASHUNAMIUT SCHOOL DISTRICT                                                 
+6,K201BI_6,60.55333333333330,-145.73363888888900,88.1,0.01,0.0,AK ,"TERMINAL RADIO, INC.                                                        "
+7,KFPS        _7,54.85577777777780,-163.41419444444400,88.1,0.01,-228.0,AK ,"ALEUTIAN PENINSULA BROADCASTING, INC.                                       "
+8,KIYU-FM     _8,64.74080555555560,-156.87602777777800,88.1,0.01,11.0,AK ,BIG RIVER PUBLIC BROADCASTING CORPORATION                                   
+9,K201AM_9,58.41741666666670,-135.71013888888900,88.1,0.01,0.0,AK ,"CAPITAL COMMUNITY BROADCASTING, INC.                                        "
+10,KAKI        _10,58.301111111111100,-134.44222222222200,88.1,0.01,-333.0,AK ,EDUCATIONAL MEDIA FOUNDATION                                                
+11,K201AH_11,70.12647222222220,-143.62166666666700,88.1,0.01,0.0,AK ,"SILAKKUAGVIK COMMUNICATIONS, INC.                                           "
+12,KOGJ        _12,60.522,-151.07344444444400,88.1,0.01,61.0,AK ,CSN INTERNATIONAL                                                           
+13,KOGJ        _13,60.52191666666670,-151.07333333333300,88.1,0.01,104.0,AK ,CSN INTERNATIONAL                                                           
+14,K201EG_14,55.35355555555560,-131.68419444444400,88.1,0.01,0.0,AK ,EDUCATIONAL MEDIA FOUNDATION                                                
+15,K201DA_15,55.06022222222220,-162.32866666666700,88.1,0.01,0.0,AK ,"ALEUTIAN PENINSULA BROADCASTING, INC.                                       "
+16,K201AG_16,70.21383333333330,-150.99058333333300,88.1,0.01,0.0,AK ,"SILAKKUAGVIK COMMUNICATIONS, INC.                                           "
+17,K201AV_17,69.72938888888890,-163.01652777777800,88.1,0.01,0.0,AK ,"SILAKKUAGVIK COMMUNICATIONS, INC.                                           "
+18,K201AL_18,56.320750000000000,-133.02919444444400,88.1,0.01,0.0,AK ,NARROWS BROADCASTING CORPORATION                                            
+19,K201AO_19,60.10275,-149.43880555555600,88.1,0.01,0.0,AK ,"PUFFIN PUBLIC BROADCASTING, INC.                                            "
+20,K201CL_20,60.86833333333330,-146.68172222222200,88.1,0.01,0.0,AK ,"TERMINAL RADIO, INC.                                                        "
+21,WKRE        _21,33.695361111111100,-86.51747222222220,88.1,0.01,120.0,AL ,"ELIJAH RADIO, INC.                                                          "
+22,WSJL        _22,33.395944444444400,-87.01861111111110,88.1,0.01,98.0,AL ,"ELIJAH RADIO, INC.                                                          "
+23,WAYH        _23,34.81897222222220,-86.73861111111110,88.1,0.01,204.0,AL ,HOPE MEDIA GROUP                                                            
+24,WOKM-LP     _24,30.699444444444400,-88.12194444444440,88.1,0.01,12.0,AL ,MOBILE ENVIRONMENTAL JUSTICE ACTION COALITION                               
+25,KBAP        _25,35.79783333333330,-91.67125,88.1,0.01,0.0,AR ,TONY V. HAMMACK MINISTRIES                                                  
+26,KRQA        _26,36.39369444444440,-94.18158333333330,88.1,0.01,70.0,AR ,EDUCATIONAL MEDIA FOUNDATION                                                
+27,KBPW        _27,33.5365,-92.46877777777780,88.1,0.01,103.0,AR ,AMERICAN FAMILY ASSOCIATION                                                 
+28,KCGS-FM     _28,35.90138888888890,-92.61611111111110,88.1,0.01,191.0,AR ,"ICHTHUS FAMILY HOPE, INC.                                                   "
+29,KGIF        _29,14.3225,-170.76305555555600,88.1,0.01,413.0,AS ,LEONE CHURCH OF CHRIST                                                      
+30,KTHO        _30,34.490072222222200,-112.53381388888900,88.1,0.01,491.0,AZ ,"ADVANCE MINISTRIES, INC.                                                    "
+31,K201IB_31,34.42225,-110.56622222222200,88.1,0.01,20.6,AZ ,"ADVANCE MINISTRIES, INC. D/B/A/ NEW LIFE CHRISTIAN SCHOOL                   "
+32,K201ER_32,34.91808333333330,-110.14094444444400,88.1,0.01,0.0,AZ ,"ADVANCE MINISTRIES, INC. D/B/A/ NEW LIFE CHRISTIAN SCHOOL                   "
+33,KUYI        _33,35.808055555555600,-110.27375000000000,88.1,0.01,124.0,AZ ,THE HOPI FOUNDATION                                                         
+34,KLTU        _34,32.24894444444450,-111.11697222222200,88.1,0.01,603.0,AZ ,EDUCATIONAL MEDIA FOUNDATION                                                
+35,KPJM        _35,34.28780555555560,-111.19344444444400,88.1,0.01,268.0,AZ ,"KPJM-LP, INC.                                                               "
+36,KREE        _36,31.348444444444400,-109.48005555555600,88.1,0.01,46.0,AZ ,"RADIO BILINGUE, INC.                                                        "
+37,K202BU_37,33.66752777777780,-114.05991666666700,88.1,0.01,0.0,AZ ,"ADVANCE MINISTRIES, INC. D/B/A                                              "
+38,KNNB        _38,33.763083333333300,-109.96147222222200,88.1,0.01,183.0,AZ ,APACHE RADIO BROADCASTING CORPORATION                                       
+39,KCFY        _39,32.642,-114.56022222222200,88.1,0.01,73.0,AZ ,"RELEVANT MEDIA, INC.                                                        "
+40,KRTM        _40,34.03777777777780,-116.81419444444400,88.1,0.01,774.0,CA ,"PENFOLD COMMUNICATIONS, INC.                                                "
+41,K201BV_41,38.006861111111100,-122.14383333333300,88.1,0.01,0.0,CA ,KQED INC.                                                                   
+42,KWTF        _42,38.36075,-122.97516666666700,88.1,0.01,0.0,CA ,KWTF RADIO                                                                  
+43,KDUP        _43,41.636833333333300,-120.09213888888900,88.1,0.01,-32.0,CA ,SURPRISE VALLEY CULTURE AND ARTS                                            
+44,K201AD_44,35.47994444444450,-117.68394444444400,88.1,0.01,0.0,CA ,"INDIAN WELLS VALLEY TV BOOSTER, INC.                                        "
+45,KECG        _45,37.90547222222220,-122.29383333333300,88.1,0.01,-29.0,CA ,WEST CONTRA COSTA UNIFIED SCHOOL DISTRICT                                   
+46,KMUE        _46,40.727361111111100,-123.97255555555600,88.1,0.01,494.0,CA ,REDWOOD COMMUNITY RADIO                                                     
+47,K201HR_47,39.46736111111110,-123.76055555555600,88.1,0.01,139.8,CA ,MENDOCINO COUNTY PUBLIC BROADCASTING                                        
+48,KFCF        _48,37.073,-119.43177777777800,88.1,0.01,579.0,CA ,FRESNO FREE COLLEGE FOUNDATION                                              
+49,KPFZ-FM     _49,38.98961111111110,-122.76913888888900,88.1,0.01,655.0,CA ,LAKE COUNTY COMMUNITY RADIO INC                                             
+50,KLWG        _50,34.90997222222220,-120.18708333333300,88.1,0.01,571.0,CA ,CALVARY CHAPEL OF LOMPOC                                                    
+51,KLWG        _51,34.60358333333330,-120.48905555555600,88.1,0.01,328.0,CA ,CALVARY CHAPEL OF LOMPOC                                                    
+52,KKJZ        _52,33.79947222222220,-118.16283333333300,88.1,0.01,137.0,CA ,"CALIFORNIA STATE UNIV., LONG BEACH RESEARCH FOUNDATION                      "
+53,K201FW_53,37.16383333333330,-121.91827777777800,88.1,0.01,0.0,CA ,CSN INTERNATIONAL                                                           
+54,K201FW_54,37.35022222222220,-121.89072222222200,88.1,0.01,0.0,CA ,CSN INTERNATIONAL                                                           
+55,KLHM        _55,34.403305555555600,-116.96305555555600,88.1,0.01,-216.0,CA ,"ONDAS DE VIDA, INC.                                                         "
+56,KCRY        _56,35.122194444444400,-118.20786111111100,88.1,0.01,-29.0,CA ,SANTA MONICA COMMUNITY COLLEGE DISTRICT                                     
+57,KNSQ        _57,41.221805555555600,-122.3086111111110,88.1,0.01,475.6,CA ,SOUTHERN OREGON UNIVERSITY                                                  
+58,K201IH_58,38.26408333333330,-122.21608333333300,88.1,0.01,0.0,CA ,CSN INTERNATIONAL                                                           
+59,K201IS_59,33.30814722222220,-116.84903055555600,88.1,0.01,0.0,CA ,CSN INTERNATIONAL                                                           
+60,KQNC        _60,39.93711111111110,-120.94855555555600,88.1,0.01,-346.0,CA ,"CALIFORNIA STATE UNIVERSITY, SACRAMENTO                                     "
+61,K213BZ_61,39.205555555555600,-121.82055555555600,88.1,0.01,588.0,CA ,CSN INTERNATIONAL                                                           
+62,K201IS_62,33.30836111111110,-116.84888888888900,88.1,0.01,0.0,CA ,CSN INTERNATIONAL                                                           
+63,K201ES_63,33.61752777777780,-114.77330555555600,88.1,0.01,0.0,CA ,CSN INTERNATIONAL                                                           
+64,KEBR        _64,38.24713888888890,-121.50188888888900,88.1,0.01,303.0,CA ,"LOAM MEDIA, INC.                                                            "
+65,KYML        _65,33.00636111111110,-116.58619444444400,88.1,0.01,705.0,CA ,"CSN INTERNATIONAL, INC.                                                     "
+66,KSRH        _66,37.969944444444400,-122.51305555555600,88.1,0.01,-70.0,CA ,SAN RAFAEL HIGH SCHOOL                                                      
+67,KZSC        _67,37.002722222222200,-122.05216666666700,88.1,0.01,140.3,CA ,REGENTS OF THE UNIVERSITY OF CALIFORNIA                                     
+68,KZSC        _68,37.002722222222200,-122.05216666666700,88.1,0.01,128.5,CA ,REGENTS OF THE UNIVERSITY OF CALIFORNIA                                     
+69,K201AJ_69,38.916583333333300,-119.96322222222200,88.1,0.01,0.0,CA ,"CALIFORNIA STATE UNIVERSITY, SACRAMENTO                                     "
+70,K201FV_70,39.325944444444400,-120.19975000000000,88.1,0.01,0.0,CA ,BOARD OF REGENTS OF THE NEVADA SYSTEM OF HIGHER EDUCATION                   
+71,K201IL_71,39.630250000000000,-106.0475,88.1,0.01,0.0,CO ,COMMUNITY RADIO FOR NORTHERN COLORADO                                       
+72,K201FK_72,39.29472222222220,-102.26075,88.1,0.01,0.0,CO ,CSN INTERNATIONAL                                                           
+73,KDNK        _73,39.418861111111100,-107.37002777777800,88.1,0.01,775.0,CO ,"CARBONDALE COMMUNITY ACCESS RADIO, INC.                                     "
+74,KAFM        _74,39.06663888888890,-108.7453888888890,88.1,0.01,396.6,CO ,"GRAND VALLEY PUBLIC RADIO, INC.                                             "
+75,K201HV_75,37.23725,-104.51497222222200,88.1,0.01,0.0,CO ,"EDUCATIONAL COMMUNICATIONS OF COLORADO SPRINGS, INC.                        "
+76,KVOD        _76,39.73277777777780,-105.23611111111100,88.1,0.01,238.0,CO ,"PUBLIC BROADCASTING OF COLORADO, INC.                                       "
+77,K201HJ_77,38.42222222222220,-105.15194444444400,88.1,0.01,0.0,CO ,"EDUCATIONAL COMMUNICATIONS OF COLORADO SPRINGS, INC.                        "
+78,K201EC_78,38.88608333333330,-104.89052777777800,88.1,0.01,0.0,CO ,"EDUCATIONAL COMMUNICATIONS OF COLORADO SPRINGS, INC.                        "
+79,KPGS        _79,37.196666666666700,-107.11752777777800,88.1,0.01,416.0,CO ,"KUTE, INC.                                                                  "
+80,KMPZ        _80,38.446638888888900,-106.01055555555600,88.1,0.01,827.0,CO ,"CHEYENNE MOUNTAIN PUBLIC BROADCAST HOUSE, INC.                              "
+81,K201IP_81,40.5325,-103.12327777777800,88.1,0.01,0.0,CO ,CSN INTERNATIONAL                                                           
+82,WESU        _82,41.553416666666700,-72.65758333333330,88.1,0.01,11.0,CT ,WESLEYAN                                                                    
+83,WMNR        _83,41.31897222222220,-73.25316666666670,88.1,0.01,123.0,CT ,"TOWN OF MONROE, CONNECTICUT                                                 "
+84,WMNR        _84,41.341638888888900,-73.27444444444440,88.1,0.01,117.0,CT ,"TOWN OF MONROE, CONNECTICUT                                                 "
+85,WMNR        _85,41.31897222222220,-73.25316666666670,88.1,0.01,82.0,CT ,"TOWN OF MONROE, CONNECTICUT                                                 "
+86,WMHS        _86,39.75761111111110,-75.66686111111110,88.1,0.01,37.0,DE ,RED CLAY CONSOLIDATED SCHOOL DISTRICT                                       
+87,WJIS        _87,27.131972222222200,-82.39397222222220,88.1,0.01,121.0,FL ,"RADIO TRAINING NETWORK, INC.                                                "
+88,WUBA        _88,29.80938888888890,-82.60705555555560,88.1,0.01,0.0,FL ,"NEIGHBORHOODS UNITED FOR A BETTER ALACHUA, INC.                             "
+89,WRGP        _89,25.540361111111100,-80.4683888888889,88.1,0.01,129.0,FL ,FLORIDA INTERNATIONAL UNIVERSITY BOARD OF TRUSTEES                          
+90,WCRJ        _90,30.27636111111110,-81.56397222222220,88.1,0.01,194.0,FL ,"RADIO TRAINING NETWORK, INC.                                                "
+91,WHIJ        _91,29.238027777777800,-82.12091666666670,88.1,0.01,117.0,FL ,"RADIO TRAINING NETWORK, INC.                                                "
+92,WUWF        _92,30.403805555555600,-86.99275,88.1,0.01,187.2,FL ,THE UNIVERSITY OF WEST FLORIDA                                              
+93,WUWF        _93,30.543833333333300,-87.22019444444450,88.1,0.01,29.2,FL ,THE UNIVERSITY OF WEST FLORIDA                                              
+94,WEKI        _94,28.582166666666700,-82.52894444444450,88.1,0.01,111.0,FL ,"CALL COMMUNICATIONS GROUP, INC.                                             "
+95,WAYF        _95,26.589222222222200,-80.212,88.1,0.01,321.0,FL ,HOPE MEDIA GROUP                                                            
+96,W219DU_96,31.200277777777800,-81.49638888888890,88.1,0.01,0.0,GA ,CSN INTERNATIONAL                                                           
+97,W201CC_97,34.10566666666670,-83.93019444444450,88.1,0.01,0.0,GA ,CSN INTERNATIONAL                                                           
+98,W201DJ_98,31.54575,-82.89152777777780,88.1,0.01,0.0,GA ,FAMILY FIRST                                                                
+99,WNEE        _99,34.012055555555600,-83.29375,88.1,0.01,49.0,GA ,"CLARKE PUBLIC RADIO, INC.                                                   "

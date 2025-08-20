@@ -1,0 +1,29 @@
+# Configuration profile for FM radio band optimization
+
+# Frequency band parameters (FM band)
+band:
+  min_mhz: 88.0      # 88 MHz
+  max_mhz: 108.0     # 108 MHz
+  step_khz: 200      # 200 kHz channel spacing
+
+# Directional geometry parameters
+geometry:
+  r_main_km: 60      # FM coverage radius
+  r_off_km: 15       # Reduced off-lobe interference
+  az_tolerance_deg: 5.0  # Precise beam control for FM
+
+# Adjacent channel protection
+# FM uses ±1 channel guard for stereo broadcasts
+interference:
+  guard_offsets: [-1, 1]  # Protect ±1 adjacent channels
+  
+# Solver parameters
+solver:
+  timeout_seconds: 60
+  num_workers: 4
+  
+# Optimization weights
+weights:
+  w_span: 50       # Less critical than AM
+  w_count: 30      # Balance with reuse
+  w_surplus: 5     # Encourage frequency reuse

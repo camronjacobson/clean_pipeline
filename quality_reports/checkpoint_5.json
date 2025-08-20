@@ -1,0 +1,89 @@
+{
+  "size": 5,
+  "scenario": "grid",
+  "runs": [
+    {
+      "seed": 42,
+      "time": 11.947994232177734,
+      "channels_used": 4,
+      "assignments": [
+        88.80000000000001,
+        89.20000000000002,
+        88.4,
+        88.4,
+        88.0
+      ],
+      "conflicts": 0,
+      "memory_mb": 0.36053943634033203,
+      "solver_status": "FEASIBLE"
+    },
+    {
+      "seed": 42,
+      "time": 10.744198083877563,
+      "channels_used": 4,
+      "assignments": [
+        88.80000000000001,
+        89.20000000000002,
+        88.4,
+        88.4,
+        88.0
+      ],
+      "conflicts": 0,
+      "memory_mb": 0.3009767532348633,
+      "solver_status": "FEASIBLE"
+    },
+    {
+      "seed": 42,
+      "time": 11.712401866912842,
+      "channels_used": 4,
+      "assignments": [
+        88.80000000000001,
+        89.20000000000002,
+        88.4,
+        88.4,
+        88.0
+      ],
+      "conflicts": 0,
+      "memory_mb": 0.2999429702758789,
+      "solver_status": "FEASIBLE"
+    },
+    {
+      "seed": 100,
+      "time": 10.746201038360596,
+      "channels_used": 4,
+      "assignments": [
+        89.20000000000002,
+        88.0,
+        88.80000000000001,
+        88.80000000000001,
+        88.4
+      ],
+      "conflicts": 0,
+      "memory_mb": 0.29964637756347656,
+      "solver_status": "FEASIBLE"
+    },
+    {
+      "seed": 999,
+      "time": 10.745361804962158,
+      "channels_used": 4,
+      "assignments": [
+        88.80000000000001,
+        89.20000000000002,
+        88.4,
+        88.4,
+        88.0
+      ],
+      "conflicts": 0,
+      "memory_mb": 0.29950904846191406,
+      "solver_status": "FEASIBLE"
+    }
+  ],
+  "deterministic": true,
+  "channels_avg": 4.0,
+  "time_avg": 11.179231405258179,
+  "time_std": 0.5367083276160949,
+  "memory_avg_mb": 0.31212291717529295,
+  "theoretical_min": 2,
+  "theoretical_max": 5,
+  "optimality_gap": 1.0
+}

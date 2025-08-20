@@ -1,0 +1,81 @@
+{
+  "unique_frequencies": 17,
+  "total_stations": 2000,
+  "solve_time_seconds": 376.60172390937805,
+  "solver_status": "FEASIBLE",
+  "constraint_stats": {
+    "co_channel": 369000,
+    "adjacent_channel": 1461240,
+    "total": 1830240,
+    "skipped_invalid": 7380
+  },
+  "neighbor_metrics": {
+    "total_stations": 2000,
+    "total_edges": 3690,
+    "avg_neighbors": 3.69,
+    "max_neighbors": 19,
+    "min_neighbors": 0,
+    "complexity_class": "O(1) - sparse",
+    "edge_density": 0.0036918459229614807,
+    "speedup_vs_all_pairs": 270.86720867208675,
+    "cache_hit_rate": 37.5,
+    "directional_config": {
+      "r_main_km": 60,
+      "r_off_km": 15,
+      "az_tolerance_deg": 5.0
+    }
+  },
+  "objective_metrics": {
+    "channels_used": 17,
+    "channel_indices_used": [
+      10,
+      12,
+      21,
+      23,
+      27,
+      29,
+      41,
+      44,
+      51,
+      55,
+      57,
+      58,
+      65,
+      67,
+      78,
+      82,
+      86
+    ],
+    "spectrum_span_khz": 15200.000000000216,
+    "channel_packing_score": 47.411764705882355
+  },
+  "config_profile": {
+    "band": {
+      "min_mhz": 88.0,
+      "max_mhz": 108.0,
+      "step_khz": 200
+    },
+    "geometry": {
+      "r_main_km": 60,
+      "r_off_km": 15,
+      "az_tolerance_deg": 5.0
+    },
+    "interference": {
+      "guard_offsets": [
+        -1,
+        1
+      ]
+    },
+    "solver": {
+      "timeout_seconds": 60,
+      "num_workers": 4
+    },
+    "weights": {
+      "w_span": 50,
+      "w_count": 30,
+      "w_surplus": 5
+    }
+  },
+  "total_time_seconds": 377.0950081348419,
+  "memory_peak_mb": 128.49734020233154
+}

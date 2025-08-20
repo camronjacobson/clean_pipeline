@@ -1,0 +1,5 @@
+station_id,latitude,longitude,frequency_mhz,power_watts,azimuth_deg,beamwidth_deg
+North_A,38.0000,-122.4194,96.1,100000,0,90
+South_A,37.5000,-122.4194,96.1,100000,180,90
+East_B,37.7500,-122.0000,96.1,100000,90,90
+West_B,37.7500,-122.8388,96.1,100000,270,90

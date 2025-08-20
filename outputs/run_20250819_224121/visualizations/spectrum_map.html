@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_65e80087b6c516ddafb4a320df4d8189 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+</head>
+<body>
+    
+    
+        <div style="
+            position: fixed;
+            bottom: 50px;
+            left: 50px;
+            width: 300px;
+            background-color: white;
+            border: 2px solid grey;
+            border-radius: 5px;
+            z-index: 9999;
+            font-size: 14px;
+            padding: 10px;
+            ">
+            <p style="margin: 0 0 10px 0; font-weight: bold;">Frequency Scale</p>
+            <div style="background: linear-gradient(to right, #440154, #31688e, #35b779, #fde725); 
+                        height: 20px; 
+                        margin: 5px 0;
+                        border-radius: 3px;">
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 12px;">
+                <span>88.0 MHz</span>
+                <span>88.0 MHz</span>
+                <span>88.0 MHz</span>
+            </div>
+        </div>
+        
+    
+            <div class="folium-map" id="map_65e80087b6c516ddafb4a320df4d8189" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_65e80087b6c516ddafb4a320df4d8189 = L.map(
+                "map_65e80087b6c516ddafb4a320df4d8189",
+                {
+                    center: [38.07726234567901, -121.01866666666668],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: true,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4a6c0fdc7a94ba2f46c20f7339352643 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 2, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_65e80087b6c516ddafb4a320df4d8189);
+        
+    
+            var tile_layer_ea009def2a458bc6b99a6ec91feb7d35 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Map data \u00a9 OpenStreetMap contributors", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_65e80087b6c516ddafb4a320df4d8189);
+        
+    
+            var tile_layer_2d2b9d8c669854c9770ecab8eba1c6f1 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_65e80087b6c516ddafb4a320df4d8189);
+        
+    
+            var tile_layer_200f99eba7df57647a634a59aa23e84c = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_65e80087b6c516ddafb4a320df4d8189);
+        
+    
+            var feature_group_5a3abc24b285e5fe79f81815c7fef5d5 = L.featureGroup(
+                {}
+            ).addTo(map_65e80087b6c516ddafb4a320df4d8189);
+        
+    
+            var circle_marker_f61c1243d51bb48f0a0b56a36edc9d85 = L.circleMarker(
+                [34.0377777777778, -116.814194444444],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#21918c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5a3abc24b285e5fe79f81815c7fef5d5);
+        
+    
+        var popup_5827d4a8bc6709879145248cba028052 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_465ee7b3aba984d8d0c0c7ed016719f8 = $(`<div id="html_465ee7b3aba984d8d0c0c7ed016719f8" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; width: 250px;">             <h4 style="margin: 0 0 10px 0; color: #333;">                 KRTM                     </h4>             <table style="width: 100%; border-collapse: collapse;">                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Frequency:</td>                     <td style="padding: 5px 0; color: #21918c;">                         88.0 MHz                     </td>                 </tr>                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Bandwidth:</td>                     <td style="padding: 5px 0;">0.01 MHz</td>                 </tr>                 <tr>                     <td style="padding: 5px 0; font-weight: bold;">Region:</td>                     <td style="padding: 5px 0;">                         N/A                     </td>                 </tr>             </table>         </div>         </div>`)[0];
+                popup_5827d4a8bc6709879145248cba028052.setContent(html_465ee7b3aba984d8d0c0c7ed016719f8);
+            
+        
+
+        circle_marker_f61c1243d51bb48f0a0b56a36edc9d85.bindPopup(popup_5827d4a8bc6709879145248cba028052)
+        ;
+
+        
+    
+    
+            var circle_marker_7f7dbce66ec59706b7af9aac8a93faa5 = L.circleMarker(
+                [38.00686111111111, -122.143833333333],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#21918c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5a3abc24b285e5fe79f81815c7fef5d5);
+        
+    
+        var popup_d1b5d009ada393259dc4e45cf0c698de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d62d42acceb3cc17e83237f373b0dbf3 = $(`<div id="html_d62d42acceb3cc17e83237f373b0dbf3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; width: 250px;">             <h4 style="margin: 0 0 10px 0; color: #333;">                 K201BV             </h4>             <table style="width: 100%; border-collapse: collapse;">                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Frequency:</td>                     <td style="padding: 5px 0; color: #21918c;">                         88.0 MHz                     </td>                 </tr>                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Bandwidth:</td>                     <td style="padding: 5px 0;">0.01 MHz</td>                 </tr>                 <tr>                     <td style="padding: 5px 0; font-weight: bold;">Region:</td>                     <td style="padding: 5px 0;">                         N/A                     </td>                 </tr>             </table>         </div>         </div>`)[0];
+                popup_d1b5d009ada393259dc4e45cf0c698de.setContent(html_d62d42acceb3cc17e83237f373b0dbf3);
+            
+        
+
+        circle_marker_7f7dbce66ec59706b7af9aac8a93faa5.bindPopup(popup_d1b5d009ada393259dc4e45cf0c698de)
+        ;
+
+        
+    
+    
+            var circle_marker_a9085abac661ac2be1e722ae16f528d2 = L.circleMarker(
+                [38.36075, -122.975166666667],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#21918c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5a3abc24b285e5fe79f81815c7fef5d5);
+        
+    
+        var popup_ecc0d0b613f4142f8398374d98fc661e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4fab2a1bb6be85f3fb8f55c0b6be8b51 = $(`<div id="html_4fab2a1bb6be85f3fb8f55c0b6be8b51" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; width: 250px;">             <h4 style="margin: 0 0 10px 0; color: #333;">                 KWTF                     </h4>             <table style="width: 100%; border-collapse: collapse;">                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Frequency:</td>                     <td style="padding: 5px 0; color: #21918c;">                         88.0 MHz                     </td>                 </tr>                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Bandwidth:</td>                     <td style="padding: 5px 0;">0.01 MHz</td>                 </tr>                 <tr>                     <td style="padding: 5px 0; font-weight: bold;">Region:</td>                     <td style="padding: 5px 0;">                         N/A                     </td>                 </tr>             </table>         </div>         </div>`)[0];
+                popup_ecc0d0b613f4142f8398374d98fc661e.setContent(html_4fab2a1bb6be85f3fb8f55c0b6be8b51);
+            
+        
+
+        circle_marker_a9085abac661ac2be1e722ae16f528d2.bindPopup(popup_ecc0d0b613f4142f8398374d98fc661e)
+        ;
+
+        
+    
+    
+            var circle_marker_3e67b130faa53caba6192d80ddfceff3 = L.circleMarker(
+                [41.63683333333329, -120.092138888889],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#21918c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5a3abc24b285e5fe79f81815c7fef5d5);
+        
+    
+        var popup_314824d509fed71a56d07546a2f992ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0fd35ca603b76fca5d157f98b0081420 = $(`<div id="html_0fd35ca603b76fca5d157f98b0081420" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; width: 250px;">             <h4 style="margin: 0 0 10px 0; color: #333;">                 KDUP                     </h4>             <table style="width: 100%; border-collapse: collapse;">                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Frequency:</td>                     <td style="padding: 5px 0; color: #21918c;">                         88.0 MHz                     </td>                 </tr>                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Bandwidth:</td>                     <td style="padding: 5px 0;">0.01 MHz</td>                 </tr>                 <tr>                     <td style="padding: 5px 0; font-weight: bold;">Region:</td>                     <td style="padding: 5px 0;">                         N/A                     </td>                 </tr>             </table>         </div>         </div>`)[0];
+                popup_314824d509fed71a56d07546a2f992ce.setContent(html_0fd35ca603b76fca5d157f98b0081420);
+            
+        
+
+        circle_marker_3e67b130faa53caba6192d80ddfceff3.bindPopup(popup_314824d509fed71a56d07546a2f992ce)
+        ;
+
+        
+    
+    
+            var circle_marker_514a4a394587742c59af885739ee7dae = L.circleMarker(
+                [35.4799444444445, -117.683944444444],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#21918c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5a3abc24b285e5fe79f81815c7fef5d5);
+        
+    
+        var popup_569e4d2cfe2c903465036c81946cbdc2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_448adc91b588d07545a399a15e00bfb7 = $(`<div id="html_448adc91b588d07545a399a15e00bfb7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; width: 250px;">             <h4 style="margin: 0 0 10px 0; color: #333;">                 K201AD             </h4>             <table style="width: 100%; border-collapse: collapse;">                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Frequency:</td>                     <td style="padding: 5px 0; color: #21918c;">                         88.0 MHz                     </td>                 </tr>                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Bandwidth:</td>                     <td style="padding: 5px 0;">0.01 MHz</td>                 </tr>                 <tr>                     <td style="padding: 5px 0; font-weight: bold;">Region:</td>                     <td style="padding: 5px 0;">                         N/A                     </td>                 </tr>             </table>         </div>         </div>`)[0];
+                popup_569e4d2cfe2c903465036c81946cbdc2.setContent(html_448adc91b588d07545a399a15e00bfb7);
+            
+        
+
+        circle_marker_514a4a394587742c59af885739ee7dae.bindPopup(popup_569e4d2cfe2c903465036c81946cbdc2)
+        ;
+
+        
+    
+    
+            var circle_marker_83501c5c8deddb8f6f6bac84645e50d0 = L.circleMarker(
+                [37.9054722222222, -122.293833333333],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#21918c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5a3abc24b285e5fe79f81815c7fef5d5);
+        
+    
+        var popup_aa77033b3e000fd0c0c5eacabbe9ccf6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13ccc167a5c54067d841f9ce416cc27e = $(`<div id="html_13ccc167a5c54067d841f9ce416cc27e" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; width: 250px;">             <h4 style="margin: 0 0 10px 0; color: #333;">                 KECG                     </h4>             <table style="width: 100%; border-collapse: collapse;">                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Frequency:</td>                     <td style="padding: 5px 0; color: #21918c;">                         88.0 MHz                     </td>                 </tr>                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Bandwidth:</td>                     <td style="padding: 5px 0;">0.01 MHz</td>                 </tr>                 <tr>                     <td style="padding: 5px 0; font-weight: bold;">Region:</td>                     <td style="padding: 5px 0;">                         N/A                     </td>                 </tr>             </table>         </div>         </div>`)[0];
+                popup_aa77033b3e000fd0c0c5eacabbe9ccf6.setContent(html_13ccc167a5c54067d841f9ce416cc27e);
+            
+        
+
+        circle_marker_83501c5c8deddb8f6f6bac84645e50d0.bindPopup(popup_aa77033b3e000fd0c0c5eacabbe9ccf6)
+        ;
+
+        
+    
+    
+            var circle_marker_b3734a8e663f3bbd0ba8a8de4467d8ec = L.circleMarker(
+                [40.7273611111111, -123.972555555556],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#21918c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5a3abc24b285e5fe79f81815c7fef5d5);
+        
+    
+        var popup_2659d36ed8ec1b7d8d2cb5cc13bbd737 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_31dfadaf23191dae3b692c62298ce443 = $(`<div id="html_31dfadaf23191dae3b692c62298ce443" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; width: 250px;">             <h4 style="margin: 0 0 10px 0; color: #333;">                 KMUE                     </h4>             <table style="width: 100%; border-collapse: collapse;">                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Frequency:</td>                     <td style="padding: 5px 0; color: #21918c;">                         88.0 MHz                     </td>                 </tr>                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Bandwidth:</td>                     <td style="padding: 5px 0;">0.01 MHz</td>                 </tr>                 <tr>                     <td style="padding: 5px 0; font-weight: bold;">Region:</td>                     <td style="padding: 5px 0;">                         N/A                     </td>                 </tr>             </table>         </div>         </div>`)[0];
+                popup_2659d36ed8ec1b7d8d2cb5cc13bbd737.setContent(html_31dfadaf23191dae3b692c62298ce443);
+            
+        
+
+        circle_marker_b3734a8e663f3bbd0ba8a8de4467d8ec.bindPopup(popup_2659d36ed8ec1b7d8d2cb5cc13bbd737)
+        ;
+
+        
+    
+    
+            var circle_marker_0f22a1035c652b3057cb3ca0f38ed343 = L.circleMarker(
+                [39.4673611111111, -123.760555555556],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#21918c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5a3abc24b285e5fe79f81815c7fef5d5);
+        
+    
+        var popup_adca93daef13aaaaf7fde963c98f4f18 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cea7475d3bf6bdcac9132297824fef16 = $(`<div id="html_cea7475d3bf6bdcac9132297824fef16" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; width: 250px;">             <h4 style="margin: 0 0 10px 0; color: #333;">                 K201HR             </h4>             <table style="width: 100%; border-collapse: collapse;">                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Frequency:</td>                     <td style="padding: 5px 0; color: #21918c;">                         88.0 MHz                     </td>                 </tr>                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Bandwidth:</td>                     <td style="padding: 5px 0;">0.01 MHz</td>                 </tr>                 <tr>                     <td style="padding: 5px 0; font-weight: bold;">Region:</td>                     <td style="padding: 5px 0;">                         N/A                     </td>                 </tr>             </table>         </div>         </div>`)[0];
+                popup_adca93daef13aaaaf7fde963c98f4f18.setContent(html_cea7475d3bf6bdcac9132297824fef16);
+            
+        
+
+        circle_marker_0f22a1035c652b3057cb3ca0f38ed343.bindPopup(popup_adca93daef13aaaaf7fde963c98f4f18)
+        ;
+
+        
+    
+    
+            var circle_marker_69020cbb9e3bfa8b26dfd446f01bdd9e = L.circleMarker(
+                [37.073, -119.431777777778],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#21918c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5a3abc24b285e5fe79f81815c7fef5d5);
+        
+    
+        var popup_25dd37ec7261e507eedaed1c3ff663da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b29986a5ee7d0e20d32ea44dbe3d1a05 = $(`<div id="html_b29986a5ee7d0e20d32ea44dbe3d1a05" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; width: 250px;">             <h4 style="margin: 0 0 10px 0; color: #333;">                 KFCF                     </h4>             <table style="width: 100%; border-collapse: collapse;">                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Frequency:</td>                     <td style="padding: 5px 0; color: #21918c;">                         88.0 MHz                     </td>                 </tr>                 <tr style="border-bottom: 1px solid #eee;">                     <td style="padding: 5px 0; font-weight: bold;">Bandwidth:</td>                     <td style="padding: 5px 0;">0.01 MHz</td>                 </tr>                 <tr>                     <td style="padding: 5px 0; font-weight: bold;">Region:</td>                     <td style="padding: 5px 0;">                         N/A                     </td>                 </tr>             </table>         </div>         </div>`)[0];
+                popup_25dd37ec7261e507eedaed1c3ff663da.setContent(html_b29986a5ee7d0e20d32ea44dbe3d1a05);
+            
+        
+
+        circle_marker_69020cbb9e3bfa8b26dfd446f01bdd9e.bindPopup(popup_25dd37ec7261e507eedaed1c3ff663da)
+        ;
+
+        
+    
+    
+            var feature_group_7665548c9a8486988357754e9aa14a88 = L.featureGroup(
+                {}
+            ).addTo(map_65e80087b6c516ddafb4a320df4d8189);
+        
+    
+            var feature_group_732b54bc74b071d77fdf91b435f424d8 = L.featureGroup(
+                {}
+            ).addTo(map_65e80087b6c516ddafb4a320df4d8189);
+        
+    
+            var feature_group_e5c25d35969f4849cac07d3490c897e2 = L.featureGroup(
+                {}
+            ).addTo(map_65e80087b6c516ddafb4a320df4d8189);
+        
+    
+            var feature_group_f68e6960f731e8850e51389c8b3d0c46 = L.featureGroup(
+                {}
+            ).addTo(map_65e80087b6c516ddafb4a320df4d8189);
+        
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": false, "position": "topleft", "title": "Full Screen", "titleCancel": "Exit Full Screen"}
+            ).addTo(map_65e80087b6c516ddafb4a320df4d8189);
+        
+    
+            var measure_control_1c2c8c250ffab915e4937fc283a28766 = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_65e80087b6c516ddafb4a320df4d8189.addControl(measure_control_1c2c8c250ffab915e4937fc283a28766);
+
+        
+    
+            var layer_control_5a8facfa524f77caceba43d36787e0d2 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_4a6c0fdc7a94ba2f46c20f7339352643,
+                    "OpenStreetMap" : tile_layer_ea009def2a458bc6b99a6ec91feb7d35,
+                    "CartoDB Positron" : tile_layer_2d2b9d8c669854c9770ecab8eba1c6f1,
+                    "CartoDB Dark Matter" : tile_layer_200f99eba7df57647a634a59aa23e84c,
+                },
+                overlays :  {
+                    "88.0-88.0 MHz" : feature_group_f68e6960f731e8850e51389c8b3d0c46,
+                },
+            };
+            L.control.layers(
+                layer_control_5a8facfa524f77caceba43d36787e0d2.base_layers,
+                layer_control_5a8facfa524f77caceba43d36787e0d2.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_65e80087b6c516ddafb4a320df4d8189);
+            tile_layer_ea009def2a458bc6b99a6ec91feb7d35.remove();
+            tile_layer_2d2b9d8c669854c9770ecab8eba1c6f1.remove();
+            tile_layer_200f99eba7df57647a634a59aa23e84c.remove();
+        
+</script>
+</html>

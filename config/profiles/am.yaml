@@ -1,0 +1,30 @@
+# Configuration profile for AM radio band optimization
+
+# Frequency band parameters (AM band)
+band:
+  min_mhz: 0.53      # 530 kHz
+  max_mhz: 1.7       # 1700 kHz
+  step_khz: 10       # 10 kHz channel spacing
+
+# Directional geometry parameters
+# AM typically has longer range due to ground wave propagation
+geometry:
+  r_main_km: 100     # Longer range for AM
+  r_off_km: 30       # Off-lobe still significant
+  az_tolerance_deg: 10.0  # Wider tolerance for AM arrays
+
+# Adjacent channel protection
+# AM requires more guard channels due to wider sidebands
+interference:
+  guard_offsets: [-2, -1, 1, 2]  # Protect ±2 adjacent channels
+  
+# Solver parameters
+solver:
+  timeout_seconds: 120  # More time for complex AM networks
+  num_workers: 4
+  
+# Optimization weights
+weights:
+  w_span: 100      # Spectrum is precious in AM band
+  w_count: 20      # Prioritize channel efficiency
+  w_surplus: 1

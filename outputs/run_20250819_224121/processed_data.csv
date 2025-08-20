@@ -1,0 +1,10 @@
+Unnamed: 0,station_id,y_coord,x_coord,frequency_mhz,bandwidth_mhz,azimuth_deg,state,licensee,elevation_deg,area_type,cluster
+40,KRTM        ,34.0377777777778,-116.814194444444,88.1,0.01,774.0,CA ,"PENFOLD COMMUNICATIONS, INC.                                                ",0,suburban,CLUSTER_-117.0_34.0
+41,K201BV,38.00686111111111,-122.143833333333,88.1,0.01,0.0,CA ,KQED INC.                                                                   ,0,suburban,CLUSTER_-123.0_38.0
+42,KWTF        ,38.36075,-122.975166666667,88.1,0.01,0.0,CA ,KWTF RADIO                                                                  ,0,suburban,CLUSTER_-123.0_38.0
+43,KDUP        ,41.63683333333329,-120.092138888889,88.1,0.01,-32.0,CA ,SURPRISE VALLEY CULTURE AND ARTS                                            ,0,suburban,CLUSTER_-121.0_41.0
+44,K201AD,35.4799444444445,-117.683944444444,88.1,0.01,0.0,CA ,"INDIAN WELLS VALLEY TV BOOSTER, INC.                                        ",0,suburban,CLUSTER_-118.0_35.0
+45,KECG        ,37.9054722222222,-122.293833333333,88.1,0.01,-29.0,CA ,WEST CONTRA COSTA UNIFIED SCHOOL DISTRICT                                   ,0,suburban,CLUSTER_-123.0_37.0
+46,KMUE        ,40.7273611111111,-123.972555555556,88.1,0.01,494.0,CA ,REDWOOD COMMUNITY RADIO                                                     ,0,suburban,CLUSTER_-124.0_40.0
+47,K201HR,39.4673611111111,-123.760555555556,88.1,0.01,139.8,CA ,MENDOCINO COUNTY PUBLIC BROADCASTING                                        ,0,suburban,CLUSTER_-124.0_39.0
+48,KFCF        ,37.073,-119.431777777778,88.1,0.01,579.0,CA ,FRESNO FREE COLLEGE FOUNDATION                                              ,0,suburban,CLUSTER_-120.0_37.0

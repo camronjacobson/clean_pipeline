@@ -1,0 +1,15 @@
+{
+  "total_stations": 200,
+  "unique_frequencies": 4,
+  "optimization_time": 0.0036008358001708984,
+  "channel_efficiency": 50.0,
+  "solver_status": "OPTIMAL",
+  "objective_value": 4,
+  "solve_time_seconds": 0.0036008358001708984,
+  "neighbor_metrics": {
+    "total_edges": 81,
+    "avg_neighbors": 0.81,
+    "max_neighbors": 6,
+    "min_neighbors": 0
+  }
+}

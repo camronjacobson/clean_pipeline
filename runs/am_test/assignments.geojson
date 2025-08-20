@@ -1,0 +1,430 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.727807,
+          37.415249
+        ]
+      },
+      "properties": {
+        "station_id": "KTSR",
+        "assigned_frequency": 0.7700000000000002,
+        "power_watts": 28886.0,
+        "azimuth_deg": 167.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.398648,
+          37.824086
+        ]
+      },
+      "properties": {
+        "station_id": "KPEY",
+        "assigned_frequency": 0.5900000000000001,
+        "power_watts": 25537.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.26859,
+          34.021969
+        ]
+      },
+      "properties": {
+        "station_id": "KIPE",
+        "assigned_frequency": 0.7100000000000002,
+        "power_watts": 24172.0,
+        "azimuth_deg": 123.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.882072,
+          33.745455
+        ]
+      },
+      "properties": {
+        "station_id": "KDYV",
+        "assigned_frequency": 0.7700000000000002,
+        "power_watts": 49417.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.966997,
+          36.974743
+        ]
+      },
+      "properties": {
+        "station_id": "KVAI",
+        "assigned_frequency": 0.53,
+        "power_watts": 18170.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.142508,
+          33.93296
+        ]
+      },
+      "properties": {
+        "station_id": "KFHZ",
+        "assigned_frequency": 0.8300000000000003,
+        "power_watts": 15007.0,
+        "azimuth_deg": 142.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.718886,
+          36.877716
+        ]
+      },
+      "properties": {
+        "station_id": "KEMK",
+        "assigned_frequency": 0.7400000000000002,
+        "power_watts": 934.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.308464,
+          37.874052
+        ]
+      },
+      "properties": {
+        "station_id": "KIRZ",
+        "assigned_frequency": 0.6800000000000002,
+        "power_watts": 39592.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.946326,
+          37.229367
+        ]
+      },
+      "properties": {
+        "station_id": "KXSO",
+        "assigned_frequency": 0.8600000000000003,
+        "power_watts": 905.0,
+        "azimuth_deg": 12.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.166938,
+          34.11933
+        ]
+      },
+      "properties": {
+        "station_id": "KHDF",
+        "assigned_frequency": 0.8000000000000003,
+        "power_watts": 504.0,
+        "azimuth_deg": 51.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.389686,
+          33.965614
+        ]
+      },
+      "properties": {
+        "station_id": "KYCZ",
+        "assigned_frequency": 0.6500000000000001,
+        "power_watts": 34029.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.24741,
+          33.982161
+        ]
+      },
+      "properties": {
+        "station_id": "KQKA",
+        "assigned_frequency": 0.6800000000000002,
+        "power_watts": 45337.0,
+        "azimuth_deg": 54.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.127747,
+          37.507101
+        ]
+      },
+      "properties": {
+        "station_id": "KJQL",
+        "assigned_frequency": 0.8300000000000003,
+        "power_watts": 562.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.469926,
+          33.97293
+        ]
+      },
+      "properties": {
+        "station_id": "KNAO",
+        "assigned_frequency": 0.8600000000000003,
+        "power_watts": 881.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.899006,
+          36.692304
+        ]
+      },
+      "properties": {
+        "station_id": "KJZS",
+        "assigned_frequency": 0.6500000000000001,
+        "power_watts": 31314.0,
+        "azimuth_deg": 87.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.091792,
+          34.120575
+        ]
+      },
+      "properties": {
+        "station_id": "KSUD",
+        "assigned_frequency": 0.7400000000000002,
+        "power_watts": 7939.0,
+        "azimuth_deg": 2.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.687241,
+          36.68106
+        ]
+      },
+      "properties": {
+        "station_id": "KOQC",
+        "assigned_frequency": 0.6200000000000001,
+        "power_watts": 543.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.115938,
+          37.016846
+        ]
+      },
+      "properties": {
+        "station_id": "KZEZ",
+        "assigned_frequency": 0.8000000000000003,
+        "power_watts": 3275.0,
+        "azimuth_deg": 186.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.237545,
+          36.380992
+        ]
+      },
+      "properties": {
+        "station_id": "KZPN",
+        "assigned_frequency": 0.5900000000000001,
+        "power_watts": 522.0,
+        "azimuth_deg": 84.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.382546,
+          34.085257
+        ]
+      },
+      "properties": {
+        "station_id": "KFJD",
+        "assigned_frequency": 0.5900000000000001,
+        "power_watts": 21709.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.019695,
+          32.76341
+        ]
+      },
+      "properties": {
+        "station_id": "KELY",
+        "assigned_frequency": 0.53,
+        "power_watts": 573.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.476728,
+          34.009126
+        ]
+      },
+      "properties": {
+        "station_id": "KTZS",
+        "assigned_frequency": 0.56,
+        "power_watts": 836.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.536254,
+          38.659379
+        ]
+      },
+      "properties": {
+        "station_id": "KEVI",
+        "assigned_frequency": 0.7400000000000002,
+        "power_watts": 44558.0,
+        "azimuth_deg": 47.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.317666,
+          34.007205
+        ]
+      },
+      "properties": {
+        "station_id": "KBQJ",
+        "assigned_frequency": 0.6200000000000001,
+        "power_watts": 15045.0,
+        "azimuth_deg": 132.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.247086,
+          34.13905
+        ]
+      },
+      "properties": {
+        "station_id": "KESH",
+        "assigned_frequency": 0.53,
+        "power_watts": 44665.0,
+        "azimuth_deg": 58.0,
+        "beamwidth_deg": 360.0
+      }
+    }
+  ]
+}

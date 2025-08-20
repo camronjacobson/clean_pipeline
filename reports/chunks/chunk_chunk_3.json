@@ -1,0 +1,49 @@
+{
+  "chunk_id": "chunk_chunk_3",
+  "timestamp": 1755656109.8438342,
+  "cp_sat_stats": {
+    "status": "OPTIMAL",
+    "status_code": 4,
+    "wall_time": 0.10684500000000001,
+    "user_time": 0.10684500000000001,
+    "num_conflicts": 0,
+    "num_branches": 1162,
+    "num_binary_propagations": null,
+    "num_integer_propagations": null,
+    "deterministic_time": null,
+    "objective_value": -351.0,
+    "best_objective_bound": -351.0,
+    "optimality_gap": 0.0,
+    "solution_info": "CpSolverResponse summary:\nstatus: OPTIMAL\nobjective: -351\nbest_bound: -351\nintegers: 386\nbooleans: 580\nconflicts: 0\nbranches: 1162\npropagations: 108922\ninteger_propagations: 62517\nrestarts: 1161\nlp_iterations: 0\nwalltime: 0.106845\nusertime: 0.106845\ndeterministic_time: 0.030912\ngap_integral: 0.10071\nsolution_fingerprint: 0x9da6716851f7edde\n"
+  },
+  "model_size": {
+    "num_stations": 3,
+    "num_frequencies": 117,
+    "num_bool_variables": 351,
+    "num_assignment_constraints": 3,
+    "num_interference_constraints": 0,
+    "total_constraints": 3,
+    "interference_pairs": 0,
+    "interference_density": 0.0,
+    "avg_feasible_channels_per_station": 117.0,
+    "max_feasible_channels_per_station": 117,
+    "min_feasible_channels_per_station": 117,
+    "model_checksum": 3565372324016491335
+  },
+  "parameter_profile": {
+    "max_time_in_seconds": 30,
+    "num_search_workers": 1,
+    "random_seed": 1,
+    "linearization_level": 1,
+    "cp_model_presolve": true,
+    "use_hints": true
+  },
+  "unknown_classification": "NOT_UNKNOWN",
+  "conflict_samples": [],
+  "timing": {
+    "start_optimization": 1755656109.843839,
+    "solve_complete": 1755656110.019646,
+    "total_chunk_time": 0.1775667667388916
+  },
+  "interference_graph": {}
+}

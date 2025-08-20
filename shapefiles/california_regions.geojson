@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "california_regions",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "NAME": "Northern California", "REGION_ID": 0 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -124.5, 40.0 ], [ -124.5, 42.0 ], [ -120.0, 42.0 ], [ -120.0, 40.0 ], [ -124.5, 40.0 ] ] ] } },
+{ "type": "Feature", "properties": { "NAME": "Bay Area", "REGION_ID": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -123.5, 37.0 ], [ -123.5, 38.5 ], [ -121.5, 38.5 ], [ -121.5, 37.0 ], [ -123.5, 37.0 ] ] ] } },
+{ "type": "Feature", "properties": { "NAME": "Central Valley", "REGION_ID": 2 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -121.5, 36.0 ], [ -121.5, 40.0 ], [ -119.5, 40.0 ], [ -119.5, 36.0 ], [ -121.5, 36.0 ] ] ] } },
+{ "type": "Feature", "properties": { "NAME": "Southern California", "REGION_ID": 3 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -120.0, 32.5 ], [ -120.0, 36.0 ], [ -115.0, 36.0 ], [ -115.0, 32.5 ], [ -120.0, 32.5 ] ] ] } }
+]
+}

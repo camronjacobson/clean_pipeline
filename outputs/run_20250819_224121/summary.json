@@ -1,0 +1,24 @@
+{
+  "timestamp": "20250819_224121",
+  "output_dir": "/Users/camronjacobson/Documents/GitHub/clean_pipeline/outputs/run_20250819_224121",
+  "input_file": "data/fmdata2_test_subset.csv",
+  "region_type": null,
+  "radius_miles": 30.0,
+  "success": true,
+  "stages_completed": [
+    "data_processing",
+    "optimization",
+    "visualization"
+  ],
+  "total_stations": 9,
+  "frequency_band": "FM",
+  "optimization_success": true,
+  "stations_optimized": 9,
+  "success_rate": 100.0,
+  "optimization_metrics": {
+    "total_spectrum_mhz": 0.2,
+    "avg_frequency_reuse": 9.0,
+    "constraint_violations": 10,
+    "optimality_gap_percent": 0.0
+  }
+}

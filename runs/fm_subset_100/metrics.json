@@ -1,0 +1,68 @@
+{
+  "unique_frequencies": 4,
+  "total_stations": 100,
+  "solve_time_seconds": 65.49967217445374,
+  "solver_status": "FEASIBLE",
+  "constraint_stats": {
+    "co_channel": 3400,
+    "adjacent_channel": 13464,
+    "total": 16864,
+    "skipped_invalid": 68
+  },
+  "neighbor_metrics": {
+    "total_stations": 100,
+    "total_edges": 34,
+    "avg_neighbors": 0.68,
+    "max_neighbors": 4,
+    "min_neighbors": 0,
+    "complexity_class": "O(1) - sparse",
+    "edge_density": 0.013737373737373737,
+    "speedup_vs_all_pairs": 72.79411764705883,
+    "cache_hit_rate": 37.5,
+    "directional_config": {
+      "r_main_km": 60,
+      "r_off_km": 15,
+      "az_tolerance_deg": 5.0
+    }
+  },
+  "objective_metrics": {
+    "channels_used": 4,
+    "channel_indices_used": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "spectrum_span_khz": 1200.000000000017,
+    "channel_packing_score": 3.0
+  },
+  "config_profile": {
+    "band": {
+      "min_mhz": 88.0,
+      "max_mhz": 108.0,
+      "step_khz": 200
+    },
+    "geometry": {
+      "r_main_km": 60,
+      "r_off_km": 15,
+      "az_tolerance_deg": 5.0
+    },
+    "interference": {
+      "guard_offsets": [
+        -1,
+        1
+      ]
+    },
+    "solver": {
+      "timeout_seconds": 60,
+      "num_workers": 4
+    },
+    "weights": {
+      "w_span": 50,
+      "w_count": 30,
+      "w_surplus": 5
+    }
+  },
+  "total_time_seconds": 65.55251407623291,
+  "memory_peak_mb": 5.037158012390137
+}

@@ -1,0 +1,73 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4194,
+          38.0
+        ]
+      },
+      "properties": {
+        "station_id": "North_A",
+        "assigned_frequency": 88.80000000000001,
+        "power_watts": 100000.0,
+        "azimuth_deg": 0.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4194,
+          37.5
+        ]
+      },
+      "properties": {
+        "station_id": "South_A",
+        "assigned_frequency": 88.0,
+        "power_watts": 100000.0,
+        "azimuth_deg": 180.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.0,
+          37.75
+        ]
+      },
+      "properties": {
+        "station_id": "East_B",
+        "assigned_frequency": 88.4,
+        "power_watts": 100000.0,
+        "azimuth_deg": 90.0,
+        "beamwidth_deg": 360.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8388,
+          37.75
+        ]
+      },
+      "properties": {
+        "station_id": "West_B",
+        "assigned_frequency": 88.4,
+        "power_watts": 100000.0,
+        "azimuth_deg": 270.0,
+        "beamwidth_deg": 360.0
+      }
+    }
+  ]
+}

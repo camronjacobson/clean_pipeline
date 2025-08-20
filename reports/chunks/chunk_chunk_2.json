@@ -1,0 +1,71 @@
+{
+  "chunk_id": "chunk_chunk_2",
+  "timestamp": 1755656109.768297,
+  "cp_sat_stats": {
+    "status": "OPTIMAL",
+    "status_code": 4,
+    "wall_time": 0.296292,
+    "user_time": 0.296292,
+    "num_conflicts": 0,
+    "num_branches": 2120,
+    "num_binary_propagations": null,
+    "num_integer_propagations": null,
+    "deterministic_time": null,
+    "objective_value": -718.0,
+    "best_objective_bound": -718.0,
+    "optimality_gap": 0.0,
+    "solution_info": "CpSolverResponse summary:\nstatus: OPTIMAL\nobjective: -718\nbest_bound: -718\nintegers: 950\nbooleans: 1051\nconflicts: 0\nbranches: 2120\npropagations: 218790\ninteger_propagations: 156763\nrestarts: 2104\nlp_iterations: 218\nwalltime: 0.296292\nusertime: 0.296292\ndeterministic_time: 0.106869\ngap_integral: 0.301091\nsolution_fingerprint: 0x883ed81c39964f1c\n"
+  },
+  "model_size": {
+    "num_stations": 7,
+    "num_frequencies": 117,
+    "num_bool_variables": 819,
+    "num_assignment_constraints": 7,
+    "num_interference_constraints": 117,
+    "total_constraints": 124,
+    "interference_pairs": 1,
+    "interference_density": 0.047619047619047616,
+    "avg_feasible_channels_per_station": 117.0,
+    "max_feasible_channels_per_station": 117,
+    "min_feasible_channels_per_station": 117,
+    "model_checksum": -8360265776753846411
+  },
+  "parameter_profile": {
+    "max_time_in_seconds": 30,
+    "num_search_workers": 1,
+    "random_seed": 1,
+    "linearization_level": 1,
+    "cp_model_presolve": true,
+    "use_hints": true
+  },
+  "unknown_classification": "NOT_UNKNOWN",
+  "conflict_samples": [
+    {
+      "station1_id": "KHDF",
+      "station2_id": "KFJD",
+      "distance_miles": 12.56,
+      "distance_km": 20.21,
+      "path_loss_db": 63.2,
+      "channel_classification": "co-channel",
+      "frequency_separation_mhz": 0.0,
+      "guard_band_violated": true,
+      "bandwidth_overlap_mhz": 0.008,
+      "station1_power": "N/A",
+      "station2_power": "N/A",
+      "station1_area": "urban",
+      "station2_area": "urban"
+    }
+  ],
+  "timing": {
+    "start_optimization": 1755656109.768301,
+    "solve_complete": 1755656110.1697521,
+    "total_chunk_time": 0.40280699729919434
+  },
+  "interference_graph": {
+    "total_conflicts": 1,
+    "sampled_conflicts": 1,
+    "avg_conflict_distance_miles": 12.56,
+    "max_conflict_distance_miles": 12.56,
+    "min_conflict_distance_miles": 12.56
+  }
+}
