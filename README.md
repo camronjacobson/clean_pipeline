@@ -359,23 +359,23 @@ The system achieved remarkable efficiency in frequency allocation:
 The system generates a comprehensive interactive dashboard for result analysis:
 
 #### Dashboard Overview Tab
-![Dashboard Overview](<12_56_02 AM.png>)
+![Dashboard Overview](12_56_02%20AM.png)
 *The Overview tab presents key performance indicators through intuitive visualizations. The circular gauges show the 117.6x frequency reuse factor achieved—nearly 3x better than industry standards. The solve time of 376.6 seconds demonstrates the efficiency of our algorithmic approach.*
 
 #### Geographic Distribution Analysis
-![Map View](<12_56_21 AM.png>)
+![Map View](12_56_21%20AM.png)
 *The interactive map reveals the geographic distribution of frequency assignments across 2,000 stations. Each cluster number represents stations sharing the same frequency, with colors indicating different frequency allocations. Notice the intelligent frequency reuse pattern—stations with the same color (frequency) are geographically separated to prevent interference.*
 
 #### Spectrum Utilization Profile
-![Spectrum Analysis](<12_56_38 AM.png>)
+![Spectrum Analysis](12_56_38%20AM.png)
 *The spectrum allocation chart demonstrates the non-uniform distribution strategy. Frequencies 90.0 MHz and 90.4 MHz are heavily utilized (697 and 431 stations respectively), while others are used more sparingly. This intelligent allocation reflects the geographic clustering of stations and the effectiveness of our optimization algorithm in maximizing reuse.*
 
 #### Interference Network Topology
-![Network Graph](<12_57_01 AM.png>)
+![Network Graph](12_57_01%20AM.png)
 *The interference network visualization shows the sparse connectivity pattern (3,690 edges for 2,000 nodes). The O(1) complexity classification indicates that our directional modeling successfully reduced the interference graph from a potential O(n²) complete graph to a sparse, manageable structure.*
 
 #### Detailed Performance Metrics
-![Metrics Tab](<12_57_18 AM.png>)
+![Metrics Tab](12_57_18%20AM.png)
 *The comprehensive metrics view provides frequency-by-frequency allocation details. The geographic span coordinates (57.86° latitude range, 316.48° longitude range) confirm continental coverage. The FEASIBLE solver status indicates a valid solution meeting all constraints.*
 
 ### 3.3 Scalability Analysis
