@@ -170,17 +170,67 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 
 #### 2.3.2 Interference Zone Modeling
 
-The system models two distinct interference zones:
+The system models two distinct interference zones based on real antenna radiation patterns:
 
-1. **Main Lobe Interference (r_main)**: 
+##### Understanding Antenna Radiation Patterns
+
+When a directional antenna transmits, it doesn't create a perfectly clean beam. The energy distribution follows a pattern with multiple components:
+
+```
+                    Main Lobe (Primary Beam)
+                         ↓
+                    ╱────────╲
+                   ╱          ╲
+                  │            │
+     Side     ╱───┴───╲    ╱───┴───╲     Side
+     Lobe    │         │  │         │     Lobe  
+      ↓      ╲___╱─────╲╱─────╲___╱       ↓
+             ↑                     ↑
+         Back Lobe            Back Lobe
+```
+
+**Side Lobes Explained**: Side lobes are unavoidable byproducts of electromagnetic physics. When focusing energy in one direction (main lobe), some energy inevitably "leaks" in other directions. These side lobes typically contain 5-20% of the transmitted power (15-25 dB below the main lobe) and can cause interference even when stations aren't pointing at each other.
+
+##### The Two-Zone Model
+
+1. **Main Lobe Interference (r_main = 60km for FM)**: 
    - High-power interference within the primary beam
-   - Typically 60km for FM stations
-   - No frequency sharing possible
+   - Contains 70-90% of transmitted power
+   - Strong interference potential where the antenna is "pointing"
+   - No frequency sharing possible between interfering stations
 
-2. **Off-Lobe Interference (r_off)**:
-   - Reduced interference from side lobes
-   - Typically 15km for FM stations
+2. **Off-Lobe Interference (r_off = 15km for FM)**:
+   - Reduced interference from side lobes outside the main beam
+   - Even stations not in the antenna's main direction can interfere
+   - Side lobes radiate significant energy at closer distances
    - Adjacent channel protection required
+
+##### Real-World Example
+
+```
+Station A: Azimuth = 90° (pointing East), Beamwidth = 60°
+
+                    North (0°)
+                         │
+                         │
+    West (270°) ─────────┼───────── East (90°)
+                         │         ← Main Beam
+                         │           (60-120°)
+                    South (180°)
+
+- Station B at 95°, 50km away: In main beam → strong interference
+- Station C at 180°, 40km away: Outside main beam, beyond 15km → no interference  
+- Station D at 180°, 10km away: Outside main beam, within 15km → side lobe interference!
+```
+
+##### Why This Dual-Zone Model Matters
+
+This sophisticated approach is crucial for optimization efficiency:
+- **Avoids Over-Constraining**: Doesn't assume omnidirectional patterns everywhere
+- **Prevents Under-Constraining**: Doesn't ignore side lobe interference
+- **Accurately Models Reality**: Captures actual antenna behavior
+
+The 60km/15km split represents typical FM broadcast scenarios where main lobe interference dominates at longer ranges due to focused power, while side lobes only matter at shorter ranges due to their lower power levels. This nuanced modeling is one reason the system achieves 117.6x frequency reuse—it accurately captures the complex reality of antenna radiation patterns rather than using oversimplified models.
 
 ### 2.4 Optimization Engine
 
