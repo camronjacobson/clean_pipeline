@@ -788,9 +788,136 @@ interference:
   guard_offsets: [-2, -1, 1, 2]  # Wider guard bands for AM
 ```
 
-### 5.3 Python API Integration
+### 5.3 Universal Applicability: Beyond FM and AM
 
-#### 5.3.1 Basic API Usage
+#### 5.3.1 Band-Agnostic Design
+
+While this documentation frequently uses FM examples due to the impressive 117.6x frequency reuse demonstration, **the system is fundamentally band-agnostic** and suitable for any frequency allocation problem with geographic constraints. The core optimization engine works with abstract channel indices, making it universally applicable across the electromagnetic spectrum.
+
+#### 5.3.2 Supported Use Cases
+
+The system can optimize frequency allocation for:
+
+| Application | Frequency Range | Channel Width | Typical Coverage | Configuration Focus |
+|------------|-----------------|---------------|------------------|-------------------|
+| **AM Radio** | 540-1700 kHz | 10 kHz | 100-300 km | Ground wave propagation |
+| **FM Radio** | 88-108 MHz | 200 kHz | 40-80 km | Line-of-sight coverage |
+| **TV Broadcasting** | 470-698 MHz | 6 MHz | 60-100 km | High power, wide channels |
+| **Cellular (4G/5G)** | 600-3700 MHz | 5-100 MHz | 0.5-30 km | Dense urban cells |
+| **Public Safety** | 769-775 MHz | 12.5-25 kHz | 20-50 km | Reliability priority |
+| **Satellite Uplinks** | 14-14.5 GHz | 36-72 MHz | 100-1000 km | Spot beam coverage |
+| **WiFi Networks** | 2.4/5/6 GHz | 20-160 MHz | 30-100 m | Indoor propagation |
+| **IoT/LoRa** | 902-928 MHz | 125-500 kHz | 2-15 km | Low power, long range |
+
+#### 5.3.3 Creating Custom Band Configurations
+
+To optimize any frequency band, create a new profile:
+
+**Step 1: Create Configuration File**
+
+```yaml
+# config/profiles/your_band.yaml
+band:
+  min_mhz: 470.0     # Your band's start frequency
+  max_mhz: 698.0     # Your band's end frequency
+  step_khz: 6000     # Channel width (6 MHz for TV)
+
+geometry:
+  r_main_km: 80      # Main lobe interference radius
+  r_off_km: 20       # Side lobe interference radius
+  az_tolerance_deg: 3.0  # Antenna pointing precision
+
+interference:
+  guard_offsets: [-1, 1]  # Adjacent channels to protect
+  
+solver:
+  timeout_seconds: 300  # Longer timeout for complex problems
+  num_workers: 8        # More parallel workers if available
+  
+weights:
+  w_span: 50       # Priority for minimizing spectrum span
+  w_count: 30      # Priority for minimizing channel count  
+  w_surplus: 5     # Priority for balanced reuse
+```
+
+**Step 2: Prepare Your Station Data**
+
+Your CSV must include these columns (the normalizer will handle variations):
+```csv
+station_id,latitude,longitude,power_watts,azimuth_deg,beamwidth_deg
+KTVU,37.7749,-122.4194,1000000,45,60
+KRON,37.8044,-122.2712,500000,0,360
+```
+
+**Step 3: Run Optimization**
+
+```bash
+python -m tool.optimize data/your_stations.csv \
+    --config your_band \
+    --output-dir results/your_band_results
+```
+
+#### 5.3.4 Real-World Examples
+
+**Television Broadcasting Configuration:**
+```yaml
+# config/profiles/tv_uhf.yaml
+band:
+  min_mhz: 470.0
+  max_mhz: 698.0
+  step_khz: 6000      # 6 MHz channels
+geometry:
+  r_main_km: 80       # Larger coverage for TV
+  r_off_km: 25
+interference:
+  guard_offsets: []   # No adjacent channel overlap for TV
+```
+
+**5G Small Cell Configuration:**
+```yaml
+# config/profiles/5g_cbrs.yaml
+band:
+  min_mhz: 3550.0     # CBRS band
+  max_mhz: 3700.0
+  step_khz: 10000     # 10 MHz channels
+geometry:
+  r_main_km: 2        # Small cell radius
+  r_off_km: 0.5       # Minimal side lobe concern
+interference:
+  guard_offsets: [-1, 1]  # Protect adjacent channels
+```
+
+**Public Safety P25 Configuration:**
+```yaml
+# config/profiles/public_safety.yaml
+band:
+  min_mhz: 769.0
+  max_mhz: 775.0
+  step_khz: 12.5      # Narrowband channels
+geometry:
+  r_main_km: 40       # Wide area coverage
+  r_off_km: 10
+interference:
+  guard_offsets: [-2, -1, 1, 2]  # Extra protection
+solver:
+  timeout_seconds: 600  # Prioritize optimal solution
+```
+
+#### 5.3.5 Why the System Works Across All Bands
+
+The optimization engine's universality stems from:
+
+1. **Abstract Constraint Model**: The CP-SAT solver operates on channel indices (0, 1, 2...) not actual frequencies
+2. **Parameterized Physics**: All frequency-specific behavior is configuration-driven
+3. **Universal Interference Principles**: Co-channel and adjacent channel interference apply across all bands
+4. **Flexible Geometry Engine**: Directional antenna modeling works from kHz to GHz
+5. **Scalable Algorithms**: Spatial indexing and constraint generation scale regardless of frequency
+
+The only differences between bands are the configuration parameters—the core mathematics, algorithms, and optimization strategies remain constant. This makes the system a truly universal solution for spectrum management across any frequency band.
+
+### 5.4 Python API Integration
+
+#### 5.4.1 Basic API Usage
 
 ```python
 from src.spectrum_optimizer_enhanced import EnhancedSpectrumOptimizer
@@ -815,7 +942,7 @@ print(f"  Reuse factor: {len(result_df) / result_df['assigned_frequency'].nuniqu
 print(f"  Constraints satisfied: {optimizer.constraint_stats['total']}")
 ```
 
-#### 5.3.2 Advanced API Features
+#### 5.4.2 Advanced API Features
 
 ```python
 # Custom configuration
@@ -849,9 +976,9 @@ visualizer = DashboardVisualizer(
 visualizer.create_unified_dashboard('optimization_report.html')
 ```
 
-### 5.4 Output Formats and Integration
+### 5.5 Output Formats and Integration
 
-#### 5.4.1 CSV Output Format
+#### 5.5.1 CSV Output Format
 
 The system generates a standardized CSV output:
 
@@ -862,7 +989,7 @@ KPFA,37.8044,-122.2712,92.5,59000,45,120
 KCBS,37.7882,-122.3912,90.1,50000,0,360
 ```
 
-#### 5.4.2 GeoJSON Export
+#### 5.5.2 GeoJSON Export
 
 For GIS integration:
 
@@ -887,7 +1014,7 @@ For GIS integration:
 }
 ```
 
-#### 5.4.3 Metrics JSON
+#### 5.5.3 Metrics JSON
 
 Comprehensive optimization metrics:
 
