@@ -4,7 +4,7 @@
 
 This document presents a sophisticated radio frequency spectrum optimization system that addresses one of the most challenging problems in telecommunications engineering: the efficient allocation of limited radio spectrum among multiple broadcasting stations. My solution employs advanced computational geometry, constraint programming, and optimization algorithms to achieve remarkable efficiency—successfully assigning frequencies to 2,000 FM radio stations using only 17 unique channels, representing a 117.6x frequency reuse factor.
 
-The system demonstrates that through intelligent modeling of directional antenna patterns and geographic interference constraints, I achieved spectrum utilization rates previously thought impossible at this scale. This report details the mathematical foundations, algorithmic innovations, and engineering decisions that enable this performance.
+The system demonstrates that through intelligent modeling of directional antenna patterns and geographic interference constraints, I achieved really high spectrum utilization rates for the scale. This report details the mathematical foundations, algorithmic innovations, and engineering decisions that enable this performance.
 
 ---
 
