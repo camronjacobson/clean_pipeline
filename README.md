@@ -458,7 +458,7 @@ This sparsity is achieved through:
 
 ##### Why the Visualization Shows Fewer Edges
 
-You're absolutely correct that not all 3,690 edges are visible in the network graph. This is intentional for several reasons:
+Not all 3,690 edges are visible in the network graph. This is intentional for several reasons:
 
 1. **Visual Clarity**: Displaying all 3,690 edges would create an incomprehensible "hairball" visualization
 2. **Performance**: Rendering thousands of edges in a web browser would be extremely slow
