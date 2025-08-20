@@ -2,9 +2,9 @@
 
 ## Executive Summary
 
-This document presents a sophisticated radio frequency spectrum optimization system that addresses one of the most challenging problems in telecommunications engineering: the efficient allocation of limited radio spectrum among multiple broadcasting stations. Our solution employs advanced computational geometry, constraint programming, and optimization algorithms to achieve remarkable efficiency—successfully assigning frequencies to 2,000 FM radio stations using only 17 unique channels, representing a 117.6x frequency reuse factor.
+This document presents a sophisticated radio frequency spectrum optimization system that addresses one of the most challenging problems in telecommunications engineering: the efficient allocation of limited radio spectrum among multiple broadcasting stations. My solution employs advanced computational geometry, constraint programming, and optimization algorithms to achieve remarkable efficiency—successfully assigning frequencies to 2,000 FM radio stations using only 17 unique channels, representing a 117.6x frequency reuse factor.
 
-The system demonstrates that through intelligent modeling of directional antenna patterns and geographic interference constraints, we can achieve spectrum utilization rates previously thought impossible at this scale. This report details the mathematical foundations, algorithmic innovations, and engineering decisions that enable this performance.
+The system demonstrates that through intelligent modeling of directional antenna patterns and geographic interference constraints, I achieved spectrum utilization rates previously thought impossible at this scale. This report details the mathematical foundations, algorithmic innovations, and engineering decisions that enable this performance.
 
 ---
 
@@ -12,7 +12,7 @@ The system demonstrates that through intelligent modeling of directional antenna
 
 ### 1.1 The Spectrum Scarcity Problem
 
-Radio spectrum is a finite natural resource. In the FM band for example (88-108 MHz), we have only 100 available channels with 200 kHz spacing. When multiple transmitters operate on the same or adjacent frequencies within geographic proximity, they create mutual interference that degrades signal quality for listeners. This fundamental physics constraint creates a complex optimization problem that grows exponentially with the number of stations.
+Radio spectrum is a finite natural resource. In the FM band for example (88-108 MHz), there are only 100 available channels with 200 kHz spacing. When multiple transmitters operate on the same or adjacent frequencies within geographic proximity, they create mutual interference that degrades signal quality for listeners. This fundamental physics constraint creates a complex optimization problem that grows exponentially with the number of stations.
 
 ### 1.2 Mathematical Formulation
 
@@ -41,7 +41,7 @@ The theoretical complexity of this problem is NP-hard. For n stations and m freq
 - Constraint checks: O(n²) for all-pairs interference
 - Example: 2,000 stations with 100 frequencies = 100²⁰⁰⁰ possibilities
 
-Traditional brute-force approaches become computationally intractable beyond 20-30 stations. Our system employs several algorithmic innovations to make this problem solvable at scale.
+Traditional brute-force approaches become computationally intractable beyond 20-30 stations. My system employs several algorithmic innovations to make this problem solvable at scale.
 
 ---
 
@@ -318,7 +318,7 @@ def validate_solution(assignments, interference_graph):
 
 ### 3.1 Benchmark Dataset: FM 2000 Station Optimization
 
-To demonstrate the system's capabilities, we present detailed results from optimizing 2,000 FM radio stations distributed across the United States.
+To demonstrate the system's capabilities, I present detailed results from optimizing 2,000 FM radio stations distributed across the United States.
 
 #### 3.1.1 Input Characteristics
 
@@ -360,7 +360,7 @@ The system generates a comprehensive interactive dashboard for result analysis:
 
 #### Dashboard Overview Tab
 ![Dashboard Overview](12_56_02_AM.png)
-*The Overview tab presents key performance indicators through intuitive visualizations. The circular gauges show the 117.6x frequency reuse factor achieved—nearly 3x better than industry standards. The solve time of 376.6 seconds demonstrates the efficiency of our algorithmic approach.*
+*The Overview tab presents key performance indicators through intuitive visualizations. The circular gauges show the 117.6x frequency reuse factor achieved—nearly 3x better than industry standards. The solve time of 376.6 seconds demonstrates the efficiency of my algorithmic approach.*
 
 #### Geographic Distribution Analysis
 ![Map View](12_56_21_AM.png)
@@ -368,11 +368,11 @@ The system generates a comprehensive interactive dashboard for result analysis:
 
 #### Spectrum Utilization Profile
 ![Spectrum Analysis](12_56_38_AM.png)
-*The spectrum allocation chart demonstrates the non-uniform distribution strategy. Frequencies 90.0 MHz and 90.4 MHz are heavily utilized (697 and 431 stations respectively), while others are used more sparingly. This intelligent allocation reflects the geographic clustering of stations and the effectiveness of our optimization algorithm in maximizing reuse.*
+*The spectrum allocation chart demonstrates the non-uniform distribution strategy. Frequencies 90.0 MHz and 90.4 MHz are heavily utilized (697 and 431 stations respectively), while others are used more sparingly. This intelligent allocation reflects the geographic clustering of stations and the effectiveness of my optimization algorithm in maximizing reuse.*
 
 #### Interference Network Topology
 ![Network Graph](12_57_01_AM.png)
-*The interference network visualization shows the sparse connectivity pattern (3,690 edges for 2,000 nodes). The O(1) complexity classification indicates that our directional modeling successfully reduced the interference graph from a potential O(n²) complete graph to a sparse, manageable structure.*
+*The interference network visualization shows the sparse connectivity pattern (3,690 edges for 2,000 nodes). The O(1) complexity classification indicates that my directional modeling successfully reduced the interference graph from a potential O(n²) complete graph to a sparse, manageable structure.*
 
 #### Detailed Performance Metrics
 ![Metrics Tab](12_57_18_AM.png)
@@ -380,7 +380,7 @@ The system generates a comprehensive interactive dashboard for result analysis:
 
 ### 3.3 Scalability Analysis
 
-We conducted extensive testing across different dataset sizes to validate scalability:
+I conducted extensive testing across different dataset sizes to validate scalability:
 
 | Dataset Size | Solve Time | Memory | Frequencies | Efficiency | Time Complexity |
 |--------------|------------|--------|-------------|------------|-----------------|
@@ -391,7 +391,7 @@ We conducted extensive testing across different dataset sizes to validate scalab
 | 5,000 stations | 1,847s | 284 MB | 23 | 86.1% | O(n log n) |
 | 10,000 stations | 7,234s | 512 MB | 31 | 84.7% | O(n log n) |
 
-The logarithmic scaling demonstrates that our spatial indexing and constraint pruning successfully manage computational complexity.
+The logarithmic scaling demonstrates that my spatial indexing and constraint pruning successfully manage computational complexity.
 
 ---
 
@@ -399,7 +399,7 @@ The logarithmic scaling demonstrates that our spatial indexing and constraint pr
 
 ### 4.1 Neighbor Discovery Algorithm
 
-The efficiency of our system hinges on intelligent neighbor discovery that reduces the O(n²) all-pairs comparison to O(n log n).
+The efficiency of my system hinges on intelligent neighbor discovery that reduces the O(n²) all-pairs comparison to O(n log n).
 
 #### 4.1.1 Spatial Indexing Implementation
 
