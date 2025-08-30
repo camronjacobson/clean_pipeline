@@ -154,7 +154,14 @@ class DirectionalGeometry:
         
         # Check if within lobe (with tolerance)
         half_beamwidth = beamwidth_deg / 2.0
-        result = ang_diff <= (half_beamwidth + self.config.az_tolerance_deg)
+        effective_threshold = half_beamwidth + self.config.az_tolerance_deg
+        result = ang_diff <= effective_threshold
+        
+        # Debug logging for lobe calculation
+        logger.debug(f"  Lobe check {from_id}→{to_id}: bearing={bearing:.1f}°, "
+                    f"azimuth={azimuth_deg:.1f}°, beamwidth={beamwidth_deg:.1f}°, "
+                    f"ang_diff={ang_diff:.1f}°, threshold={effective_threshold:.1f}°, "
+                    f"in_lobe={result}")
         
         # Cache result
         if cache_key:
@@ -188,11 +195,17 @@ class DirectionalGeometry:
         # Calculate distance
         distance = self.haversine_distance(lat1, lon1, lat2, lon2, id1, id2)
         
-        # Check if either station has the other in its main lobe
+        # Get azimuth and beamwidth parameters
         az1 = station1.get('azimuth_deg', 0)
         bw1 = station1.get('beamwidth_deg', 360)
         az2 = station2.get('azimuth_deg', 0)
         bw2 = station2.get('beamwidth_deg', 360)
+        
+        # Log the initial parameters
+        logger.debug(f"\nChecking directional interference between {id1} and {id2}:")
+        logger.debug(f"  Station {id1}: az={az1:.1f}°, bw={bw1:.1f}°, pos=({lat1:.4f}, {lon1:.4f})")
+        logger.debug(f"  Station {id2}: az={az2:.1f}°, bw={bw2:.1f}°, pos=({lat2:.4f}, {lon2:.4f})")
+        logger.debug(f"  Distance: {distance:.2f} km")
         
         # Station 1 has station 2 in its lobe?
         s1_has_s2 = self.in_lobe(lat1, lon1, lat2, lon2, az1, bw1, id1, id2)
@@ -203,14 +216,26 @@ class DirectionalGeometry:
         # Determine effective radius (conservative: use main radius if EITHER is in lobe)
         if s1_has_s2 or s2_has_s1:
             effective_radius = self.config.r_main_km
-            logger.debug(f"Stations {id1}-{id2}: Using main radius {effective_radius}km "
-                        f"(s1_has_s2={s1_has_s2}, s2_has_s1={s2_has_s1})")
+            lobe_status = []
+            if s1_has_s2:
+                lobe_status.append(f"{id1} has {id2} in main lobe")
+            if s2_has_s1:
+                lobe_status.append(f"{id2} has {id1} in main lobe")
+            logger.debug(f"  Main lobe interference detected: {' AND '.join(lobe_status)}")
+            logger.debug(f"  Using main radius: {effective_radius} km")
         else:
             effective_radius = self.config.r_off_km
-            logger.debug(f"Stations {id1}-{id2}: Using off-lobe radius {effective_radius}km")
+            logger.debug(f"  No main lobe alignment: both stations outside each other's main lobes")
+            logger.debug(f"  Using off-lobe radius: {effective_radius} km")
         
         # Check interference
         interferes = distance <= effective_radius
+        
+        # Log final decision
+        if interferes:
+            logger.debug(f"  ✓ INTERFERENCE: distance ({distance:.2f} km) ≤ radius ({effective_radius} km)")
+        else:
+            logger.debug(f"  ✗ NO INTERFERENCE: distance ({distance:.2f} km) > radius ({effective_radius} km)")
         
         return interferes, effective_radius
     

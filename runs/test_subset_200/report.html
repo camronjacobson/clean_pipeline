@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spectrum Optimization Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        .metric { background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .metric-label { font-weight: bold; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background: #4CAF50; color: white; }
+        .success { color: green; }
+        .warning { color: orange; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Spectrum Optimization Report</h1>
+    
+    <h2>Summary Metrics</h2>
+    <div class="metric">
+        <span class="metric-label">Total Stations:</span> 200
+    </div>
+    <div class="metric">
+        <span class="metric-label">Channels Used:</span> 26
+    </div>
+    <div class="metric">
+        <span class="metric-label">Spectrum Span:</span> 11200 kHz
+    </div>
+    <div class="metric">
+        <span class="metric-label">Average Channel Index:</span> 27.00
+    </div>
+    <div class="metric">
+        <span class="metric-label">Optimization Time:</span> 97.77 seconds
+    </div>
+    
+    <h2>Interference Graph Statistics</h2>
+    <div class="metric">
+        <span class="metric-label">Average Neighbors:</span> 8.62
+    </div>
+    <div class="metric">
+        <span class="metric-label">Total Edges:</span> 862
+    </div>
+    <div class="metric">
+        <span class="metric-label">Complexity Class:</span> O(log n) - very sparse
+    </div>
+    <div class="metric">
+        <span class="metric-label">Speedup vs All-Pairs:</span> 11.5x
+    </div>
+    
+    <h2>Constraint Statistics</h2>
+    <div class="metric">
+        <span class="metric-label">Total Constraints:</span> 427552
+    </div>
+    <div class="metric">
+        <span class="metric-label">Co-channel:</span> 86200
+    </div>
+    <div class="metric">
+        <span class="metric-label">Adjacent Channel:</span> 341352
+    </div>
+    
+    <h2>Frequency Assignment Distribution</h2>
+    <table>
+        <tr>
+            <th>Frequency (MHz)</th>
+            <th>Station Count</th>
+            <th>Percentage</th>
+        </tr>
+
+        <tr>
+            <td>88.00</td>
+            <td>10</td>
+            <td>5.0%</td>
+        </tr>
+
+        <tr>
+            <td>88.40</td>
+            <td>6</td>
+            <td>3.0%</td>
+        </tr>
+
+        <tr>
+            <td>89.00</td>
+            <td>8</td>
+            <td>4.0%</td>
+        </tr>
+
+        <tr>
+            <td>89.40</td>
+            <td>7</td>
+            <td>3.5%</td>
+        </tr>
+
+        <tr>
+            <td>89.80</td>
+            <td>8</td>
+            <td>4.0%</td>
+        </tr>
+
+        <tr>
+            <td>90.20</td>
+            <td>9</td>
+            <td>4.5%</td>
+        </tr>
+
+        <tr>
+            <td>90.60</td>
+            <td>7</td>
+            <td>3.5%</td>
+        </tr>
+
+        <tr>
+            <td>91.00</td>
+            <td>9</td>
+            <td>4.5%</td>
+        </tr>
+
+        <tr>
+            <td>91.40</td>
+            <td>7</td>
+            <td>3.5%</td>
+        </tr>
+
+        <tr>
+            <td>91.80</td>
+            <td>5</td>
+            <td>2.5%</td>
+        </tr>
+
+        <tr>
+            <td>92.20</td>
+            <td>9</td>
+            <td>4.5%</td>
+        </tr>
+
+        <tr>
+            <td>92.60</td>
+            <td>8</td>
+            <td>4.0%</td>
+        </tr>
+
+        <tr>
+            <td>93.20</td>
+            <td>9</td>
+            <td>4.5%</td>
+        </tr>
+
+        <tr>
+            <td>93.60</td>
+            <td>8</td>
+            <td>4.0%</td>
+        </tr>
+
+        <tr>
+            <td>94.00</td>
+            <td>3</td>
+            <td>1.5%</td>
+        </tr>
+
+        <tr>
+            <td>94.60</td>
+            <td>5</td>
+            <td>2.5%</td>
+        </tr>
+
+        <tr>
+            <td>95.00</td>
+            <td>6</td>
+            <td>3.0%</td>
+        </tr>
+
+        <tr>
+            <td>95.40</td>
+            <td>7</td>
+            <td>3.5%</td>
+        </tr>
+
+        <tr>
+            <td>95.80</td>
+            <td>8</td>
+            <td>4.0%</td>
+        </tr>
+
+        <tr>
+            <td>96.20</td>
+            <td>13</td>
+            <td>6.5%</td>
+        </tr>
+
+        <tr>
+            <td>96.60</td>
+            <td>6</td>
+            <td>3.0%</td>
+        </tr>
+
+        <tr>
+            <td>97.00</td>
+            <td>11</td>
+            <td>5.5%</td>
+        </tr>
+
+        <tr>
+            <td>97.40</td>
+            <td>5</td>
+            <td>2.5%</td>
+        </tr>
+
+        <tr>
+            <td>97.80</td>
+            <td>9</td>
+            <td>4.5%</td>
+        </tr>
+
+        <tr>
+            <td>98.20</td>
+            <td>8</td>
+            <td>4.0%</td>
+        </tr>
+
+        <tr>
+            <td>99.20</td>
+            <td>9</td>
+            <td>4.5%</td>
+        </tr>
+
+    </table>
+    
+    <h2>Validation</h2>
+<div class="metric success">✓ No conflicts detected</div><div class="metric success">✓ Channel usage optimized (26 channels)</div>
+</body>
+</html>

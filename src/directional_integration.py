@@ -107,6 +107,303 @@ class DirectionalSpectrumOptimizer:
         
         return edges, metrics
     
+    def analyze_zipcode_frequency_reuse(self, stations_df: pd.DataFrame, 
+                                       edges: List[Tuple[int, int]]) -> Dict:
+        """
+        Analyze frequency reuse opportunities across zipcodes considering directional patterns.
+        
+        Args:
+            stations_df: DataFrame with station data including 'zipcode' and 'assigned_frequency'
+            edges: List of interference edges from build_interference_graph
+            
+        Returns:
+            Dictionary with detailed zipcode frequency reuse analysis
+        """
+        # Check if required columns exist
+        if 'zipcode' not in stations_df.columns:
+            return {
+                'available': False,
+                'message': 'No zipcode data available for reuse analysis'
+            }
+        
+        if 'assigned_frequency' not in stations_df.columns:
+            return {
+                'available': False,
+                'message': 'No frequency assignments available for reuse analysis'
+            }
+        
+        logger.info("Analyzing zipcode frequency reuse with directional patterns")
+        
+        # Create station index to zipcode mapping
+        idx_to_zip = {idx: str(row['zipcode']) for idx, row in stations_df.iterrows()}
+        zip_to_indices = {}
+        for idx, zipcode in idx_to_zip.items():
+            if zipcode not in zip_to_indices:
+                zip_to_indices[zipcode] = []
+            zip_to_indices[zipcode].append(idx)
+        
+        # Build zipcode interference matrix
+        zipcode_interference = {}
+        for zip1 in zip_to_indices:
+            zipcode_interference[zip1] = set()
+            
+        # Analyze interference between zipcodes
+        for i, j in edges:
+            zip_i = idx_to_zip.get(i)
+            zip_j = idx_to_zip.get(j)
+            
+            if zip_i and zip_j and zip_i != zip_j:
+                zipcode_interference[zip_i].add(zip_j)
+                zipcode_interference[zip_j].add(zip_i)
+        
+        # Analyze frequency usage per zipcode
+        zipcode_freq_usage = {}
+        for zipcode, indices in zip_to_indices.items():
+            stations_subset = stations_df.iloc[indices]
+            freq_counts = stations_subset['assigned_frequency'].value_counts()
+            
+            zipcode_freq_usage[zipcode] = {
+                'station_count': len(indices),
+                'frequencies_used': set(stations_subset['assigned_frequency'].values),
+                'unique_freq_count': len(freq_counts),
+                'frequency_distribution': freq_counts.to_dict(),
+                'efficiency': len(indices) / max(len(freq_counts), 1)
+            }
+        
+        # Identify non-interfering zipcode pairs
+        non_interfering_pairs = []
+        for zip1 in zip_to_indices:
+            for zip2 in zip_to_indices:
+                if zip1 < zip2:  # Avoid duplicates
+                    if zip2 not in zipcode_interference[zip1]:
+                        non_interfering_pairs.append((zip1, zip2))
+        
+        # Analyze reuse opportunities
+        reuse_opportunities = []
+        total_potential_savings = 0
+        
+        for zip1, zip2 in non_interfering_pairs:
+            freqs1 = zipcode_freq_usage[zip1]['frequencies_used']
+            freqs2 = zipcode_freq_usage[zip2]['frequencies_used']
+            
+            # Calculate overlap and potential for reuse
+            freq_overlap = freqs1.intersection(freqs2)
+            unique_to_zip1 = freqs1 - freqs2
+            unique_to_zip2 = freqs2 - freqs1
+            
+            # Calculate potential frequency savings if perfect reuse
+            current_total_freqs = len(freqs1.union(freqs2))
+            optimal_freqs = max(len(freqs1), len(freqs2))
+            potential_savings = current_total_freqs - optimal_freqs
+            
+            if potential_savings > 0:
+                # Analyze directional patterns for better understanding
+                stations1 = stations_df.iloc[zip_to_indices[zip1]]
+                stations2 = stations_df.iloc[zip_to_indices[zip2]]
+                
+                # Calculate average directional characteristics
+                avg_azimuth1 = stations1.get('azimuth_deg', pd.Series([0])).mean()
+                avg_azimuth2 = stations2.get('azimuth_deg', pd.Series([0])).mean()
+                avg_beamwidth1 = stations1.get('beamwidth_deg', pd.Series([360])).mean()
+                avg_beamwidth2 = stations2.get('beamwidth_deg', pd.Series([360])).mean()
+                
+                # Calculate geographic separation
+                center1_lat = stations1['latitude'].mean()
+                center1_lon = stations1['longitude'].mean()
+                center2_lat = stations2['latitude'].mean()
+                center2_lon = stations2['longitude'].mean()
+                
+                # Approximate distance
+                distance_km = np.sqrt(
+                    ((center2_lat - center1_lat) * 111) ** 2 +
+                    ((center2_lon - center1_lon) * 111 * np.cos(np.radians(center1_lat))) ** 2
+                )
+                
+                reuse_opportunities.append({
+                    'zipcode_pair': (zip1, zip2),
+                    'current_frequencies': current_total_freqs,
+                    'optimal_frequencies': optimal_freqs,
+                    'potential_savings': potential_savings,
+                    'freq_overlap': len(freq_overlap),
+                    'distance_km': round(distance_km, 2),
+                    'directional_info': {
+                        'avg_azimuth_diff': abs(avg_azimuth1 - avg_azimuth2),
+                        'avg_beamwidth': (avg_beamwidth1 + avg_beamwidth2) / 2,
+                        'likely_directional': avg_beamwidth1 < 180 or avg_beamwidth2 < 180
+                    },
+                    'reuse_score': potential_savings / current_total_freqs if current_total_freqs > 0 else 0
+                })
+                
+                total_potential_savings += potential_savings
+        
+        # Sort opportunities by potential savings
+        reuse_opportunities.sort(key=lambda x: x['potential_savings'], reverse=True)
+        
+        # Calculate interference statistics per zipcode
+        zipcode_isolation_scores = {}
+        for zipcode in zip_to_indices:
+            interfering_count = len(zipcode_interference[zipcode])
+            total_other_zips = len(zip_to_indices) - 1
+            isolation_score = 1.0 - (interfering_count / max(total_other_zips, 1))
+            
+            zipcode_isolation_scores[zipcode] = {
+                'interfering_zipcodes': interfering_count,
+                'total_other_zipcodes': total_other_zips,
+                'isolation_score': round(isolation_score, 3),
+                'non_interfering': list(set(zip_to_indices.keys()) - 
+                                       zipcode_interference[zipcode] - {zipcode})
+            }
+        
+        # Identify zipcode clusters (groups that don't interfere)
+        zipcode_clusters = self._find_zipcode_clusters(
+            list(zip_to_indices.keys()),
+            zipcode_interference
+        )
+        
+        # Calculate overall metrics
+        total_frequencies_used = len(set(stations_df['assigned_frequency'].values))
+        avg_efficiency = np.mean([z['efficiency'] for z in zipcode_freq_usage.values()])
+        
+        # Find the theoretical minimum frequencies needed
+        max_freq_per_cluster = []
+        for cluster in zipcode_clusters:
+            cluster_freqs = set()
+            for zipcode in cluster:
+                cluster_freqs.update(zipcode_freq_usage[zipcode]['frequencies_used'])
+            max_freq_per_cluster.append(len(cluster_freqs))
+        
+        theoretical_min = max(max_freq_per_cluster) if max_freq_per_cluster else total_frequencies_used
+        
+        return {
+            'available': True,
+            'summary': {
+                'total_zipcodes': len(zip_to_indices),
+                'total_stations': len(stations_df),
+                'total_interference_edges': len(edges),
+                'non_interfering_pairs': len(non_interfering_pairs),
+                'total_frequencies_used': total_frequencies_used,
+                'theoretical_minimum_frequencies': theoretical_min,
+                'potential_frequency_savings': total_potential_savings,
+                'average_efficiency': round(avg_efficiency, 3),
+                'reuse_improvement_potential': round(
+                    (total_frequencies_used - theoretical_min) / max(total_frequencies_used, 1),
+                    3
+                )
+            },
+            'zipcode_frequency_usage': zipcode_freq_usage,
+            'zipcode_interference_matrix': {
+                zip_code: list(interfering) 
+                for zip_code, interfering in zipcode_interference.items()
+            },
+            'zipcode_isolation_scores': zipcode_isolation_scores,
+            'reuse_opportunities': reuse_opportunities[:10],  # Top 10 opportunities
+            'zipcode_clusters': zipcode_clusters,
+            'recommendations': self._generate_reuse_recommendations(
+                reuse_opportunities, 
+                zipcode_freq_usage,
+                zipcode_isolation_scores
+            )
+        }
+    
+    def _find_zipcode_clusters(self, zipcodes: List[str], 
+                               interference_matrix: Dict[str, set]) -> List[List[str]]:
+        """
+        Find clusters of zipcodes that don't interfere with each other.
+        Uses a greedy graph coloring approach.
+        """
+        clusters = []
+        assigned = set()
+        
+        for zipcode in zipcodes:
+            if zipcode in assigned:
+                continue
+            
+            # Start new cluster
+            cluster = [zipcode]
+            assigned.add(zipcode)
+            
+            # Try to add non-interfering zipcodes
+            for other_zip in zipcodes:
+                if other_zip in assigned:
+                    continue
+                
+                # Check if this zipcode interferes with any in cluster
+                can_add = True
+                for cluster_zip in cluster:
+                    if other_zip in interference_matrix[cluster_zip]:
+                        can_add = False
+                        break
+                
+                if can_add:
+                    cluster.append(other_zip)
+                    assigned.add(other_zip)
+            
+            clusters.append(cluster)
+        
+        return clusters
+    
+    def _generate_reuse_recommendations(self, opportunities: List[Dict],
+                                       freq_usage: Dict,
+                                       isolation_scores: Dict) -> List[str]:
+        """Generate actionable recommendations for frequency reuse improvement."""
+        recommendations = []
+        
+        if not opportunities:
+            recommendations.append(
+                "No significant frequency reuse opportunities found. "
+                "Current allocation may already be optimal given interference constraints."
+            )
+            return recommendations
+        
+        # Top opportunity
+        if opportunities:
+            top = opportunities[0]
+            recommendations.append(
+                f"Highest impact: Zipcodes {top['zipcode_pair'][0]} and "
+                f"{top['zipcode_pair'][1]} could share frequencies, "
+                f"saving {top['potential_savings']} channels "
+                f"(currently using {top['current_frequencies']} combined)."
+            )
+        
+        # Find most isolated zipcodes
+        most_isolated = sorted(
+            isolation_scores.items(),
+            key=lambda x: x[1]['isolation_score'],
+            reverse=True
+        )[:3]
+        
+        if most_isolated and most_isolated[0][1]['isolation_score'] > 0.5:
+            isolated_zips = ', '.join([z[0] for z in most_isolated])
+            recommendations.append(
+                f"Zipcodes {isolated_zips} have high isolation scores and "
+                f"are good candidates for frequency reuse with multiple other regions."
+            )
+        
+        # Check for directional opportunities
+        directional_opportunities = [
+            opp for opp in opportunities 
+            if opp['directional_info']['likely_directional']
+        ]
+        
+        if directional_opportunities:
+            recommendations.append(
+                f"Found {len(directional_opportunities)} zipcode pairs where "
+                f"directional antenna patterns could enable better frequency reuse. "
+                f"Consider adjusting antenna azimuths to minimize inter-zipcode interference."
+            )
+        
+        # Overall efficiency
+        total_savings = sum(opp['potential_savings'] for opp in opportunities)
+        if total_savings > 10:
+            recommendations.append(
+                f"Total potential frequency savings across all non-interfering "
+                f"zipcode pairs: {total_savings} channels. This represents a "
+                f"{(total_savings / max(len(freq_usage), 1)):.1%} potential reduction "
+                f"in spectrum usage."
+            )
+        
+        return recommendations
+    
     def optimize_with_directional(self, stations_df: pd.DataFrame,
                                  freq_params: Dict) -> pd.DataFrame:
         """

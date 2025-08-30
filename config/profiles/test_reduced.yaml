@@ -1,0 +1,19 @@
+band:
+  max_mhz: 108.0
+  min_mhz: 88.0
+  step_khz: 200
+geometry:
+  az_tolerance_deg: 5.0
+  r_main_km: 20
+  r_off_km: 8
+interference:
+  guard_offsets:
+  - -1
+  - 1
+solver:
+  num_workers: 4
+  timeout_seconds: 30
+weights:
+  w_count: 10
+  w_span: 100
+  w_surplus: 1

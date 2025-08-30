@@ -1,0 +1,1809 @@
+======================================================================
+OPTIMIZATION VALIDATION REPORT
+======================================================================
+Timestamp: 2025-08-29 21:04:03.176854
+Stations: 200
+Profile: microwave_fast
+
+INTERFERENCE GRAPH ANALYSIS
+----------------------------------------
+Total edges: 423
+Average neighbors: 4.23
+Max neighbors: 20
+
+1. CO-CHANNEL INTERFERENCE CHECK
+----------------------------------------
+  ❌ VIOLATION: Zayo POP ↔ Jerome Butte
+     Frequency: 12800.00 MHz
+     Distance: 27.48 km
+     Interference radius: 30 km
+  ❌ VIOLATION: CROWN MTN ↔ ROMAN HILL
+     Frequency: 12700.00 MHz
+     Distance: 19.99 km
+     Interference radius: 30 km
+  ❌ VIOLATION: CROWN MTN ↔ Crown Mountain
+     Frequency: 12700.00 MHz
+     Distance: 0.01 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Wintberg ↔ ROMAN HILL
+     Frequency: 12700.00 MHz
+     Distance: 12.76 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Wintberg ↔ Bordeaux
+     Frequency: 12700.00 MHz
+     Distance: 18.55 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Wintberg ↔ Red Hook
+     Frequency: 12700.00 MHz
+     Distance: 4.83 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Wintberg ↔ WINTBERG
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Wintberg ↔ WINTERBERG
+     Frequency: 12700.00 MHz
+     Distance: 0.01 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Wintberg ↔ WINTERBERG
+     Frequency: 12700.00 MHz
+     Distance: 0.01 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Wintberg ↔ Red Hook
+     Frequency: 12700.00 MHz
+     Distance: 4.83 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Wintberg ↔ Red Hook
+     Frequency: 12700.00 MHz
+     Distance: 4.83 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Red Hook ↔ WINTBERG
+     Frequency: 12700.00 MHz
+     Distance: 4.83 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Red Hook ↔ WINTERBERG
+     Frequency: 12700.00 MHz
+     Distance: 4.82 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Red Hook ↔ WINTERBERG
+     Frequency: 12700.00 MHz
+     Distance: 4.82 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Red Hook ↔ Red Hook
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Red Hook ↔ Red Hook
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 30 km
+  ❌ VIOLATION: WINTBERG ↔ ROMAN HILL
+     Frequency: 12700.00 MHz
+     Distance: 12.76 km
+     Interference radius: 30 km
+  ❌ VIOLATION: WINTBERG ↔ WINTERBERG
+     Frequency: 12700.00 MHz
+     Distance: 0.01 km
+     Interference radius: 5 km
+  ❌ VIOLATION: WINTBERG ↔ WINTERBERG
+     Frequency: 12700.00 MHz
+     Distance: 0.01 km
+     Interference radius: 5 km
+  ❌ VIOLATION: WINTBERG ↔ Red Hook
+     Frequency: 12700.00 MHz
+     Distance: 4.83 km
+     Interference radius: 5 km
+  ❌ VIOLATION: WINTBERG ↔ Red Hook
+     Frequency: 12700.00 MHz
+     Distance: 4.83 km
+     Interference radius: 5 km
+  ❌ VIOLATION: WINTERBERG ↔ ROMAN HILL
+     Frequency: 12700.00 MHz
+     Distance: 12.76 km
+     Interference radius: 30 km
+  ❌ VIOLATION: WINTERBERG ↔ WINTERBERG
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: WINTERBERG ↔ Red Hook
+     Frequency: 12700.00 MHz
+     Distance: 4.82 km
+     Interference radius: 5 km
+  ❌ VIOLATION: WINTERBERG ↔ Red Hook
+     Frequency: 12700.00 MHz
+     Distance: 4.82 km
+     Interference radius: 5 km
+  ❌ VIOLATION: WINTERBERG ↔ ROMAN HILL
+     Frequency: 12700.00 MHz
+     Distance: 12.76 km
+     Interference radius: 30 km
+  ❌ VIOLATION: WINTERBERG ↔ Red Hook
+     Frequency: 12700.00 MHz
+     Distance: 4.82 km
+     Interference radius: 5 km
+  ❌ VIOLATION: WINTERBERG ↔ Red Hook
+     Frequency: 12700.00 MHz
+     Distance: 4.82 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Red Hook ↔ ROMAN HILL
+     Frequency: 12700.00 MHz
+     Distance: 8.33 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Red Hook ↔ Red Hook
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Crown Mountain ↔ ROMAN HILL
+     Frequency: 12700.00 MHz
+     Distance: 19.99 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Cottage ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.94 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ MT WELCOME
+     Frequency: 12700.00 MHz
+     Distance: 7.12 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Cottage ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ SUNNY ISLE
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.94 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.93 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.94 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ MT WELCOME
+     Frequency: 12700.00 MHz
+     Distance: 7.12 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Cottage ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ SUNNY ISLE
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.94 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.93 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 4.66 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ MT WELCOME
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ MT WELCOME
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 4.66 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ Princess
+     Frequency: 12700.00 MHz
+     Distance: 4.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ MT WELCOME
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 4.66 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ MT WELCOME
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 4.66 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ Princess
+     Frequency: 12700.00 MHz
+     Distance: 4.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ MT WELCOME
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.94 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ MT WELCOME
+     Frequency: 12700.00 MHz
+     Distance: 7.12 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Cottage ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ SUNNY ISLE
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.94 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.93 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 4.66 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 7.12 km
+     Interference radius: 30 km
+  ❌ VIOLATION: MT WELCOME ↔ SUNNY ISLE
+     Frequency: 12700.00 MHz
+     Distance: 7.12 km
+     Interference radius: 30 km
+  ❌ VIOLATION: MT WELCOME ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 7.12 km
+     Interference radius: 30 km
+  ❌ VIOLATION: MT WELCOME ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 4.66 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ Princess
+     Frequency: 12700.00 MHz
+     Distance: 4.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ MT WELCOME
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.94 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ SUNNY ISLE
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.94 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.93 km
+     Interference radius: 5 km
+  ❌ VIOLATION: SUNNY ISLE ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.94 km
+     Interference radius: 5 km
+  ❌ VIOLATION: SUNNY ISLE ↔ Cottage
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: SUNNY ISLE ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.94 km
+     Interference radius: 5 km
+  ❌ VIOLATION: SUNNY ISLE ↔ Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.93 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.94 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.94 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cottage ↔ Princess
+     Frequency: 12700.00 MHz
+     Distance: 3.93 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Little Princess ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Little Princess ↔ Princess
+     Frequency: 12700.00 MHz
+     Distance: 0.23 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Little Princess ↔ MT WELCOME
+     Frequency: 12700.00 MHz
+     Distance: 4.66 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Princess ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 0.23 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Princess ↔ MT WELCOME
+     Frequency: 12700.00 MHz
+     Distance: 4.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: MT WELCOME ↔ Little Princess
+     Frequency: 12700.00 MHz
+     Distance: 4.66 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Little Princess ↔ Global Crossing
+     Frequency: 12700.00 MHz
+     Distance: 16.71 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Little Princess ↔ Blue
+     Frequency: 12700.00 MHz
+     Distance: 7.64 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Little Princess ↔ Blue
+     Frequency: 12700.00 MHz
+     Distance: 7.64 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Global Crossing ↔ Blue
+     Frequency: 12700.00 MHz
+     Distance: 9.07 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Blue ↔ Blue
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Old Post Office ↔ WJLA STUDIO
+     Frequency: 13250.00 MHz
+     Distance: 3.69 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Joint tower ↔ WJLA STUDIO
+     Frequency: 13250.00 MHz
+     Distance: 6.21 km
+     Interference radius: 30 km
+  ❌ VIOLATION: WHIO Studio ↔ Germantown xmtr site
+     Frequency: 13250.00 MHz
+     Distance: 5.33 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Willis Tower ↔ JOHN HANCOCK
+     Frequency: 13250.00 MHz
+     Distance: 2.47 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Chase Bank, TX ↔ Louisiana Street
+     Frequency: 12750.00 MHz
+     Distance: 0.47 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Louisiana Street ↔ San Felipe
+     Frequency: 13250.00 MHz
+     Distance: 10.98 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Aspen mnt ↔ 200 2ND STREET
+     Frequency: 12700.00 MHz
+     Distance: 19.16 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Cora Butte ↔ Cora Butte
+     Frequency: 12750.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Cora Butte ↔ Mount Airy
+     Frequency: 13250.00 MHz
+     Distance: 11.06 km
+     Interference radius: 30 km
+  ❌ VIOLATION: Marbleton ↔ Marbleton
+     Frequency: 12750.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: FHS Martin ↔ TH OFFICE
+     Frequency: 13100.00 MHz
+     Distance: 2.84 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Burley Site ↔ Burley Site
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Bayer ↔ Bayer
+     Frequency: 12750.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Hansen Silo ↔ Hansen Silo
+     Frequency: 12750.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Valley School Distri ↔ Valley School Distri
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Picabo ↔ Picabo
+     Frequency: 12750.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Wendell School Distr ↔ Wendell School Distr
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: NEW SADDLE ↔ MCCORMICK
+     Frequency: 13250.00 MHz
+     Distance: 17.04 km
+     Interference radius: 30 km
+  ❌ VIOLATION: nan ↔ nan
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Tuba City Chapter ↔ TUBA CITY
+     Frequency: 12750.00 MHz
+     Distance: 0.47 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-088-HHP-H
+     Frequency: 12700.00 MHz
+     Distance: 1.78 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-088-HHP-H
+     Frequency: 12700.00 MHz
+     Distance: 1.78 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-088-HHP-H
+     Frequency: 12700.00 MHz
+     Distance: 1.78 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.65 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.65 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.65 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-088-HHP-H
+     Frequency: 12700.00 MHz
+     Distance: 0.86 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-088-HHP-H
+     Frequency: 12700.00 MHz
+     Distance: 0.86 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-088-HHP-H
+     Frequency: 12700.00 MHz
+     Distance: 0.86 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-088-HHP-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 1.78 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 1.78 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-088-HHP-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.86 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 1.78 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.86 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.86 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 8.22 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 4.48 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 4.48 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 8.22 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 4.48 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 8.22 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 1.78 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 1.78 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-088-HHP-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.86 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 1.78 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.86 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.86 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 8.22 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 4.48 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 4.48 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 8.22 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 4.48 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 8.22 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-088-HHP-H
+     Frequency: 12700.00 MHz
+     Distance: 1.78 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.65 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.65 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.65 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-088-HHP-H
+     Frequency: 12700.00 MHz
+     Distance: 1.78 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.65 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.65 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.65 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.86 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 1.78 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.86 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.86 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 8.22 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 4.48 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 4.48 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 8.22 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 4.48 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-088-HHP-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 8.22 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-090-BR-H
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 1.39 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.65 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.65 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.65 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-090-BR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 4.91 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-002-SP-CN
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.45 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-002-SP-CN ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 6.28 km
+     Interference radius: 30 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 3.96 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 2.85 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 2.85 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 3.96 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 2.85 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 3.96 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 3.96 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-001-RM-H ↔ LHC-001-RM-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-001-RM-H ↔ LHC-001-RM-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-075-DS-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 2.66 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-075-DS-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 0.63 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-075-DS-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 0.63 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-075-DS-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 2.66 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-075-DS-H ↔ LHC-031-GH-H
+     Frequency: 12700.00 MHz
+     Distance: 3.73 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-075-DS-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 0.63 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-075-DS-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 2.66 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-075-DS-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 2.66 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-121-JR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 2.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-121-JR-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-121-JR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 2.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-121-JR-H ↔ LHC-031-GH-H
+     Frequency: 12700.00 MHz
+     Distance: 4.21 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-121-JR-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-121-JR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 2.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-121-JR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 2.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-001-RM-H ↔ LHC-001-RM-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 2.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.96 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 2.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.96 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 2.85 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 2.85 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 3.96 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 2.85 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 3.96 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 3.96 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-032-DD-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-032-DD-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.85 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-032-DD-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-031-GH-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 4.21 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-031-GH-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 4.21 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-032-DD-H ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 2.85 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-032-DD-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-121-JR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 2.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-121-JR-H ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-121-JR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 2.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-121-JR-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 2.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 2.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ LHC-008-AN-H
+     Frequency: 12700.00 MHz
+     Distance: 3.96 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ LHC-032-DD-H
+     Frequency: 12700.00 MHz
+     Distance: 2.85 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 3.96 km
+     Interference radius: 5 km
+  ❌ VIOLATION: LHC-008-AN-H ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 3.96 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ Desert Hills FD STN1
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 2.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: Desert Hills FD STN1 ↔ LHC-121-JR-H
+     Frequency: 12700.00 MHz
+     Distance: 2.07 km
+     Interference radius: 5 km
+  ❌ VIOLATION: CNSP ↔ CNSP
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: 1923 ↔ 3280
+     Frequency: 13250.00 MHz
+     Distance: 18.89 km
+     Interference radius: 30 km
+  ❌ VIOLATION: 1760 ↔ 1760
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: 2874 ↔ 2874
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: AFB ↔ AFB
+     Frequency: 12750.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ VIOLATION: SOUTH FORK ↔ SOUTH FORK
+     Frequency: 12700.00 MHz
+     Distance: 0.00 km
+     Interference radius: 5 km
+  ❌ FAILED: 322 co-channel violations detected
+
+2. ADJACENT CHANNEL CONSTRAINTS CHECK
+----------------------------------------
+  ⚠️  VIOLATION: Mid Columbia Bus (12800.00 MHz) ↔ Bayer (12750.00 MHz)
+     Guard offset: -1 channels
+  ⚠️  VIOLATION: Mid Columbia Bus (12800.00 MHz) ↔ Bayer (12750.00 MHz)
+     Guard offset: -1 channels
+  ⚠️  VIOLATION: Hansen Silo (12750.00 MHz) ↔ Jerome Butte (12800.00 MHz)
+     Guard offset: 1 channels
+  ⚠️  VIOLATION: Hansen Silo (12750.00 MHz) ↔ Jerome Butte (12800.00 MHz)
+     Guard offset: 1 channels
+  ⚠️  VIOLATION: Preston Mesa (12700.00 MHz) ↔ Tuba City Chapter (12750.00 MHz)
+     Guard offset: 1 channels
+  ⚠️  WARNING: 5 adjacent channel violations detected
+
+3. ZIPCODE FREQUENCY ALLOCATION BALANCE
+----------------------------------------
+  Zipcode 0:
+    Stations: 11
+    Unique frequencies: 2
+    Efficiency: 5.50 stations/frequency
+    Frequency span: 100.00 MHz
+  Zipcode 802:
+    Stations: 9
+    Unique frequencies: 1
+    Efficiency: 9.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 820:
+    Stations: 13
+    Unique frequencies: 1
+    Efficiency: 13.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 830:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 840:
+    Stations: 7
+    Unique frequencies: 6
+    Efficiency: 1.17 stations/frequency
+    Frequency span: 550.00 MHz
+  Zipcode 850:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 971:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 2494:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 7070:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 8648:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 19128:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 20004:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 20016:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 22209:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 37918:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 40202:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 44134:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 45409:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 45417:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 47119:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 50309:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 59102:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 60606:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 60611:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 63123:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 68131:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 72730:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 77002:
+    Stations: 3
+    Unique frequencies: 2
+    Efficiency: 1.50 stations/frequency
+    Frequency span: 500.00 MHz
+  Zipcode 77057:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 78229:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 78705:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 79930:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 80202:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 81301:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 82901:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 82925:
+    Stations: 3
+    Unique frequencies: 2
+    Efficiency: 1.50 stations/frequency
+    Frequency span: 500.00 MHz
+  Zipcode 82941:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 83113:
+    Stations: 3
+    Unique frequencies: 2
+    Efficiency: 1.50 stations/frequency
+    Frequency span: 500.00 MHz
+  Zipcode 83301:
+    Stations: 7
+    Unique frequencies: 6
+    Efficiency: 1.17 stations/frequency
+    Frequency span: 550.00 MHz
+  Zipcode 83318:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 83325:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 83328:
+    Stations: 3
+    Unique frequencies: 2
+    Efficiency: 1.50 stations/frequency
+    Frequency span: 500.00 MHz
+  Zipcode 83334:
+    Stations: 3
+    Unique frequencies: 2
+    Efficiency: 1.50 stations/frequency
+    Frequency span: 500.00 MHz
+  Zipcode 83335:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 83338:
+    Stations: 7
+    Unique frequencies: 6
+    Efficiency: 1.17 stations/frequency
+    Frequency span: 550.00 MHz
+  Zipcode 83341:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 83348:
+    Stations: 5
+    Unique frequencies: 4
+    Efficiency: 1.25 stations/frequency
+    Frequency span: 500.00 MHz
+  Zipcode 83355:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 84074:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 84720:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 85719:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 85925:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 85930:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 86001:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 86004:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 86030:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 86040:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 86044:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 86045:
+    Stations: 5
+    Unique frequencies: 4
+    Efficiency: 1.25 stations/frequency
+    Frequency span: 500.00 MHz
+  Zipcode 86403:
+    Stations: 11
+    Unique frequencies: 1
+    Efficiency: 11.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 86404:
+    Stations: 18
+    Unique frequencies: 1
+    Efficiency: 18.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 86510:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 86538:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 86544:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 87013:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 87301:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 87325:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 87326:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 87505:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 87506:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 87549:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 90011:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 90026:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 90028:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 90064:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 90265:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 90731:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 91201:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 91208:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 91331:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 91335:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 91978:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 92883:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 93428:
+    Stations: 4
+    Unique frequencies: 3
+    Efficiency: 1.33 stations/frequency
+    Frequency span: 400.00 MHz
+  Zipcode 93908:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 95525:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 95549:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 96052:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 96087:
+    Stations: 2
+    Unique frequencies: 1
+    Efficiency: 2.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 98902:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 99516:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+
+  Overall Statistics:
+    Average efficiency: 1.75
+    Std deviation: 2.53
+    Coefficient of variation: 1.44
+  ⚠️  WARNING: Imbalanced allocation detected (CV > 0.5)
+
+4. FREQUENCY BAND COMPLIANCE
+----------------------------------------
+  ✅ PASSED: All frequencies within band [12700.0-13250.0] MHz
+
+5. OPTIMIZATION METRICS VALIDATION
+----------------------------------------
+  Solver status: UNKNOWN
+  ❌ No valid solution found
+  Constraints generated: 16576
+    Co-channel: 3552
+    Adjacent: 13024
+
+======================================================================
+VALIDATION SUMMARY
+======================================================================
+Total checks performed: 1469
+Passed checks: 1142
+Success rate: 77.7%
+
+Co-channel violations: 322
+Adjacent channel violations: 5
+Critical errors: 1
+Warnings: 1
+
+❌ VALIDATION FAILED - Critical constraint violations detected
+======================================================================

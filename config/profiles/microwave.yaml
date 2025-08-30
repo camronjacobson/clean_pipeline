@@ -1,0 +1,47 @@
+# Microwave configuration profile for spectrum optimization
+# For microwave point-to-point and point-to-multipoint systems
+
+# Frequency band parameters
+# IMPORTANT: Adjust min_mhz and max_mhz based on your dataset's frequency range
+# Common microwave bands:
+#   - 2.4 GHz band: 2400-2500 MHz (ISM band)
+#   - 5.8 GHz band: 5725-5875 MHz (ISM band)  
+#   - 6 GHz band: 5925-6425 MHz (licensed)
+#   - 11 GHz band: 10700-11700 MHz
+#   - 18 GHz band: 17700-19700 MHz
+#   - 23 GHz band: 21200-23600 MHz
+#
+# Before running optimization:
+# 1. Check your dataset's frequency column to determine the range
+# 2. Set min_mhz slightly below your lowest frequency
+# 3. Set max_mhz slightly above your highest frequency
+# 4. Adjust step_khz based on your system's channel bandwidth
+
+band:
+  min_mhz: 12700.0   # 12.7 GHz - Based on apps_13.parquet dataset min frequency
+  max_mhz: 13250.0   # 13.25 GHz - Based on apps_13.parquet dataset max frequency  
+  step_khz: 25000    # 25 MHz channel spacing for 12-13 GHz band
+
+# Directional geometry parameters
+# Microwave systems use highly directional antennas
+geometry:
+  r_main_km: 20      # Main lobe interference radius (reduced from 30km for realistic interference)
+  r_off_km: 4        # Off-lobe interference radius (reduced from 5km due to high directivity)
+  az_tolerance_deg: 2.0  # Tighter angular tolerance for precise microwave beams
+
+# Adjacent channel protection
+# Microwave systems typically have better selectivity
+interference:
+  guard_offsets: [-1, 1]  # Protect ±1 adjacent channels
+  
+# Solver parameters
+solver:
+  timeout_seconds: 120  # Longer timeout for complex microwave networks
+  num_workers: 4
+  
+# Optimization weights
+# Adjusted for microwave characteristics
+weights:
+  w_span: 50       # Lower weight - spectrum span less critical with wide bandwidth
+  w_count: 20      # Higher weight - minimize channel count for efficiency
+  w_surplus: 2     # Slightly higher - encourage frequency reuse in directional systems

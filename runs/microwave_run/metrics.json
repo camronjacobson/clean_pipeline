@@ -1,0 +1,658 @@
+{
+  "total_time_seconds": 129.48964715003967,
+  "memory_peak_mb": 5.159450531005859,
+  "validation": {
+    "is_valid": false,
+    "success_rate": 71.20490129339687,
+    "co_channel_violations": 423,
+    "adjacent_channel_violations": 0,
+    "total_violations": 424,
+    "checks_performed": 1469,
+    "checks_passed": 1046,
+    "warnings": [
+      "High variation in zipcode efficiency (CV=1.30), indicating imbalanced frequency allocation"
+    ],
+    "errors": [
+      "Invalid solver status: UNKNOWN"
+    ],
+    "zipcode_stats": [
+      {
+        "zipcode": "00000",
+        "stations": 11,
+        "unique_frequencies": 1,
+        "efficiency": 11.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "00802",
+        "stations": 9,
+        "unique_frequencies": 1,
+        "efficiency": 9.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "00820",
+        "stations": 13,
+        "unique_frequencies": 1,
+        "efficiency": 13.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "00830",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "00840",
+        "stations": 7,
+        "unique_frequencies": 1,
+        "efficiency": 7.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "00850",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "00971",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "02494",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "07070",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "08648",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "19128",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "20004",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "20016",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "22209",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "37918",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "40202",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "44134",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "45409",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "45417",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "47119",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "50309",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "59102",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "60606",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "60611",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "63123",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "68131",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "72730",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "77002",
+        "stations": 3,
+        "unique_frequencies": 1,
+        "efficiency": 3.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "77057",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "78229",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "78705",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "79930",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "80202",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "81301",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "82901",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "82925",
+        "stations": 3,
+        "unique_frequencies": 1,
+        "efficiency": 3.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "82941",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "83113",
+        "stations": 3,
+        "unique_frequencies": 1,
+        "efficiency": 3.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "83301",
+        "stations": 7,
+        "unique_frequencies": 1,
+        "efficiency": 7.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "83318",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "83325",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "83328",
+        "stations": 3,
+        "unique_frequencies": 1,
+        "efficiency": 3.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "83334",
+        "stations": 3,
+        "unique_frequencies": 1,
+        "efficiency": 3.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "83335",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "83338",
+        "stations": 7,
+        "unique_frequencies": 1,
+        "efficiency": 7.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "83341",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "83348",
+        "stations": 5,
+        "unique_frequencies": 1,
+        "efficiency": 5.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "83355",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "84074",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "84720",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "85719",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "85925",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "85930",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86001",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86004",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86030",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86040",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86044",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86045",
+        "stations": 5,
+        "unique_frequencies": 1,
+        "efficiency": 5.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86403",
+        "stations": 11,
+        "unique_frequencies": 1,
+        "efficiency": 11.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86404",
+        "stations": 18,
+        "unique_frequencies": 1,
+        "efficiency": 18.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86510",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86538",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86544",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "87013",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "87301",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "87325",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "87326",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "87505",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "87506",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "87549",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "90011",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "90026",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "90028",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "90064",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "90265",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "90731",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "91201",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "91208",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "91331",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "91335",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "91978",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "92883",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "93428",
+        "stations": 4,
+        "unique_frequencies": 1,
+        "efficiency": 4.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "93908",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "95525",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "95549",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "96052",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "96087",
+        "stations": 2,
+        "unique_frequencies": 1,
+        "efficiency": 2.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "98902",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "99516",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      }
+    ]
+  }
+}

@@ -6,7 +6,8 @@ Handles column name variations and ensures data integrity.
 import pandas as pd
 import numpy as np
 import logging
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple, Union
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -19,7 +20,8 @@ COLUMN_SYNONYMS = {
     'bandwidth_khz': ['bandwidth_khz', 'bw_khz', 'bandwidth', 'bw', 'channel_width'],
     'power_watts': ['power_watts', 'power', 'erp', 'erp_watts', 'tx_power', 'transmit_power'],
     'azimuth_deg': ['azimuth_deg', 'azimuth', 'az', 'bearing', 'direction', 'heading'],
-    'beamwidth_deg': ['beamwidth_deg', 'beam', 'beamwidth', 'bw_deg', 'beam_width', 'pattern_width']
+    'beamwidth_deg': ['beamwidth_deg', 'beam', 'beamwidth', 'bw_deg', 'beam_width', 'pattern_width'],
+    'zipcode': ['zipcode', 'zip', 'postal_code', 'zip_code', 'postal', 'postcode', 'post_code']
 }
 
 # Required columns for operation
@@ -32,7 +34,7 @@ OPTIONAL_DEFAULTS = {
     'bandwidth_khz': lambda df: 200.0,
     'power_watts': lambda df: 1000.0,
     'azimuth_deg': lambda df: 0.0,
-    'beamwidth_deg': lambda df: 360.0
+    'beamwidth_deg': lambda df: 3.0
 }
 
 
@@ -164,7 +166,7 @@ def validate_input(df: pd.DataFrame) -> Tuple[bool, List[str]]:
         if pd.api.types.is_numeric_dtype(freq_values):
             if (freq_values <= 0).any():
                 errors.append(f"Found {(freq_values <= 0).sum()} non-positive frequency values")
-            elif freq_values.max() > 10000:  # Sanity check for MHz
+            elif freq_values.max() > 30000:  # Sanity check for MHz (up to 30 GHz)
                 errors.append(f"Frequency values seem too high (max={freq_values.max():.1f} MHz)")
     
     # Power validation (if present)
@@ -197,11 +199,11 @@ def validate_input(df: pd.DataFrame) -> Tuple[bool, List[str]]:
             elif (bw_values > 360).any():
                 errors.append(f"Found {(bw_values > 360).sum()} beamwidth values > 360°")
     
-    # Check for duplicate station IDs
+    # Check for duplicate station IDs - only warn, don't error
     if 'station_id' in df.columns:
         duplicates = df['station_id'].duplicated().sum()
         if duplicates > 0:
-            errors.append(f"Found {duplicates} duplicate station IDs")
+            logger.warning(f"Found {duplicates} duplicate station IDs (this is often expected for multiple transmitters)")
     
     # Check for sufficient data
     if len(df) == 0:
@@ -213,12 +215,12 @@ def validate_input(df: pd.DataFrame) -> Tuple[bool, List[str]]:
     return is_valid, errors
 
 
-def prepare_dataframe(df: pd.DataFrame, strict: bool = False) -> pd.DataFrame:
+def prepare_dataframe(df: Union[pd.DataFrame, str, Path], strict: bool = False) -> pd.DataFrame:
     """
     Complete pipeline to prepare DataFrame for optimization.
     
     Args:
-        df: Raw input DataFrame
+        df: Raw input DataFrame, or path to CSV/Parquet file
         strict: If True, enforce strict validation
         
     Returns:
@@ -226,7 +228,29 @@ def prepare_dataframe(df: pd.DataFrame, strict: bool = False) -> pd.DataFrame:
         
     Raises:
         SchemaError: If validation fails
+        FileNotFoundError: If file path doesn't exist
+        ValueError: If file format is not supported
     """
+    # Handle file input
+    if isinstance(df, (str, Path)):
+        file_path = Path(df)
+        
+        if not file_path.exists():
+            raise FileNotFoundError(f"File not found: {file_path}")
+        
+        # Detect file type and read accordingly
+        suffix = file_path.suffix.lower()
+        
+        if suffix == '.parquet':
+            logger.info(f"Reading Parquet file: {file_path}")
+            df = pd.read_parquet(file_path)
+        elif suffix in ['.csv', '.txt']:
+            logger.info(f"Reading CSV file: {file_path}")
+            df = pd.read_csv(file_path)
+        else:
+            raise ValueError(f"Unsupported file format: {suffix}. Supported formats: .csv, .txt, .parquet")
+        
+        logger.info(f"Loaded {len(df)} rows from {file_path.name}")
     # Step 1: Normalize column names
     df = normalize_columns(df, strict=strict)
     

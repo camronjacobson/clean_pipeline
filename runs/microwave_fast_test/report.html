@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spectrum Optimization Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        .metric { background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .metric-label { font-weight: bold; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background: #4CAF50; color: white; }
+        .success { color: green; }
+        .warning { color: orange; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Spectrum Optimization Report</h1>
+    
+    <h2>Summary Metrics</h2>
+    <div class="metric">
+        <span class="metric-label">Total Stations:</span> 50
+    </div>
+    <div class="metric">
+        <span class="metric-label">Channels Used:</span> 4
+    </div>
+    <div class="metric">
+        <span class="metric-label">Spectrum Span:</span> 300000 kHz
+    </div>
+    <div class="metric">
+        <span class="metric-label">Average Channel Index:</span> 3.00
+    </div>
+    <div class="metric">
+        <span class="metric-label">Optimization Time:</span> 0.53 seconds
+    </div>
+    
+    <h2>Interference Graph Statistics</h2>
+    <div class="metric">
+        <span class="metric-label">Average Neighbors:</span> 0.96
+    </div>
+    <div class="metric">
+        <span class="metric-label">Total Edges:</span> 24
+    </div>
+    <div class="metric">
+        <span class="metric-label">Complexity Class:</span> O(log n) - very sparse
+    </div>
+    <div class="metric">
+        <span class="metric-label">Speedup vs All-Pairs:</span> 25.5x
+    </div>
+    
+    <h2>Constraint Statistics</h2>
+    <div class="metric">
+        <span class="metric-label">Total Constraints:</span> 1344
+    </div>
+    <div class="metric">
+        <span class="metric-label">Co-channel:</span> 288
+    </div>
+    <div class="metric">
+        <span class="metric-label">Adjacent Channel:</span> 1056
+    </div>
+    
+    <h2>Frequency Assignment Distribution</h2>
+    <table>
+        <tr>
+            <th>Frequency (MHz)</th>
+            <th>Station Count</th>
+            <th>Percentage</th>
+        </tr>
+
+        <tr>
+            <td>12700.00</td>
+            <td>13</td>
+            <td>26.0%</td>
+        </tr>
+
+        <tr>
+            <td>12800.00</td>
+            <td>11</td>
+            <td>22.0%</td>
+        </tr>
+
+        <tr>
+            <td>12900.00</td>
+            <td>11</td>
+            <td>22.0%</td>
+        </tr>
+
+        <tr>
+            <td>13000.00</td>
+            <td>15</td>
+            <td>30.0%</td>
+        </tr>
+
+    </table>
+    
+    <h2>Validation</h2>
+<div class="metric success">✓ No conflicts detected</div><div class="metric success">✓ Channel usage optimized (4 channels)</div>
+</body>
+</html>

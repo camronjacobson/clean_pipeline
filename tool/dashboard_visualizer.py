@@ -45,7 +45,7 @@ class DashboardVisualizer(EnhancedVisualizer):
         self._extract_metrics()
         
     def _extract_metrics(self):
-        """Extract and compute dashboard metrics."""
+        """Extract and validate dashboard metrics."""
         # Basic metrics
         self.total_stations = len(self.df)
         self.unique_frequencies = len(self.freq_colors)
@@ -68,6 +68,9 @@ class DashboardVisualizer(EnhancedVisualizer):
             self.constraint_stats = self.metrics.get('constraint_stats', {})
             self.total_constraints = self.constraint_stats.get('total', 0)
             self.solver_status = self.metrics.get('solver_status', 'N/A')
+            
+            # Zipcode metrics
+            self.zipcode_metrics = self.metrics.get('zipcode_metrics', {})
         else:
             # Defaults if no metrics
             self.channels_used = self.unique_frequencies
@@ -80,13 +83,80 @@ class DashboardVisualizer(EnhancedVisualizer):
             self.constraint_stats = {}
             self.total_constraints = 0
             self.solver_status = 'N/A'
+            self.zipcode_metrics = {}
         
-        # Calculate efficiency metrics
-        self.channel_efficiency = (self.total_stations / max(self.channels_used, 1))
+        # VALIDATE: Channel efficiency should be stations/frequencies used
+        self.channel_efficiency = self.total_stations / max(self.unique_frequencies, 1)
         self.reuse_factor = self.channel_efficiency
+        
+        # VALIDATE: Spectrum span calculation
+        if self.unique_frequencies > 0:
+            min_freq = self.df['assigned_frequency'].min()
+            max_freq = self.df['assigned_frequency'].max()
+            # Spectrum span in kHz (frequencies are in MHz)
+            self.spectrum_span = (max_freq - min_freq) * 1000
+        else:
+            self.spectrum_span = 0
         
         # Frequency distribution
         self.freq_counts = self.df['assigned_frequency'].value_counts().sort_index()
+        
+        # Check for zipcode data
+        self.has_zipcode = 'zipcode' in self.df.columns
+        
+        # Print validation
+        print(f'VALIDATION:')
+        print(f'  Stations: {self.total_stations}')
+        print(f'  Unique frequencies used: {self.unique_frequencies}')
+        print(f'  Channel efficiency: {self.channel_efficiency:.2f} (should be ~{self.total_stations/self.unique_frequencies:.2f})')
+        print(f'  Spectrum span: {self.spectrum_span} kHz')
+        print(f'  Frequency range: {self.df["assigned_frequency"].min():.2f} - {self.df["assigned_frequency"].max():.2f} MHz')
+    
+    def validate_optimization_results(self):
+        '''Validate that optimization results are correct'''
+        errors = []
+        warnings = []
+        
+        # Check frequency assignments
+        if self.df['assigned_frequency'].isna().any():
+            errors.append(f"{self.df['assigned_frequency'].isna().sum()} stations have no frequency assigned")
+        
+        # Check frequency range
+        min_freq = self.df['assigned_frequency'].min()
+        max_freq = self.df['assigned_frequency'].max()
+        if min_freq < 88.0 or max_freq > 108.0:
+            warnings.append(f"Frequencies outside FM band: {min_freq:.2f}-{max_freq:.2f} MHz")
+        
+        # Validate efficiency calculation
+        actual_efficiency = self.total_stations / self.unique_frequencies
+        if abs(self.channel_efficiency - actual_efficiency) > 0.01:
+            errors.append(f"Channel efficiency mismatch: shown={self.channel_efficiency:.2f}, actual={actual_efficiency:.2f}")
+        
+        # Check for interference violations (if we have the edge data)
+        if hasattr(self, 'interference_edges'):
+            violations = 0
+            for i, j in self.interference_edges:
+                if self.df.iloc[i]['assigned_frequency'] == self.df.iloc[j]['assigned_frequency']:
+                    violations += 1
+            if violations > 0:
+                errors.append(f"{violations} co-channel interference violations detected")
+        
+        # Print validation results
+        print('\n' + '='*60)
+        print('DASHBOARD VALIDATION RESULTS')
+        print('='*60)
+        if errors:
+            print('ERRORS:')
+            for e in errors:
+                print(f'  ❌ {e}')
+        if warnings:
+            print('WARNINGS:')
+            for w in warnings:
+                print(f'  ⚠️ {w}')
+        if not errors and not warnings:
+            print('  ✅ All validations passed')
+        
+        return len(errors) == 0
     
     def create_unified_dashboard(self, output_path: str = "dashboard.html") -> None:
         """
@@ -107,6 +177,7 @@ class DashboardVisualizer(EnhancedVisualizer):
         performance_stats = self._create_summary_stats()
         interference_graph = self._create_interference_graph()
         detailed_metrics = self._create_detailed_metrics()
+        zipcode_analysis = self._create_zipcode_analysis()
         
         # Build the dashboard HTML
         dashboard_html = f"""
@@ -268,6 +339,50 @@ class DashboardVisualizer(EnhancedVisualizer):
             color: #667eea;
         }}
         
+        .efficiency-grid {{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }}
+        
+        .efficiency-card {{
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }}
+        
+        .efficiency-metric {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #dee2e6;
+        }}
+        
+        .metric-label {{
+            font-weight: 600;
+            color: #495057;
+        }}
+        
+        .metric-value {{
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }}
+        
+        .metric-detail {{
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-left: 10px;
+        }}
+        
+        .zipcode-summary {{
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }}
+        
         #map-container {{
             height: 600px;
             border-radius: 8px;
@@ -379,6 +494,7 @@ class DashboardVisualizer(EnhancedVisualizer):
         <div id="metrics" class="tab-content">
             <h2>Detailed Metrics</h2>
             {detailed_metrics}
+            {zipcode_analysis}
         </div>
     </div>
     
@@ -421,6 +537,9 @@ class DashboardVisualizer(EnhancedVisualizer):
 </body>
 </html>
 """
+        
+        # Validate optimization results before saving
+        self.validate_optimization_results()
         
         # Save dashboard
         with open(output_path, 'w') as f:
@@ -596,60 +715,34 @@ class DashboardVisualizer(EnhancedVisualizer):
             return '<div class="chart-container"><p style="text-align:center; padding:40px;">No frequency reuse detected</p></div>'
     
     def _create_efficiency_gauges(self) -> str:
-        """Create gauge charts for key efficiency metrics."""
-        # Calculate efficiency percentages
-        spectrum_efficiency = min((1 - self.channels_used / max(100, self.channels_used)) * 100, 100)
-        packing_efficiency = min(self.packing_score * 10, 100)  # Scale to percentage
-        
-        fig = go.Figure()
-        
-        # Spectrum Efficiency Gauge
-        fig.add_trace(go.Indicator(
-            mode="gauge+number",
-            value=self.channel_efficiency,
-            title={'text': "Channel Efficiency (Stations/Channel)"},
-            gauge={
-                'axis': {'range': [0, 10]},
-                'bar': {'color': "darkblue"},
-                'steps': [
-                    {'range': [0, 2], 'color': "lightgray"},
-                    {'range': [2, 5], 'color': "gray"},
-                    {'range': [5, 10], 'color': "lightgreen"}
-                ],
-                'threshold': {
-                    'line': {'color': "red", 'width': 4},
-                    'thickness': 0.75,
-                    'value': 8
-                }
-            },
-            domain={'x': [0, 0.45], 'y': [0, 1]}
-        ))
-        
-        # Reuse Factor Gauge
-        fig.add_trace(go.Indicator(
-            mode="gauge+number",
-            value=self.reuse_factor,
-            title={'text': "Frequency Reuse Factor"},
-            gauge={
-                'axis': {'range': [0, 10]},
-                'bar': {'color': "green"},
-                'steps': [
-                    {'range': [0, 2], 'color': "salmon"},
-                    {'range': [2, 5], 'color': "yellow"},
-                    {'range': [5, 10], 'color': "lightgreen"}
-                ]
-            },
-            domain={'x': [0.55, 1], 'y': [0, 1]}
-        ))
-        
-        fig.update_layout(
-            height=300,
-            margin=dict(l=20, r=20, t=40, b=20),
-            plot_bgcolor='rgba(0,0,0,0)',
-            paper_bgcolor='rgba(0,0,0,0)',
-        )
-        
-        return f'<div class="chart-container">{pyo.plot(fig, output_type="div", include_plotlyjs=False)}</div>'
+        """Replace gauges with clean efficiency metrics."""
+        return f'''
+        <div class="efficiency-grid">
+            <div class="efficiency-card">
+                <h3>Optimization Efficiency</h3>
+                <div class="efficiency-metric">
+                    <span class="metric-label">Spectrum Utilization:</span>
+                    <span class="metric-value">{(self.unique_frequencies / 100 * 100):.1f}%</span>
+                    <span class="metric-detail">({self.unique_frequencies} of 100 available channels)</span>
+                </div>
+                <div class="efficiency-metric">
+                    <span class="metric-label">Average Reuse:</span>
+                    <span class="metric-value">{self.channel_efficiency:.1f}x</span>
+                    <span class="metric-detail">({self.total_stations} stations / {self.unique_frequencies} frequencies)</span>
+                </div>
+                <div class="efficiency-metric">
+                    <span class="metric-label">Packing Efficiency:</span>
+                    <span class="metric-value">{max(0, (1 - self.spectrum_span/20000)*100):.1f}%</span>
+                    <span class="metric-detail">(Spectrum span: {self.spectrum_span/1000:.1f} MHz)</span>
+                </div>
+                <div class="efficiency-metric">
+                    <span class="metric-label">Interference Edges:</span>
+                    <span class="metric-value">{self.total_edges}</span>
+                    <span class="metric-detail">(Avg neighbors: {self.avg_neighbors:.1f})</span>
+                </div>
+            </div>
+        </div>
+        '''
     
     def _create_summary_stats(self) -> str:
         """Create summary statistics panel."""
@@ -870,6 +963,108 @@ class DashboardVisualizer(EnhancedVisualizer):
             </div>
         </div>
         """
+    
+    def _create_zipcode_analysis(self) -> str:
+        """Create clean zipcode distribution analysis."""
+        if not self.has_zipcode:
+            return '<div class="chart-container"><p>No zipcode data available</p></div>'
+        
+        # Calculate zipcode statistics
+        zipcode_stats = self.df.groupby('zipcode').agg({
+            'station_id': 'count',
+            'assigned_frequency': 'nunique'
+        }).rename(columns={
+            'station_id': 'stations',
+            'assigned_frequency': 'unique_frequencies'
+        })
+        
+        # Calculate efficiency per zipcode
+        zipcode_stats['efficiency'] = zipcode_stats['stations'] / zipcode_stats['unique_frequencies']
+        
+        # Sort by number of stations and take top 20
+        zipcode_stats = zipcode_stats.sort_values('stations', ascending=False).head(20)
+        
+        # Create clean bar chart with dual axis
+        fig = go.Figure()
+        
+        # Stations bar
+        fig.add_trace(go.Bar(
+            x=zipcode_stats.index.astype(str),
+            y=zipcode_stats['stations'],
+            name='Stations',
+            marker_color='lightblue',
+            yaxis='y',
+            text=zipcode_stats['stations'],
+            textposition='auto',
+        ))
+        
+        # Efficiency line
+        fig.add_trace(go.Scatter(
+            x=zipcode_stats.index.astype(str),
+            y=zipcode_stats['efficiency'],
+            name='Efficiency (Stations/Freq)',
+            marker_color='red',
+            yaxis='y2',
+            mode='lines+markers',
+            line=dict(width=3),
+            marker=dict(size=8)
+        ))
+        
+        fig.update_layout(
+            title='Top 20 Zipcodes: Station Count and Frequency Efficiency',
+            xaxis=dict(title='Zipcode', tickangle=45),
+            yaxis=dict(title='Number of Stations', side='left'),
+            yaxis2=dict(
+                title='Efficiency (Stations per Frequency)',
+                overlaying='y',
+                side='right'
+            ),
+            hovermode='x unified',
+            height=400,
+            showlegend=True,
+            legend=dict(x=0.7, y=1),
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)'
+        )
+        
+        # Extract zipcode metrics from optimization if available
+        zipcode_summary = ""
+        if self.zipcode_metrics:
+            freq_usage = self.zipcode_metrics.get('frequency_usage', {})
+            interference = self.zipcode_metrics.get('interference', {})
+            
+            if freq_usage.get('available'):
+                summary = freq_usage.get('summary', {})
+                zipcode_summary = f"""
+                <div class="info-panel">
+                    <h3>Zipcode Analysis Summary</h3>
+                    <p>
+                        <b>Total Zipcodes:</b> {summary.get('total_zipcodes', 'N/A')} | 
+                        <b>Avg Frequencies/Zipcode:</b> {summary.get('avg_frequencies_per_zipcode', 0):.2f} | 
+                        <b>Shared Frequencies:</b> {summary.get('frequencies_shared_across_zipcodes', 0)}
+                    </p>
+                </div>
+                """
+        
+        # Add summary statistics
+        total_zipcodes = self.df['zipcode'].nunique()
+        avg_stations_per_zip = self.df.groupby('zipcode').size().mean()
+        
+        summary = f'''
+        <div class="zipcode-summary">
+            <h4>Zipcode Statistics</h4>
+            <p>Total zipcodes: {total_zipcodes}</p>
+            <p>Average stations per zipcode: {avg_stations_per_zip:.1f}</p>
+            <p>Most dense zipcode: {zipcode_stats.index[0]} ({zipcode_stats.iloc[0]['stations']} stations)</p>
+        </div>
+        '''
+        
+        return f'''
+        <div class="chart-container">
+            {pyo.plot(fig, output_type='div', include_plotlyjs=False)}
+            {summary}
+        </div>
+        '''
 
 
 def create_dashboard(assignments_path: str, metrics_path: Optional[str] = None,

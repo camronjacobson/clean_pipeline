@@ -1,0 +1,191 @@
+======================================================================
+OPTIMIZATION VALIDATION REPORT
+======================================================================
+Timestamp: 2025-08-29 17:42:09.188525
+Stations: 50
+Profile: microwave
+
+INTERFERENCE GRAPH ANALYSIS
+----------------------------------------
+Total edges: 24
+Average neighbors: 0.96
+Max neighbors: 4
+
+1. CO-CHANNEL INTERFERENCE CHECK
+----------------------------------------
+  ✅ PASSED: No co-channel violations found (24 edges checked)
+
+2. ADJACENT CHANNEL CONSTRAINTS CHECK
+----------------------------------------
+  ✅ PASSED: No adjacent channel violations found
+
+3. ZIPCODE FREQUENCY ALLOCATION BALANCE
+----------------------------------------
+  Zipcode 00000:
+    Stations: 19
+    Unique frequencies: 4
+    Efficiency: 4.75 stations/frequency
+    Frequency span: 60.00 MHz
+  Zipcode 02494:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 07070:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 08607:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 19128:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 20004:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 20016:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 22209:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 37917:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 40202:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 44133:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 45342:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 45409:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 47119:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 50309:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 59102:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 60606:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 60611:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 63123:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 68178:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 72701:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 80202:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 82901:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 83113:
+    Stations: 3
+    Unique frequencies: 3
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 40.00 MHz
+  Zipcode 86045:
+    Stations: 4
+    Unique frequencies: 4
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 60.00 MHz
+  Zipcode 86539:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+  Zipcode 87537:
+    Stations: 1
+    Unique frequencies: 1
+    Efficiency: 1.00 stations/frequency
+    Frequency span: 0.00 MHz
+
+  Overall Statistics:
+    Average efficiency: 1.14
+    Std deviation: 0.71
+    Coefficient of variation: 0.62
+  ⚠️  WARNING: Imbalanced allocation detected (CV > 0.5)
+
+4. FREQUENCY BAND COMPLIANCE
+----------------------------------------
+  ✅ PASSED: All frequencies within band [5900.0-6500.0] MHz
+
+5. OPTIMIZATION METRICS VALIDATION
+----------------------------------------
+  Solver status: OPTIMAL
+  ✅ Optimal solution found
+  Constraints generated: 7224
+    Co-channel: 1464
+    Adjacent: 5760
+
+======================================================================
+VALIDATION SUMMARY
+======================================================================
+Total checks performed: 122
+Passed checks: 122
+Success rate: 100.0%
+
+Co-channel violations: 0
+Adjacent channel violations: 0
+Critical errors: 0
+Warnings: 1
+
+✅ VALIDATION PASSED - Optimization results are valid
+======================================================================

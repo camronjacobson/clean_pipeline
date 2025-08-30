@@ -1366,6 +1366,119 @@ Through extensive testing, I validated several critical system properties:
 
 ---
 
+## Part VI.5: Known Issues and Dataset Challenges
+
+### Current Dataset Problems with apps_13
+
+During development and testing with the `apps_13` dataset and its derivatives, several critical issues have been identified that prevent successful optimization:
+
+#### 6.5.1 Data Quality Issues
+
+The `apps_13` dataset exhibits several problematic characteristics that violate the optimizer's assumptions:
+
+1. **Duplicate and Near-Duplicate Stations**: Multiple stations exist at identical or nearly identical coordinates (< 10 meters apart), creating impossible interference constraints:
+   - Example: CROWN MTN, Crown Mountain at essentially the same location
+   - Example: Wintberg, WINTBERG, WINTERBERG all within 10m
+   - Example: Multiple "Red Hook" and "Cottage" entries at same coordinates
+
+2. **Geographic Clustering**: Extreme density of stations in certain geographic areas creates unsolvable interference patterns:
+   - Virgin Islands cluster: 20+ stations within a 20km radius
+   - All stations require minimum 30km separation for co-channel use
+   - Mathematical impossibility: Cannot fit 20 stations in a 20km area with 30km separation
+
+3. **Invalid Frequency Assignments**: The dataset contains frequency values outside standard bands:
+   - Frequencies like 12700-13250 MHz (microwave band, not FM/AM)
+   - These require different propagation models and interference calculations
+
+#### 6.5.2 Optimizer Failure Analysis
+
+The optimizer fails with this dataset due to fundamental mathematical impossibilities:
+
+**Constraint Violation Statistics (Latest Run):**
+```
+Total checks performed: 1469
+Passed checks: 1142
+Success rate: 77.7%
+
+Co-channel violations: 322 (21.9% failure rate)
+Adjacent channel violations: 5
+Critical errors: 1
+```
+
+**Root Causes:**
+1. **Infeasible Constraint Set**: The geographic distribution makes it mathematically impossible to satisfy all interference constraints
+2. **Insufficient Spectrum**: Even with 550 MHz of available spectrum (12700-13250 MHz), the dense clustering prevents frequency reuse
+3. **Solver Status UNKNOWN**: The CP-SAT solver cannot find any valid solution that satisfies all constraints
+
+#### 6.5.3 Specific Failure Examples
+
+**Example 1: Virgin Islands Cluster**
+```
+Stations within interference range:
+- Wintberg ↔ ROMAN HILL: 12.76 km (violates 30km requirement)
+- Wintberg ↔ Bordeaux: 18.55 km (violates 30km requirement)  
+- Wintberg ↔ Red Hook: 4.83 km (violates 30km requirement)
+- CROWN MTN ↔ ROMAN HILL: 19.99 km (violates 30km requirement)
+
+With 8+ stations all within 30km of each other, and only 8 frequencies 
+available after optimization attempts, co-channel violations are inevitable.
+```
+
+**Example 2: Duplicate Station Problem**
+```
+Identical coordinates detected:
+- Wintberg: (18.3458, -64.9764)
+- WINTBERG: (18.3458, -64.9764)
+- WINTERBERG: (18.3459, -64.9765) [< 1m away]
+
+These create zero-distance interference edges that cannot be resolved.
+```
+
+#### 6.5.4 Why the Optimizer Cannot Solve This
+
+The optimization problem becomes infeasible when:
+1. **Graph Density Exceeds Chromatic Number**: The interference graph requires more colors (frequencies) than available
+2. **Clique Formation**: Dense geographic clusters form cliques in the interference graph where every station interferes with every other
+3. **Physical Impossibility**: No amount of optimization can overcome fundamental physics - two transmitters cannot occupy the same space
+
+#### 6.5.5 Recommended Solutions
+
+To make this dataset optimizable, consider:
+
+1. **Data Cleaning**:
+   - Remove duplicate stations at identical coordinates
+   - Merge near-duplicate entries (< 100m apart)
+   - Validate coordinate accuracy
+
+2. **Geographic Distribution**:
+   - Implement minimum spacing requirements during data collection
+   - Consider reducing station density in hotspots
+   - Apply geographic load balancing
+
+3. **Frequency Band Adjustment**:
+   - Use appropriate frequency ranges for the service type
+   - Increase available spectrum for dense deployments
+   - Consider time-division or other multiplexing schemes
+
+4. **Relaxed Constraints**:
+   - Reduce interference radii for low-power stations
+   - Implement power control to minimize interference zones
+   - Use sectored antennas to reduce overlap
+
+#### 6.5.6 Validation Output Interpretation
+
+When seeing validation failures like:
+```
+❌ VIOLATION: Station_A ↔ Station_B
+   Frequency: 12700.00 MHz
+   Distance: X.XX km
+   Interference radius: 30 km
+```
+
+This indicates the optimizer assigned the same frequency to two stations within interference range - a hard constraint violation that makes the solution invalid. The high number of such violations (322 in the latest run) indicates the problem is fundamentally infeasible with the current dataset and constraints.
+
+---
+
 ## Part VII: Conclusions and Future Directions
 
 ### 7.1 Key Achievements

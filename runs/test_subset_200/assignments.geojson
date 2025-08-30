@@ -1,0 +1,3605 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6361388888889,
+          41.87891666666667
+        ]
+      },
+      "properties": {
+        "station_id": "Willis Tower",
+        "assigned_frequency": 89.00000000000001,
+        "power_watts": 1.99526231496888,
+        "azimuth_deg": 279.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "60606"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.84916666666666,
+          38.35027777777778
+        ]
+      },
+      "properties": {
+        "station_id": "WDRB Tower",
+        "assigned_frequency": 92.60000000000007,
+        "power_watts": 66.06934480075954,
+        "azimuth_deg": 39.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "47119"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.1296111111111,
+          41.42538888888889
+        ]
+      },
+      "properties": {
+        "station_id": "Aspen mnt",
+        "assigned_frequency": 95.80000000000011,
+        "power_watts": 89.12509381337459,
+        "azimuth_deg": 337.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.345,
+          41.49611111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Wilkins Tower",
+        "assigned_frequency": 90.20000000000003,
+        "power_watts": 251.18864315095823,
+        "azimuth_deg": 138.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.01447222222222,
+          42.91875
+        ]
+      },
+      "properties": {
+        "station_id": "Cora Butte",
+        "assigned_frequency": 98.20000000000014,
+        "power_watts": 223.872113856834,
+        "azimuth_deg": 138.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.21991666666666,
+          36.018388888888886
+        ]
+      },
+      "properties": {
+        "station_id": "Kessler Mtn",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": 223.87211385683355,
+        "azimuth_deg": 41.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "72701"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.07330555555556,
+          36.59552777777778
+        ]
+      },
+      "properties": {
+        "station_id": "RED VALLEY NTUA",
+        "assigned_frequency": 93.20000000000007,
+        "power_watts": 301.9951720402016,
+        "azimuth_deg": 90.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.24027777777778,
+          40.04416666666666
+        ]
+      },
+      "properties": {
+        "station_id": "Roxborough",
+        "assigned_frequency": 91.00000000000004,
+        "power_watts": 10000.0,
+        "azimuth_deg": 279.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "19128"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.68611111111112,
+          40.282777777777774
+        ]
+      },
+      "properties": {
+        "station_id": "Lawrence Township",
+        "assigned_frequency": 94.6000000000001,
+        "power_watts": 20.892961308540407,
+        "azimuth_deg": 41.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "8607"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.20291666666668,
+          36.35886111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Preston Mesa",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": 134.89628825916532,
+        "azimuth_deg": 6.5,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.01447222222222,
+          42.91875
+        ]
+      },
+      "properties": {
+        "station_id": "Cora Butte",
+        "assigned_frequency": 97.00000000000013,
+        "power_watts": 125.89254117941675,
+        "azimuth_deg": 46.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.924,
+          42.84430555555556
+        ]
+      },
+      "properties": {
+        "station_id": "Mount Airy",
+        "assigned_frequency": 91.80000000000005,
+        "power_watts": 251.18864315095823,
+        "azimuth_deg": 289.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.07019444444444,
+          38.89483333333333
+        ]
+      },
+      "properties": {
+        "station_id": "WJLA STUDIO",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": 64.56542290346559,
+        "azimuth_deg": 352.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "22209"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6231111111111,
+          41.898916666666665
+        ]
+      },
+      "properties": {
+        "station_id": "JOHN HANCOCK",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": 251.1886431509577,
+        "azimuth_deg": 116.8,
+        "beamwidth_deg": 3.0,
+        "zipcode": "60611"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.1006111111111,
+          36.33261111111111
+        ]
+      },
+      "properties": {
+        "station_id": "HOLE IN THE ROCK",
+        "assigned_frequency": 97.00000000000013,
+        "power_watts": 147.91083881682087,
+        "azimuth_deg": 290.1,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0275,
+          38.89416666666666
+        ]
+      },
+      "properties": {
+        "station_id": "Old Post Office",
+        "assigned_frequency": 88.4,
+        "power_watts": 100.0,
+        "azimuth_deg": 279.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "20004"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.66688888888888,
+          35.92283333333333
+        ]
+      },
+      "properties": {
+        "station_id": "Hotevilla B Communi",
+        "assigned_frequency": 89.80000000000003,
+        "power_watts": 275.4228703338166,
+        "azimuth_deg": 106.9,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.23602777777778,
+          36.12580555555556
+        ]
+      },
+      "properties": {
+        "station_id": "Tuba City Chapter",
+        "assigned_frequency": 97.40000000000013,
+        "power_watts": 134.89628825916532,
+        "azimuth_deg": 6.5,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86045"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.86958333333332,
+          37.03413888888889
+        ]
+      },
+      "properties": {
+        "station_id": "nan",
+        "assigned_frequency": 97.40000000000013,
+        "power_watts": 23.9883291901949,
+        "azimuth_deg": 65.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.98691666666669,
+          39.743027777777776
+        ]
+      },
+      "properties": {
+        "station_id": "Amoco",
+        "assigned_frequency": 92.20000000000006,
+        "power_watts": 100000.0,
+        "azimuth_deg": 279.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "80202"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.099,
+          42.553888888888885
+        ]
+      },
+      "properties": {
+        "station_id": "Marbleton",
+        "assigned_frequency": 88.0,
+        "power_watts": 251.18864315095823,
+        "azimuth_deg": 46.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83113"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.18577777777779,
+          39.737027777777776
+        ]
+      },
+      "properties": {
+        "station_id": "WHIO Studio",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": 630.9573444801923,
+        "azimuth_deg": 266.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "45409"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.02330555555557,
+          36.24105555555556
+        ]
+      },
+      "properties": {
+        "station_id": "MIDDLE MESA",
+        "assigned_frequency": 95.4000000000001,
+        "power_watts": 102.32929922807548,
+        "azimuth_deg": 309.1,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.75772222222223,
+          38.256166666666665
+        ]
+      },
+      "properties": {
+        "station_id": "nan",
+        "assigned_frequency": 91.00000000000004,
+        "power_watts": NaN,
+        "azimuth_deg": 195.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "40202"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.57402777777776,
+          45.75494444444445
+        ]
+      },
+      "properties": {
+        "station_id": "KULR Studio",
+        "assigned_frequency": 88.0,
+        "power_watts": 489.7788193684461,
+        "azimuth_deg": 266.8,
+        "beamwidth_deg": 3.0,
+        "zipcode": "59102"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.64166666666668,
+          41.58472222222223
+        ]
+      },
+      "properties": {
+        "station_id": "Studio",
+        "assigned_frequency": 98.20000000000014,
+        "power_watts": 97.72372209558108,
+        "azimuth_deg": 259.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "50309"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.78377777777776,
+          37.36627777777778
+        ]
+      },
+      "properties": {
+        "station_id": "MISSIONARY",
+        "assigned_frequency": 95.4000000000001,
+        "power_watts": 141.25375446227568,
+        "azimuth_deg": 355.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.01447222222222,
+          42.91875
+        ]
+      },
+      "properties": {
+        "station_id": "Cora Butte",
+        "assigned_frequency": 88.4,
+        "power_watts": 223.872113856834,
+        "azimuth_deg": 138.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.24805555555555,
+          39.73388888888889
+        ]
+      },
+      "properties": {
+        "station_id": "Germantown xmtr site",
+        "assigned_frequency": 88.0,
+        "power_watts": 99.99999999999984,
+        "azimuth_deg": 87.1,
+        "beamwidth_deg": 3.0,
+        "zipcode": "45342"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.099,
+          42.553888888888885
+        ]
+      },
+      "properties": {
+        "station_id": "Marbleton",
+        "assigned_frequency": 89.00000000000001,
+        "power_watts": 251.18864315095823,
+        "azimuth_deg": 200.9,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83113"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.22780555555556,
+          42.30397222222222
+        ]
+      },
+      "properties": {
+        "station_id": "5 TV Place",
+        "assigned_frequency": 92.60000000000007,
+        "power_watts": 154.88166189124811,
+        "azimuth_deg": 248.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "2494"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.63552777777778,
+          35.960750000000004
+        ]
+      },
+      "properties": {
+        "station_id": "VBS Pueblo",
+        "assigned_frequency": 92.20000000000006,
+        "power_watts": 239.88329190194895,
+        "azimuth_deg": 15.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.95166666666668,
+          41.25833333333333
+        ]
+      },
+      "properties": {
+        "station_id": "Douglas St.",
+        "assigned_frequency": 95.0000000000001,
+        "power_watts": 263.02679918953817,
+        "azimuth_deg": 295.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "68178"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.7175,
+          41.37388888888889
+        ]
+      },
+      "properties": {
+        "station_id": "WEWS XMTR",
+        "assigned_frequency": 96.60000000000012,
+        "power_watts": 95.49925860214368,
+        "azimuth_deg": 196.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "44133"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.23483333333331,
+          36.14111111111111
+        ]
+      },
+      "properties": {
+        "station_id": "TUBA CITY N",
+        "assigned_frequency": 93.60000000000008,
+        "power_watts": 26.91534803926914,
+        "azimuth_deg": 190.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86045"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.61972222222222,
+          36.35272222222223
+        ]
+      },
+      "properties": {
+        "station_id": "MANY FARMS",
+        "assigned_frequency": 89.40000000000002,
+        "power_watts": 323.5936569296284,
+        "azimuth_deg": 269.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86539"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.8575,
+          36.07888888888889
+        ]
+      },
+      "properties": {
+        "station_id": "Narbona Pass",
+        "assigned_frequency": 91.00000000000004,
+        "power_watts": 478.630092322638,
+        "azimuth_deg": 234.5,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.23311111111111,
+          36.13238888888889
+        ]
+      },
+      "properties": {
+        "station_id": "Tuba Dine College",
+        "assigned_frequency": 90.20000000000003,
+        "power_watts": 48.97788193684469,
+        "azimuth_deg": 314.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86045"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.10138888888888,
+          40.816944444444445
+        ]
+      },
+      "properties": {
+        "station_id": "Rutherford News Bur",
+        "assigned_frequency": 89.00000000000001,
+        "power_watts": 74.13102413009169,
+        "azimuth_deg": 43.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "7070"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.90736111111111,
+          41.3525
+        ]
+      },
+      "properties": {
+        "station_id": "Butte",
+        "assigned_frequency": 89.40000000000002,
+        "power_watts": 251.18864315095823,
+        "azimuth_deg": 138.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.07944444444443,
+          38.95027777777778
+        ]
+      },
+      "properties": {
+        "station_id": "Joint tower",
+        "assigned_frequency": 93.20000000000007,
+        "power_watts": 100.0,
+        "azimuth_deg": 279.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "20016"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.86958333333332,
+          37.03413888888889
+        ]
+      },
+      "properties": {
+        "station_id": "nan",
+        "assigned_frequency": 97.80000000000014,
+        "power_watts": 23.9883291901949,
+        "azimuth_deg": 65.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.12230555555554,
+          36.09780555555556
+        ]
+      },
+      "properties": {
+        "station_id": "Chamita",
+        "assigned_frequency": 89.80000000000003,
+        "power_watts": 177.82794100389228,
+        "azimuth_deg": 225.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "87537"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.345,
+          41.49611111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Wilkins Tower",
+        "assigned_frequency": 99.20000000000016,
+        "power_watts": 251.18864315095823,
+        "azimuth_deg": 138.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.22038888888888,
+          41.584
+        ]
+      },
+      "properties": {
+        "station_id": "200 2ND STREET",
+        "assigned_frequency": 93.20000000000007,
+        "power_watts": 177.82794100389228,
+        "azimuth_deg": 46.8,
+        "beamwidth_deg": 3.0,
+        "zipcode": "82901"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.90736111111111,
+          41.3525
+        ]
+      },
+      "properties": {
+        "station_id": "Butte",
+        "assigned_frequency": 95.80000000000011,
+        "power_watts": 125.89254117941675,
+        "azimuth_deg": 138.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.099,
+          42.553888888888885
+        ]
+      },
+      "properties": {
+        "station_id": "Marbleton",
+        "assigned_frequency": 90.60000000000004,
+        "power_watts": 177.82794100389228,
+        "azimuth_deg": 46.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83113"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.33194444444445,
+          38.56805555555556
+        ]
+      },
+      "properties": {
+        "station_id": "Heege Road",
+        "assigned_frequency": 99.20000000000016,
+        "power_watts": 794.3282347242805,
+        "azimuth_deg": 61.1,
+        "beamwidth_deg": 3.0,
+        "zipcode": "63123"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.23513888888888,
+          36.12997222222222
+        ]
+      },
+      "properties": {
+        "station_id": "TUBA CITY",
+        "assigned_frequency": 95.80000000000011,
+        "power_watts": 23.9883291901949,
+        "azimuth_deg": 65.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86045"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.94277777777778,
+          36.00361111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Sharps Ridge",
+        "assigned_frequency": 90.60000000000004,
+        "power_watts": 389.04514499428126,
+        "azimuth_deg": 135.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "37917"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.69108333333334,
+          42.77625
+        ]
+      },
+      "properties": {
+        "station_id": "Wendell School Distr",
+        "assigned_frequency": 91.80000000000005,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83355"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.53866666666669,
+          46.58372222222223
+        ]
+      },
+      "properties": {
+        "station_id": "nan",
+        "assigned_frequency": 99.20000000000016,
+        "power_watts": NaN,
+        "azimuth_deg": 337.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "98902"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.30161111111111,
+          42.532583333333335
+        ]
+      },
+      "properties": {
+        "station_id": "Hansen Silo",
+        "assigned_frequency": 89.40000000000002,
+        "power_watts": 123.02687708123798,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83325"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.59183333333333,
+          42.56425
+        ]
+      },
+      "properties": {
+        "station_id": "Bayer",
+        "assigned_frequency": 90.20000000000003,
+        "power_watts": 173.78008287493728,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83328"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.9726388888889,
+          40.72830555555556
+        ]
+      },
+      "properties": {
+        "station_id": "KNEELAND",
+        "assigned_frequency": 94.00000000000009,
+        "power_watts": 5.888436553555884,
+        "azimuth_deg": 356.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.17047222222224,
+          42.59477777777778
+        ]
+      },
+      "properties": {
+        "station_id": "Valley School Distri",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": 61.65950018614822,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.74822222222222,
+          41.03783333333333
+        ]
+      },
+      "properties": {
+        "station_id": "SUGARPINE201",
+        "assigned_frequency": 93.20000000000007,
+        "power_watts": 23.442288153199204,
+        "azimuth_deg": 356.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.49172222222222,
+          42.56902777777778
+        ]
+      },
+      "properties": {
+        "station_id": "FHS Martin",
+        "assigned_frequency": 88.0,
+        "power_watts": 154.8816618912478,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83301"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.71808333333334,
+          40.74411111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Burnt Ridge",
+        "assigned_frequency": 90.60000000000004,
+        "power_watts": 89.12509381337459,
+        "azimuth_deg": 139.9,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.52491666666668,
+          40.65413888888889
+        ]
+      },
+      "properties": {
+        "station_id": "SOUTH FORK",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": 107.1519305237606,
+        "azimuth_deg": 291.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "96095"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.55733333333332,
+          42.95611111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Zayo POP",
+        "assigned_frequency": 97.00000000000013,
+        "power_watts": 26.302679918953803,
+        "azimuth_deg": 156.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.42169444444446,
+          42.72936111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Jerome Butte",
+        "assigned_frequency": 93.20000000000007,
+        "power_watts": 26.302679918953803,
+        "azimuth_deg": 156.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.40808333333334,
+          36.89822222222222
+        ]
+      },
+      "properties": {
+        "station_id": "Page Fiber Shelter",
+        "assigned_frequency": 90.60000000000004,
+        "power_watts": 60.255958607435744,
+        "azimuth_deg": 13.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.41938888888888,
+          42.54872222222222
+        ]
+      },
+      "properties": {
+        "station_id": "Western States Equip",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83301"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.54691666666666,
+          42.66972222222222
+        ]
+      },
+      "properties": {
+        "station_id": "Aardema Hill",
+        "assigned_frequency": 95.4000000000001,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.55733333333332,
+          42.95611111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Zayo POP",
+        "assigned_frequency": 92.20000000000006,
+        "power_watts": 46.77351412871979,
+        "azimuth_deg": 156.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.17047222222224,
+          42.59477777777778
+        ]
+      },
+      "properties": {
+        "station_id": "Valley School Distri",
+        "assigned_frequency": 91.00000000000004,
+        "power_watts": 154.8816618912478,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.91380555555556,
+          42.48980555555556
+        ]
+      },
+      "properties": {
+        "station_id": "Burley Site",
+        "assigned_frequency": 91.40000000000005,
+        "power_watts": 173.78008287493728,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.37394444444443,
+          42.53213888888889
+        ]
+      },
+      "properties": {
+        "station_id": "Kimberly School",
+        "assigned_frequency": 89.80000000000003,
+        "power_watts": 87.09635899560791,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83341"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.03111111111112,
+          37.605
+        ]
+      },
+      "properties": {
+        "station_id": "Lone Tree Mtn., UT",
+        "assigned_frequency": 92.20000000000006,
+        "power_watts": 63.09573444801933,
+        "azimuth_deg": 190.8,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.55163888888887,
+          42.56463888888889
+        ]
+      },
+      "properties": {
+        "station_id": "Mid Columbia Bus",
+        "assigned_frequency": 91.00000000000004,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.42169444444446,
+          42.72936111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Jerome Butte",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 156.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.41552777777778,
+          42.72930555555556
+        ]
+      },
+      "properties": {
+        "station_id": "Flat Top Butte",
+        "assigned_frequency": 97.40000000000013,
+        "power_watts": 158.48931924611108,
+        "azimuth_deg": 271.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.55163888888887,
+          42.56463888888889
+        ]
+      },
+      "properties": {
+        "station_id": "Mid Columbia Bus",
+        "assigned_frequency": 97.00000000000013,
+        "power_watts": 154.8816618912478,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.30161111111111,
+          42.532583333333335
+        ]
+      },
+      "properties": {
+        "station_id": "Hansen Silo",
+        "assigned_frequency": 95.0000000000001,
+        "power_watts": 173.78008287493728,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83325"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.49944444444444,
+          42.72519444444445
+        ]
+      },
+      "properties": {
+        "station_id": "Jerome School Distri",
+        "assigned_frequency": 94.6000000000001,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83338"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.15505555555556,
+          43.28061111111112
+        ]
+      },
+      "properties": {
+        "station_id": "Picabo",
+        "assigned_frequency": 95.4000000000001,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83313"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.52491666666668,
+          40.65413888888889
+        ]
+      },
+      "properties": {
+        "station_id": "SOUTH FORK",
+        "assigned_frequency": 99.20000000000016,
+        "power_watts": 107.1519305237606,
+        "azimuth_deg": 291.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "96095"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.91380555555556,
+          42.48980555555556
+        ]
+      },
+      "properties": {
+        "station_id": "Burley Site",
+        "assigned_frequency": 95.0000000000001,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.20872222222222,
+          42.608916666666666
+        ]
+      },
+      "properties": {
+        "station_id": "Eden Silo",
+        "assigned_frequency": 96.60000000000012,
+        "power_watts": 275.4228703338163,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83325"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.41552777777778,
+          42.72930555555556
+        ]
+      },
+      "properties": {
+        "station_id": "Flat Top Butte",
+        "assigned_frequency": 98.20000000000014,
+        "power_watts": 99.99999999999984,
+        "azimuth_deg": 271.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.28644444444444,
+          42.9015
+        ]
+      },
+      "properties": {
+        "station_id": "Canyon Mountain",
+        "assigned_frequency": 92.20000000000006,
+        "power_watts": 75.85775750291836,
+        "azimuth_deg": 166.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "97417"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.73375,
+          40.87380555555556
+        ]
+      },
+      "properties": {
+        "station_id": "PWMHORSETOWE",
+        "assigned_frequency": 97.80000000000014,
+        "power_watts": 23.442288153199204,
+        "azimuth_deg": 356.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.15505555555556,
+          43.28061111111112
+        ]
+      },
+      "properties": {
+        "station_id": "Picabo",
+        "assigned_frequency": 95.0000000000001,
+        "power_watts": 61.65950018614822,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83313"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.203,
+          40.65911111111111
+        ]
+      },
+      "properties": {
+        "station_id": "FARNSWORTH",
+        "assigned_frequency": 91.80000000000005,
+        "power_watts": 41.686938347033575,
+        "azimuth_deg": 230.9,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.43944444444443,
+          42.55791666666666
+        ]
+      },
+      "properties": {
+        "station_id": "FHS Eastland 2",
+        "assigned_frequency": 92.20000000000006,
+        "power_watts": 87.09635899560791,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83301"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.41938888888888,
+          42.54872222222222
+        ]
+      },
+      "properties": {
+        "station_id": "Western States Equip",
+        "assigned_frequency": 99.20000000000016,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83301"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.59183333333333,
+          42.56425
+        ]
+      },
+      "properties": {
+        "station_id": "Bayer",
+        "assigned_frequency": 89.00000000000001,
+        "power_watts": 275.4228703338163,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83328"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.69108333333334,
+          42.77625
+        ]
+      },
+      "properties": {
+        "station_id": "Wendell School Distr",
+        "assigned_frequency": 89.80000000000003,
+        "power_watts": 173.78008287493728,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83355"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.46561111111112,
+          42.55219444444444
+        ]
+      },
+      "properties": {
+        "station_id": "TH OFFICE",
+        "assigned_frequency": 92.60000000000007,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83301"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.30161111111111,
+          42.532583333333335
+        ]
+      },
+      "properties": {
+        "station_id": "Hansen Silo",
+        "assigned_frequency": 88.4,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83325"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.50241666666666,
+          36.75633333333333
+        ]
+      },
+      "properties": {
+        "station_id": "FREMONT PEAK",
+        "assigned_frequency": 97.80000000000014,
+        "power_watts": 44.66835921509632,
+        "azimuth_deg": 233.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.15505555555556,
+          43.28061111111112
+        ]
+      },
+      "properties": {
+        "station_id": "Picabo",
+        "assigned_frequency": 89.80000000000003,
+        "power_watts": 52.48074602497723,
+        "azimuth_deg": 156.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83313"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.54691666666666,
+          42.66972222222222
+        ]
+      },
+      "properties": {
+        "station_id": "Aardema Hill",
+        "assigned_frequency": 93.60000000000008,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.15505555555556,
+          43.28061111111112
+        ]
+      },
+      "properties": {
+        "station_id": "Picabo",
+        "assigned_frequency": 97.00000000000013,
+        "power_watts": 46.77351412871979,
+        "azimuth_deg": 156.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83313"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.59183333333333,
+          42.56425
+        ]
+      },
+      "properties": {
+        "station_id": "Bayer",
+        "assigned_frequency": 97.80000000000014,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83328"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.97436111111112,
+          37.84169444444445
+        ]
+      },
+      "properties": {
+        "station_id": "Red Hills, UT",
+        "assigned_frequency": 98.20000000000014,
+        "power_watts": 125.89254117941675,
+        "azimuth_deg": 190.8,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.15505555555556,
+          43.28061111111112
+        ]
+      },
+      "properties": {
+        "station_id": "Picabo",
+        "assigned_frequency": 91.40000000000005,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 217.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "83313"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.68555555555557,
+          61.10111111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Glen Alps",
+        "assigned_frequency": 95.4000000000001,
+        "power_watts": 707.9457843841374,
+        "azimuth_deg": 132.9,
+        "beamwidth_deg": 3.0,
+        "zipcode": "99516"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.83341666666666,
+          40.68997222222222
+        ]
+      },
+      "properties": {
+        "station_id": "Repeater Ridge",
+        "assigned_frequency": 93.20000000000007,
+        "power_watts": 85.11380382023759,
+        "azimuth_deg": 302.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "96052"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.91511111111112,
+          35.23405555555556
+        ]
+      },
+      "properties": {
+        "station_id": "Chi Chil Tah",
+        "assigned_frequency": 90.20000000000003,
+        "power_watts": 61.65950018614832,
+        "azimuth_deg": 319.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.75461111111112,
+          17.721944444444443
+        ]
+      },
+      "properties": {
+        "station_id": "Cottage",
+        "assigned_frequency": 97.40000000000013,
+        "power_watts": 25.11886431509581,
+        "azimuth_deg": 263.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "822"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.97005555555556,
+          18.35686111111111
+        ]
+      },
+      "properties": {
+        "station_id": "CROWN MTN",
+        "assigned_frequency": 92.60000000000007,
+        "power_watts": 33.11311214825915,
+        "azimuth_deg": 246.5,
+        "beamwidth_deg": 3.0,
+        "zipcode": "803"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.90152777777779,
+          18.349027777777778
+        ]
+      },
+      "properties": {
+        "station_id": "Wintberg",
+        "assigned_frequency": 93.20000000000007,
+        "power_watts": 33.11311214825915,
+        "azimuth_deg": 94.5,
+        "beamwidth_deg": 3.0,
+        "zipcode": "802"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.75461111111112,
+          17.721944444444443
+        ]
+      },
+      "properties": {
+        "station_id": "Cottage",
+        "assigned_frequency": 91.80000000000005,
+        "power_watts": 158.48931924611142,
+        "azimuth_deg": 88.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "822"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.68769444444445,
+          17.72936111111111
+        ]
+      },
+      "properties": {
+        "station_id": "MT WELCOME",
+        "assigned_frequency": 95.4000000000001,
+        "power_watts": 15.135612484362072,
+        "azimuth_deg": 268.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "824"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.81975,
+          17.71025
+        ]
+      },
+      "properties": {
+        "station_id": "MtPleasant",
+        "assigned_frequency": 99.20000000000016,
+        "power_watts": 25.11886431509581,
+        "azimuth_deg": 268.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "841"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.68769444444445,
+          17.72936111111111
+        ]
+      },
+      "properties": {
+        "station_id": "MT WELCOME",
+        "assigned_frequency": 97.00000000000013,
+        "power_watts": 30.199517204020147,
+        "azimuth_deg": 268.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "824"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.75461111111112,
+          17.721944444444443
+        ]
+      },
+      "properties": {
+        "station_id": "Cottage",
+        "assigned_frequency": 90.60000000000004,
+        "power_watts": 34.67368504525322,
+        "azimuth_deg": 276.9,
+        "beamwidth_deg": 3.0,
+        "zipcode": "822"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.68769444444445,
+          17.72936111111111
+        ]
+      },
+      "properties": {
+        "station_id": "MT WELCOME",
+        "assigned_frequency": 89.80000000000003,
+        "power_watts": 30.199517204020147,
+        "azimuth_deg": 263.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "824"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.36408333333333,
+          29.7605
+        ]
+      },
+      "properties": {
+        "station_id": "Chase Bank, TX",
+        "assigned_frequency": 99.20000000000016,
+        "power_watts": 501.18723362727246,
+        "azimuth_deg": 69.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "77002"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.78402777777778,
+          18.321194444444444
+        ]
+      },
+      "properties": {
+        "station_id": "ROMAN HILL",
+        "assigned_frequency": 88.4,
+        "power_watts": 36.30780547701016,
+        "azimuth_deg": 284.5,
+        "beamwidth_deg": 3.0,
+        "zipcode": "830"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.86297222222221,
+          18.3255
+        ]
+      },
+      "properties": {
+        "station_id": "Red Hook",
+        "assigned_frequency": 88.0,
+        "power_watts": 54.95408738576254,
+        "azimuth_deg": 107.1,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.75461111111112,
+          17.721944444444443
+        ]
+      },
+      "properties": {
+        "station_id": "Cottage",
+        "assigned_frequency": 96.60000000000012,
+        "power_watts": 63.09573444801933,
+        "azimuth_deg": 88.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "822"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.88511111111112,
+          17.761333333333333
+        ]
+      },
+      "properties": {
+        "station_id": "Global Crossing",
+        "assigned_frequency": 93.60000000000008,
+        "power_watts": 41.686938347033575,
+        "azimuth_deg": 1.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.7996111111111,
+          17.754944444444444
+        ]
+      },
+      "properties": {
+        "station_id": "Blue",
+        "assigned_frequency": 89.40000000000002,
+        "power_watts": 4.897788193684469,
+        "azimuth_deg": 276.9,
+        "beamwidth_deg": 3.0,
+        "zipcode": "851"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.95288888888888,
+          32.22166666666667
+        ]
+      },
+      "properties": {
+        "station_id": "KUDF Studio",
+        "assigned_frequency": 90.20000000000003,
+        "power_watts": 218.7761623949552,
+        "azimuth_deg": 281.2,
+        "beamwidth_deg": 3.0,
+        "zipcode": "85721"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.90152777777779,
+          18.349027777777778
+        ]
+      },
+      "properties": {
+        "station_id": "WINTBERG",
+        "assigned_frequency": 94.00000000000009,
+        "power_watts": 20.892961308540407,
+        "azimuth_deg": 246.5,
+        "beamwidth_deg": 3.0,
+        "zipcode": "802"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.90152777777779,
+          18.34894444444444
+        ]
+      },
+      "properties": {
+        "station_id": "WINTERBERG",
+        "assigned_frequency": 89.40000000000002,
+        "power_watts": 251.18864315095823,
+        "azimuth_deg": 313.8,
+        "beamwidth_deg": 3.0,
+        "zipcode": "802"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.87727777777778,
+          17.75861111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Caledonia",
+        "assigned_frequency": 97.00000000000013,
+        "power_watts": 3.467368504525316,
+        "azimuth_deg": 1.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "870"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.87727777777778,
+          17.75861111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Caledonia",
+        "assigned_frequency": 91.00000000000004,
+        "power_watts": 41.686938347033575,
+        "azimuth_deg": 1.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "870"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.87727777777778,
+          17.75861111111111
+        ]
+      },
+      "properties": {
+        "station_id": "Caledonia",
+        "assigned_frequency": 89.00000000000001,
+        "power_watts": 41.686938347033575,
+        "azimuth_deg": 1.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "870"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.89836111111111,
+          35.89863888888889
+        ]
+      },
+      "properties": {
+        "station_id": "CERRO PINON",
+        "assigned_frequency": 93.60000000000008,
+        "power_watts": 63.09573444801933,
+        "azimuth_deg": 225.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.75461111111112,
+          17.721944444444443
+        ]
+      },
+      "properties": {
+        "station_id": "SUNNY ISLE",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": 56.23413251903491,
+        "azimuth_deg": 237.1,
+        "beamwidth_deg": 3.0,
+        "zipcode": "822"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.72602777777777,
+          18.335638888888887
+        ]
+      },
+      "properties": {
+        "station_id": "Bordeaux",
+        "assigned_frequency": 95.0000000000001,
+        "power_watts": 33.11311214825915,
+        "azimuth_deg": 94.5,
+        "beamwidth_deg": 3.0,
+        "zipcode": "830"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1125,
+          18.279722222222222
+        ]
+      },
+      "properties": {
+        "station_id": "Marquesa, Channel 11",
+        "assigned_frequency": 97.80000000000014,
+        "power_watts": 125.89254117941648,
+        "azimuth_deg": 0.1,
+        "beamwidth_deg": 3.0,
+        "zipcode": "703"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.9067777777778,
+          34.06169444444444
+        ]
+      },
+      "properties": {
+        "station_id": "COOLEY MTN",
+        "assigned_frequency": 91.40000000000005,
+        "power_watts": 38.0189396320561,
+        "azimuth_deg": 1.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "85930"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.75461111111112,
+          17.721944444444443
+        ]
+      },
+      "properties": {
+        "station_id": "Cottage",
+        "assigned_frequency": 88.4,
+        "power_watts": 21.877616239495563,
+        "azimuth_deg": 276.9,
+        "beamwidth_deg": 3.0,
+        "zipcode": "822"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.83430555555555,
+          17.744694444444445
+        ]
+      },
+      "properties": {
+        "station_id": "Pemberton",
+        "assigned_frequency": 93.20000000000007,
+        "power_watts": 52.48074602497731,
+        "azimuth_deg": 1.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.90152777777779,
+          18.34894444444444
+        ]
+      },
+      "properties": {
+        "station_id": "WINTERBERG",
+        "assigned_frequency": 90.20000000000003,
+        "power_watts": 33.11311214825915,
+        "azimuth_deg": 246.5,
+        "beamwidth_deg": 3.0,
+        "zipcode": "802"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.98,
+          35.66308333333333
+        ]
+      },
+      "properties": {
+        "station_id": "CNSP",
+        "assigned_frequency": 93.60000000000008,
+        "power_watts": 104.71285480509006,
+        "azimuth_deg": 136.5,
+        "beamwidth_deg": 3.0,
+        "zipcode": "87605"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.58361111111113,
+          29.50855555555556
+        ]
+      },
+      "properties": {
+        "station_id": "nan",
+        "assigned_frequency": 92.60000000000007,
+        "power_watts": 1000.0,
+        "azimuth_deg": 279.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "78229"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.72783333333334,
+          17.74663888888889
+        ]
+      },
+      "properties": {
+        "station_id": "Little Princess",
+        "assigned_frequency": 92.20000000000006,
+        "power_watts": 25.11886431509581,
+        "azimuth_deg": 268.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "823"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.48191666666666,
+          29.74941666666667
+        ]
+      },
+      "properties": {
+        "station_id": "San Felipe",
+        "assigned_frequency": 88.0,
+        "power_watts": 120.22644346174118,
+        "azimuth_deg": 84.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "77057"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.72641666666667,
+          17.745083333333334
+        ]
+      },
+      "properties": {
+        "station_id": "Princess",
+        "assigned_frequency": 93.60000000000008,
+        "power_watts": 25.11886431509581,
+        "azimuth_deg": 268.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "823"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.36841666666666,
+          29.758472222222224
+        ]
+      },
+      "properties": {
+        "station_id": "Louisiana Street",
+        "assigned_frequency": 92.60000000000007,
+        "power_watts": 47.8630092322639,
+        "azimuth_deg": NaN,
+        "beamwidth_deg": 3.0,
+        "zipcode": "77002"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.86297222222221,
+          18.3255
+        ]
+      },
+      "properties": {
+        "station_id": "Red Hook",
+        "assigned_frequency": 97.00000000000013,
+        "power_watts": 52.48074602497731,
+        "azimuth_deg": 94.5,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.36841666666666,
+          29.758472222222224
+        ]
+      },
+      "properties": {
+        "station_id": "Louisiana Street",
+        "assigned_frequency": 89.00000000000001,
+        "power_watts": 120.22644346174118,
+        "azimuth_deg": 84.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "77002"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.3,
+          34.10494444444445
+        ]
+      },
+      "properties": {
+        "station_id": "Eager",
+        "assigned_frequency": 97.80000000000014,
+        "power_watts": 223.872113856834,
+        "azimuth_deg": 260.1,
+        "beamwidth_deg": 3.0,
+        "zipcode": "85925"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.86297222222221,
+          18.3255
+        ]
+      },
+      "properties": {
+        "station_id": "Red Hook",
+        "assigned_frequency": 98.20000000000014,
+        "power_watts": 66.06934480075964,
+        "azimuth_deg": 1.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.30158333333333,
+          35.80869444444444
+        ]
+      },
+      "properties": {
+        "station_id": "TINIAN",
+        "assigned_frequency": 97.00000000000013,
+        "power_watts": 114.81536214968816,
+        "azimuth_deg": 195.1,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.98,
+          35.66308333333333
+        ]
+      },
+      "properties": {
+        "station_id": "CNSP",
+        "assigned_frequency": 95.80000000000011,
+        "power_watts": 165.95869074375614,
+        "azimuth_deg": 136.5,
+        "beamwidth_deg": 3.0,
+        "zipcode": "87605"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.74755555555556,
+          30.28383333333333
+        ]
+      },
+      "properties": {
+        "station_id": "Receive (Studio)",
+        "assigned_frequency": 96.60000000000012,
+        "power_watts": 281.8382931264449,
+        "azimuth_deg": 132.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "78705"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.68769444444445,
+          17.72936111111111
+        ]
+      },
+      "properties": {
+        "station_id": "MT WELCOME",
+        "assigned_frequency": 91.40000000000005,
+        "power_watts": 15.848931924611142,
+        "azimuth_deg": 268.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "824"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.97,
+          18.356916666666667
+        ]
+      },
+      "properties": {
+        "station_id": "Crown Mountain",
+        "assigned_frequency": 92.20000000000006,
+        "power_watts": 52.48074602497731,
+        "azimuth_deg": 181.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "803"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4802777777778,
+          31.7875
+        ]
+      },
+      "properties": {
+        "station_id": "S FRANKLIN",
+        "assigned_frequency": 90.20000000000003,
+        "power_watts": 100.0,
+        "azimuth_deg": 279.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "79902"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.88511111111112,
+          17.761333333333333
+        ]
+      },
+      "properties": {
+        "station_id": "Global Crossing",
+        "assigned_frequency": 88.0,
+        "power_watts": 3.467368504525316,
+        "azimuth_deg": 1.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.7996111111111,
+          17.754944444444444
+        ]
+      },
+      "properties": {
+        "station_id": "Blue",
+        "assigned_frequency": 98.20000000000014,
+        "power_watts": 66.06934480075964,
+        "azimuth_deg": 1.4,
+        "beamwidth_deg": 3.0,
+        "zipcode": "851"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.72783333333334,
+          17.74663888888889
+        ]
+      },
+      "properties": {
+        "station_id": "Little Princess",
+        "assigned_frequency": 92.60000000000007,
+        "power_watts": 54.95408738576254,
+        "azimuth_deg": 276.9,
+        "beamwidth_deg": 3.0,
+        "zipcode": "823"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.71369444444444,
+          35.53397222222222
+        ]
+      },
+      "properties": {
+        "station_id": "Gallup East",
+        "assigned_frequency": 91.00000000000004,
+        "power_watts": 109.64781961431852,
+        "azimuth_deg": 122.1,
+        "beamwidth_deg": 3.0,
+        "zipcode": "87301"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.55152777777778,
+          35.39308333333333
+        ]
+      },
+      "properties": {
+        "station_id": "MCCORMICK",
+        "assigned_frequency": 97.80000000000014,
+        "power_watts": 42.65795188015925,
+        "azimuth_deg": 287.1,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.06188888888887,
+          35.52430555555556
+        ]
+      },
+      "properties": {
+        "station_id": "AFB",
+        "assigned_frequency": 89.80000000000003,
+        "power_watts": 251.18864315095848,
+        "azimuth_deg": 137.8,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.33638888888888,
+          34.52133333333333
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-008-AN-H",
+        "assigned_frequency": 92.60000000000007,
+        "power_watts": 39.81071705534973,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.3551111111111,
+          34.50313888888889
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-090-BR-H",
+        "assigned_frequency": 95.4000000000001,
+        "power_watts": 199.52623149688807,
+        "azimuth_deg": NaN,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86406"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.34844444444444,
+          34.49188888888889
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-002-SP-CN",
+        "assigned_frequency": 95.80000000000011,
+        "power_watts": 112.2018454301964,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86403"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.33927777777777,
+          34.49377777777778
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-088-HHP-H",
+        "assigned_frequency": 94.6000000000001,
+        "power_watts": 112.2018454301964,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86403"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.27052777777776,
+          34.61675
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-001-RM-H",
+        "assigned_frequency": 96.60000000000012,
+        "power_watts": 89.12509381337459,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.5478611111111,
+          34.19333333333333
+        ]
+      },
+      "properties": {
+        "station_id": "2874",
+        "assigned_frequency": 99.20000000000016,
+        "power_watts": 154.88166189124811,
+        "azimuth_deg": 156.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "91335"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.04580555555556,
+          35.669999999999995
+        ]
+      },
+      "properties": {
+        "station_id": "ROCKY BUTTE",
+        "assigned_frequency": 97.80000000000014,
+        "power_watts": 141.2537544622754,
+        "azimuth_deg": 137.8,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.33927777777777,
+          34.49377777777778
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-088-HHP-H",
+        "assigned_frequency": 96.60000000000012,
+        "power_watts": 70.79457843841381,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86403"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.36138888888888,
+          34.56966666666667
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-075-DS-H",
+        "assigned_frequency": 97.40000000000013,
+        "power_watts": 112.2018454301964,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.3551111111111,
+          34.50313888888889
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-090-BR-H",
+        "assigned_frequency": 89.40000000000002,
+        "power_watts": 79.43282347242817,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86406"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.3551111111111,
+          34.50313888888889
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-090-BR-H",
+        "assigned_frequency": 93.20000000000007,
+        "power_watts": 251.18864315095823,
+        "azimuth_deg": NaN,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86406"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.36497222222222,
+          34.56477777777778
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-121-JR-H",
+        "assigned_frequency": 90.60000000000004,
+        "power_watts": 89.12509381337459,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.27052777777776,
+          34.61675
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-001-RM-H",
+        "assigned_frequency": 94.6000000000001,
+        "power_watts": 89.12509381337459,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.33927777777777,
+          34.49377777777778
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-088-HHP-H",
+        "assigned_frequency": 91.00000000000004,
+        "power_watts": 112.2018454301964,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86403"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.28866666666669,
+          33.757777777777775
+        ]
+      },
+      "properties": {
+        "station_id": "1760",
+        "assigned_frequency": 88.0,
+        "power_watts": 154.88166189124811,
+        "azimuth_deg": 156.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "90731"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73155555555556,
+          35.43838888888889
+        ]
+      },
+      "properties": {
+        "station_id": "NEW SADDLE",
+        "assigned_frequency": 94.6000000000001,
+        "power_watts": 42.65795188015925,
+        "azimuth_deg": 287.1,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.45591666666668,
+          34.03388888888889
+        ]
+      },
+      "properties": {
+        "station_id": "KTTV REMOTE",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": NaN,
+        "azimuth_deg": 279.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "90025"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.93694444444444,
+          32.69669444444444
+        ]
+      },
+      "properties": {
+        "station_id": "SAN MIGUEL MT",
+        "assigned_frequency": 93.60000000000008,
+        "power_watts": 436.51583224016656,
+        "azimuth_deg": 289.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "91978"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.04580555555556,
+          35.669999999999995
+        ]
+      },
+      "properties": {
+        "station_id": "ROCKY BUTTE",
+        "assigned_frequency": 95.80000000000011,
+        "power_watts": 112.2018454301964,
+        "azimuth_deg": 137.8,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.28866666666669,
+          33.757777777777775
+        ]
+      },
+      "properties": {
+        "station_id": "1760",
+        "assigned_frequency": 90.60000000000004,
+        "power_watts": 537.0317963702532,
+        "azimuth_deg": 156.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "90731"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.34844444444444,
+          34.49188888888889
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-002-SP-CN",
+        "assigned_frequency": 93.60000000000008,
+        "power_watts": 39.81071705534973,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86403"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.36733333333332,
+          34.54625
+        ]
+      },
+      "properties": {
+        "station_id": "Desert Hills FD STN1",
+        "assigned_frequency": 98.20000000000014,
+        "power_watts": 100.0,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.41005555555556,
+          34.253055555555555
+        ]
+      },
+      "properties": {
+        "station_id": "3280",
+        "assigned_frequency": 89.40000000000002,
+        "power_watts": 537.0317963702532,
+        "azimuth_deg": 156.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "91331"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.66011111111112,
+          34.075583333333334
+        ]
+      },
+      "properties": {
+        "station_id": "Saddle Peak",
+        "assigned_frequency": 88.0,
+        "power_watts": 316.2277660168376,
+        "azimuth_deg": 78.9,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.33638888888888,
+          34.52133333333333
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-008-AN-H",
+        "assigned_frequency": 91.80000000000005,
+        "power_watts": 177.82794100389228,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.53366666666666,
+          33.71188888888889
+        ]
+      },
+      "properties": {
+        "station_id": "Santiago",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": 10000.0,
+        "azimuth_deg": 279.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.27616666666668,
+          34.073055555555555
+        ]
+      },
+      "properties": {
+        "station_id": "1489",
+        "assigned_frequency": 91.00000000000004,
+        "power_watts": 223.872113856834,
+        "azimuth_deg": 192.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "90026"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.30527777777776,
+          34.52283333333333
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-032-DD-H",
+        "assigned_frequency": 97.00000000000013,
+        "power_watts": 112.2018454301964,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.37094444444443,
+          34.602361111111115
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-031-GH-H",
+        "assigned_frequency": 94.00000000000009,
+        "power_watts": 398.1071705534973,
+        "azimuth_deg": NaN,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.30527777777776,
+          34.52283333333333
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-032-DD-H",
+        "assigned_frequency": 96.20000000000012,
+        "power_watts": 112.2018454301964,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.36497222222222,
+          34.56477777777778
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-121-JR-H",
+        "assigned_frequency": 91.40000000000005,
+        "power_watts": 100.0,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.36733333333332,
+          34.54625
+        ]
+      },
+      "properties": {
+        "station_id": "Desert Hills FD STN1",
+        "assigned_frequency": 88.4,
+        "power_watts": 112.2018454301964,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.2906111111111,
+          34.219722222222224
+        ]
+      },
+      "properties": {
+        "station_id": "0163",
+        "assigned_frequency": 89.00000000000001,
+        "power_watts": 154.88166189124811,
+        "azimuth_deg": 156.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "91501"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.33638888888888,
+          34.52133333333333
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-008-AN-H",
+        "assigned_frequency": 89.80000000000003,
+        "power_watts": 100.0,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.06666666666666,
+          34.22666666666667
+        ]
+      },
+      "properties": {
+        "station_id": "Mt. Wilson",
+        "assigned_frequency": 97.00000000000013,
+        "power_watts": 165.95869074375597,
+        "azimuth_deg": 111.7,
+        "beamwidth_deg": 3.0,
+        "zipcode": "91023"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.3551111111111,
+          34.50313888888889
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-090-BR-H",
+        "assigned_frequency": 92.20000000000006,
+        "power_watts": 100.0,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86406"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.34844444444444,
+          34.49188888888889
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-002-SP-CN",
+        "assigned_frequency": 95.0000000000001,
+        "power_watts": 70.79457843841381,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86403"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.5478611111111,
+          34.19333333333333
+        ]
+      },
+      "properties": {
+        "station_id": "2874",
+        "assigned_frequency": 91.40000000000005,
+        "power_watts": 30.902954325135905,
+        "azimuth_deg": 156.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "91335"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.34844444444444,
+          34.49188888888889
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-002-SP-CN",
+        "assigned_frequency": 90.20000000000003,
+        "power_watts": 89.12509381337459,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86403"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.25616666666669,
+          34.0125
+        ]
+      },
+      "properties": {
+        "station_id": "STATION",
+        "assigned_frequency": 95.80000000000011,
+        "power_watts": 251.18864315095823,
+        "azimuth_deg": 336.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "90011"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.33061111111112,
+          34.096111111111114
+        ]
+      },
+      "properties": {
+        "station_id": "1923",
+        "assigned_frequency": 90.20000000000003,
+        "power_watts": 154.88166189124811,
+        "azimuth_deg": 156.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "90028"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.30527777777776,
+          34.52283333333333
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-032-DD-H",
+        "assigned_frequency": 97.80000000000014,
+        "power_watts": 56.23413251903491,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.06188888888887,
+          35.52430555555556
+        ]
+      },
+      "properties": {
+        "station_id": "AFB",
+        "assigned_frequency": 98.20000000000014,
+        "power_watts": 223.8721138568345,
+        "azimuth_deg": 318.0,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.27052777777776,
+          34.61675
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-001-RM-H",
+        "assigned_frequency": 95.80000000000011,
+        "power_watts": 112.2018454301964,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.36733333333332,
+          34.54625
+        ]
+      },
+      "properties": {
+        "station_id": "Desert Hills FD STN1",
+        "assigned_frequency": 88.0,
+        "power_watts": 100.0,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.36733333333332,
+          34.54625
+        ]
+      },
+      "properties": {
+        "station_id": "Desert Hills FD STN1",
+        "assigned_frequency": 89.00000000000001,
+        "power_watts": 70.79457843841381,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.28869444444445,
+          34.157222222222224
+        ]
+      },
+      "properties": {
+        "station_id": "KABC GLENDAL",
+        "assigned_frequency": 91.40000000000005,
+        "power_watts": 501.1872336272714,
+        "azimuth_deg": 249.3,
+        "beamwidth_deg": 3.0,
+        "zipcode": "91201"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.36497222222222,
+          34.56477777777778
+        ]
+      },
+      "properties": {
+        "station_id": "LHC-121-JR-H",
+        "assigned_frequency": 99.20000000000016,
+        "power_watts": 39.81071705534973,
+        "azimuth_deg": 160.6,
+        "beamwidth_deg": 3.0,
+        "zipcode": "86404"
+      }
+    }
+  ]
+}

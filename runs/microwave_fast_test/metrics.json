@@ -1,0 +1,1284 @@
+{
+  "unique_frequencies": 4,
+  "total_stations": 50,
+  "solve_time_seconds": 0.5275270938873291,
+  "solver_status": "OPTIMAL",
+  "constraint_stats": {
+    "co_channel": 288,
+    "adjacent_channel": 1056,
+    "total": 1344,
+    "skipped_invalid": 48
+  },
+  "neighbor_metrics": {
+    "total_stations": 50,
+    "total_edges": 24,
+    "avg_neighbors": 0.96,
+    "max_neighbors": 4,
+    "min_neighbors": 0,
+    "complexity_class": "O(log n) - very sparse",
+    "edge_density": 0.03918367346938775,
+    "speedup_vs_all_pairs": 25.520833333333332,
+    "cache_hit_rate": 37.5,
+    "directional_config": {
+      "r_main_km": 30,
+      "r_off_km": 5,
+      "az_tolerance_deg": 2.0
+    }
+  },
+  "objective_metrics": {
+    "channels_used": 4,
+    "channel_indices_used": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "spectrum_span_khz": 300000.0,
+    "channel_packing_score": 3.0
+  },
+  "zipcode_metrics": {
+    "interference": {
+      "available": true,
+      "by_zipcode": {
+        "00000": {
+          "station_count": 4,
+          "internal_edges": 1,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.5,
+          "stations": [
+            3,
+            39,
+            43,
+            45
+          ]
+        },
+        "02494": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            30
+          ]
+        },
+        "07070": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            38
+          ]
+        },
+        "08648": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            8
+          ]
+        },
+        "19128": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            7
+          ]
+        },
+        "20004": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 1,
+          "connected_zipcodes": [
+            "22209"
+          ],
+          "avg_interference_degree": 1.0,
+          "stations": [
+            15
+          ]
+        },
+        "20016": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 1,
+          "connected_zipcodes": [
+            "22209"
+          ],
+          "avg_interference_degree": 1.0,
+          "stations": [
+            40
+          ]
+        },
+        "22209": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 2,
+          "connected_zipcodes": [
+            "20004",
+            "20016"
+          ],
+          "avg_interference_degree": 2.0,
+          "stations": [
+            12
+          ]
+        },
+        "37918": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            49
+          ]
+        },
+        "40202": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            23
+          ]
+        },
+        "44134": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            33
+          ]
+        },
+        "45409": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 1,
+          "connected_zipcodes": [
+            "45417"
+          ],
+          "avg_interference_degree": 1.0,
+          "stations": [
+            21
+          ]
+        },
+        "45417": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 1,
+          "connected_zipcodes": [
+            "45409"
+          ],
+          "avg_interference_degree": 1.0,
+          "stations": [
+            28
+          ]
+        },
+        "47119": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            1
+          ]
+        },
+        "50309": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            25
+          ]
+        },
+        "59102": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            24
+          ]
+        },
+        "60606": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 1,
+          "connected_zipcodes": [
+            "60611"
+          ],
+          "avg_interference_degree": 1.0,
+          "stations": [
+            0
+          ]
+        },
+        "60611": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 1,
+          "connected_zipcodes": [
+            "60606"
+          ],
+          "avg_interference_degree": 1.0,
+          "stations": [
+            13
+          ]
+        },
+        "63123": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            47
+          ]
+        },
+        "68131": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            32
+          ]
+        },
+        "72730": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            5
+          ]
+        },
+        "80202": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            19
+          ]
+        },
+        "81301": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            26
+          ]
+        },
+        "82901": {
+          "station_count": 2,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.5,
+          "stations": [
+            2,
+            44
+          ]
+        },
+        "82925": {
+          "station_count": 3,
+          "internal_edges": 1,
+          "external_edges": 2,
+          "connected_zipcodes": [
+            "82941"
+          ],
+          "avg_interference_degree": 1.6666666666666667,
+          "stations": [
+            4,
+            10,
+            27
+          ]
+        },
+        "82941": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 2,
+          "connected_zipcodes": [
+            "82925"
+          ],
+          "avg_interference_degree": 2.0,
+          "stations": [
+            11
+          ]
+        },
+        "83113": {
+          "station_count": 3,
+          "internal_edges": 1,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 1.0,
+          "stations": [
+            20,
+            29,
+            46
+          ]
+        },
+        "86030": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            16
+          ]
+        },
+        "86040": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 2,
+          "connected_zipcodes": [
+            "86045"
+          ],
+          "avg_interference_degree": 2.0,
+          "stations": [
+            9
+          ]
+        },
+        "86044": {
+          "station_count": 2,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.5,
+          "stations": [
+            18,
+            41
+          ]
+        },
+        "86045": {
+          "station_count": 5,
+          "internal_edges": 3,
+          "external_edges": 2,
+          "connected_zipcodes": [
+            "86040"
+          ],
+          "avg_interference_degree": 1.6,
+          "stations": [
+            17,
+            22,
+            34,
+            37,
+            48
+          ]
+        },
+        "86510": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            14
+          ]
+        },
+        "86538": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            35
+          ]
+        },
+        "86544": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            6
+          ]
+        },
+        "87013": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            31
+          ]
+        },
+        "87325": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            36
+          ]
+        },
+        "87549": {
+          "station_count": 1,
+          "internal_edges": 0,
+          "external_edges": 0,
+          "connected_zipcodes": [],
+          "avg_interference_degree": 0.0,
+          "stations": [
+            42
+          ]
+        }
+      },
+      "summary": {
+        "total_zipcodes": 37,
+        "total_internal_edges": 6,
+        "total_external_edges": 8,
+        "total_edges": 24,
+        "internal_ratio": 0.25,
+        "external_ratio": 0.3333333333333333
+      }
+    },
+    "frequency_usage": {
+      "available": true,
+      "by_zipcode": {
+        "00000": {
+          "station_count": 4,
+          "unique_frequencies": 2,
+          "frequency_distribution": {
+            "13000.0": 2,
+            "12900.0": 2
+          },
+          "most_used_frequency": 13000.0,
+          "frequency_reuse_ratio": 0.5,
+          "min_frequency": 12900.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 100.0
+        },
+        "02494": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12900.0": 1
+          },
+          "most_used_frequency": 12900.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12900.0,
+          "max_frequency": 12900.0,
+          "frequency_span_mhz": 0.0
+        },
+        "07070": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12700.0": 1
+          },
+          "most_used_frequency": 12700.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12700.0,
+          "max_frequency": 12700.0,
+          "frequency_span_mhz": 0.0
+        },
+        "08648": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12700.0": 1
+          },
+          "most_used_frequency": 12700.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12700.0,
+          "max_frequency": 12700.0,
+          "frequency_span_mhz": 0.0
+        },
+        "19128": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "13000.0": 1
+          },
+          "most_used_frequency": 13000.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 13000.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 0.0
+        },
+        "20004": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12800.0": 1
+          },
+          "most_used_frequency": 12800.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12800.0,
+          "max_frequency": 12800.0,
+          "frequency_span_mhz": 0.0
+        },
+        "20016": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "13000.0": 1
+          },
+          "most_used_frequency": 13000.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 13000.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 0.0
+        },
+        "22209": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12700.0": 1
+          },
+          "most_used_frequency": 12700.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12700.0,
+          "max_frequency": 12700.0,
+          "frequency_span_mhz": 0.0
+        },
+        "37918": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12800.0": 1
+          },
+          "most_used_frequency": 12800.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12800.0,
+          "max_frequency": 12800.0,
+          "frequency_span_mhz": 0.0
+        },
+        "40202": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12800.0": 1
+          },
+          "most_used_frequency": 12800.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12800.0,
+          "max_frequency": 12800.0,
+          "frequency_span_mhz": 0.0
+        },
+        "44134": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12700.0": 1
+          },
+          "most_used_frequency": 12700.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12700.0,
+          "max_frequency": 12700.0,
+          "frequency_span_mhz": 0.0
+        },
+        "45409": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12900.0": 1
+          },
+          "most_used_frequency": 12900.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12900.0,
+          "max_frequency": 12900.0,
+          "frequency_span_mhz": 0.0
+        },
+        "45417": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12700.0": 1
+          },
+          "most_used_frequency": 12700.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12700.0,
+          "max_frequency": 12700.0,
+          "frequency_span_mhz": 0.0
+        },
+        "47119": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "13000.0": 1
+          },
+          "most_used_frequency": 13000.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 13000.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 0.0
+        },
+        "50309": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12700.0": 1
+          },
+          "most_used_frequency": 12700.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12700.0,
+          "max_frequency": 12700.0,
+          "frequency_span_mhz": 0.0
+        },
+        "59102": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12700.0": 1
+          },
+          "most_used_frequency": 12700.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12700.0,
+          "max_frequency": 12700.0,
+          "frequency_span_mhz": 0.0
+        },
+        "60606": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12900.0": 1
+          },
+          "most_used_frequency": 12900.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12900.0,
+          "max_frequency": 12900.0,
+          "frequency_span_mhz": 0.0
+        },
+        "60611": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12700.0": 1
+          },
+          "most_used_frequency": 12700.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12700.0,
+          "max_frequency": 12700.0,
+          "frequency_span_mhz": 0.0
+        },
+        "63123": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "13000.0": 1
+          },
+          "most_used_frequency": 13000.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 13000.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 0.0
+        },
+        "68131": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12800.0": 1
+          },
+          "most_used_frequency": 12800.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12800.0,
+          "max_frequency": 12800.0,
+          "frequency_span_mhz": 0.0
+        },
+        "72730": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12900.0": 1
+          },
+          "most_used_frequency": 12900.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12900.0,
+          "max_frequency": 12900.0,
+          "frequency_span_mhz": 0.0
+        },
+        "80202": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12800.0": 1
+          },
+          "most_used_frequency": 12800.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12800.0,
+          "max_frequency": 12800.0,
+          "frequency_span_mhz": 0.0
+        },
+        "81301": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12900.0": 1
+          },
+          "most_used_frequency": 12900.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12900.0,
+          "max_frequency": 12900.0,
+          "frequency_span_mhz": 0.0
+        },
+        "82901": {
+          "station_count": 2,
+          "unique_frequencies": 2,
+          "frequency_distribution": {
+            "12800.0": 1,
+            "13000.0": 1
+          },
+          "most_used_frequency": 12800.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12800.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 200.0
+        },
+        "82925": {
+          "station_count": 3,
+          "unique_frequencies": 3,
+          "frequency_distribution": {
+            "12700.0": 1,
+            "13000.0": 1,
+            "12800.0": 1
+          },
+          "most_used_frequency": 12700.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12700.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 300.0
+        },
+        "82941": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "13000.0": 1
+          },
+          "most_used_frequency": 13000.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 13000.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 0.0
+        },
+        "83113": {
+          "station_count": 3,
+          "unique_frequencies": 3,
+          "frequency_distribution": {
+            "12800.0": 1,
+            "12700.0": 1,
+            "12900.0": 1
+          },
+          "most_used_frequency": 12800.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12700.0,
+          "max_frequency": 12900.0,
+          "frequency_span_mhz": 200.0
+        },
+        "86030": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12700.0": 1
+          },
+          "most_used_frequency": 12700.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12700.0,
+          "max_frequency": 12700.0,
+          "frequency_span_mhz": 0.0
+        },
+        "86040": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12700.0": 1
+          },
+          "most_used_frequency": 12700.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12700.0,
+          "max_frequency": 12700.0,
+          "frequency_span_mhz": 0.0
+        },
+        "86044": {
+          "station_count": 2,
+          "unique_frequencies": 2,
+          "frequency_distribution": {
+            "13000.0": 1,
+            "12800.0": 1
+          },
+          "most_used_frequency": 13000.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12800.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 200.0
+        },
+        "86045": {
+          "station_count": 5,
+          "unique_frequencies": 4,
+          "frequency_distribution": {
+            "12900.0": 2,
+            "12800.0": 1,
+            "12700.0": 1,
+            "13000.0": 1
+          },
+          "most_used_frequency": 12900.0,
+          "frequency_reuse_ratio": 0.19999999999999996,
+          "min_frequency": 12700.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 300.0
+        },
+        "86510": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "13000.0": 1
+          },
+          "most_used_frequency": 13000.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 13000.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 0.0
+        },
+        "86538": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "13000.0": 1
+          },
+          "most_used_frequency": 13000.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 13000.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 0.0
+        },
+        "86544": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "13000.0": 1
+          },
+          "most_used_frequency": 13000.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 13000.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 0.0
+        },
+        "87013": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "13000.0": 1
+          },
+          "most_used_frequency": 13000.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 13000.0,
+          "max_frequency": 13000.0,
+          "frequency_span_mhz": 0.0
+        },
+        "87325": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12800.0": 1
+          },
+          "most_used_frequency": 12800.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12800.0,
+          "max_frequency": 12800.0,
+          "frequency_span_mhz": 0.0
+        },
+        "87549": {
+          "station_count": 1,
+          "unique_frequencies": 1,
+          "frequency_distribution": {
+            "12900.0": 1
+          },
+          "most_used_frequency": 12900.0,
+          "frequency_reuse_ratio": 0.0,
+          "min_frequency": 12900.0,
+          "max_frequency": 12900.0,
+          "frequency_span_mhz": 0.0
+        }
+      },
+      "shared_frequencies": {
+        "13000.0": [
+          "00000",
+          "19128",
+          "20016",
+          "47119",
+          "63123",
+          "82901",
+          "82925",
+          "82941",
+          "86044",
+          "86045",
+          "86510",
+          "86538",
+          "86544",
+          "87013"
+        ],
+        "12900.0": [
+          "00000",
+          "02494",
+          "45409",
+          "60606",
+          "72730",
+          "81301",
+          "83113",
+          "86045",
+          "87549"
+        ],
+        "12700.0": [
+          "07070",
+          "08648",
+          "22209",
+          "44134",
+          "45417",
+          "50309",
+          "59102",
+          "60611",
+          "82925",
+          "83113",
+          "86030",
+          "86040",
+          "86045"
+        ],
+        "12800.0": [
+          "20004",
+          "37918",
+          "40202",
+          "68131",
+          "80202",
+          "82901",
+          "82925",
+          "83113",
+          "86044",
+          "86045",
+          "87325"
+        ]
+      },
+      "summary": {
+        "total_zipcodes": 37,
+        "avg_frequencies_per_zipcode": 1.2702702702702702,
+        "max_frequencies_in_zipcode": 4,
+        "min_frequencies_in_zipcode": 1,
+        "frequencies_shared_across_zipcodes": 4
+      }
+    }
+  },
+  "config_profile": {
+    "band": {
+      "min_mhz": 12700.0,
+      "max_mhz": 13250.0,
+      "step_khz": 50000
+    },
+    "geometry": {
+      "r_main_km": 30,
+      "r_off_km": 5,
+      "az_tolerance_deg": 2.0
+    },
+    "interference": {
+      "guard_offsets": [
+        -1,
+        1
+      ]
+    },
+    "solver": {
+      "timeout_seconds": 30,
+      "num_workers": 4
+    },
+    "weights": {
+      "w_span": 10,
+      "w_count": 10,
+      "w_surplus": 1
+    }
+  },
+  "total_time_seconds": 0.7403550148010254,
+  "memory_peak_mb": 1.7222137451171875,
+  "validation": {
+    "is_valid": true,
+    "success_rate": 100.0,
+    "co_channel_violations": 0,
+    "adjacent_channel_violations": 0,
+    "total_violations": 0,
+    "checks_performed": 122,
+    "checks_passed": 122,
+    "warnings": [],
+    "errors": [],
+    "zipcode_stats": [
+      {
+        "zipcode": "00000",
+        "stations": 4,
+        "unique_frequencies": 2,
+        "efficiency": 2.0,
+        "freq_span_mhz": 100.0
+      },
+      {
+        "zipcode": "02494",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "07070",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "08648",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "19128",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "20004",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "20016",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "22209",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "37918",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "40202",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "44134",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "45409",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "45417",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "47119",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "50309",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "59102",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "60606",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "60611",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "63123",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "68131",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "72730",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "80202",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "81301",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "82901",
+        "stations": 2,
+        "unique_frequencies": 2,
+        "efficiency": 1.0,
+        "freq_span_mhz": 200.0
+      },
+      {
+        "zipcode": "82925",
+        "stations": 3,
+        "unique_frequencies": 3,
+        "efficiency": 1.0,
+        "freq_span_mhz": 300.0
+      },
+      {
+        "zipcode": "82941",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "83113",
+        "stations": 3,
+        "unique_frequencies": 3,
+        "efficiency": 1.0,
+        "freq_span_mhz": 200.0
+      },
+      {
+        "zipcode": "86030",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86040",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86044",
+        "stations": 2,
+        "unique_frequencies": 2,
+        "efficiency": 1.0,
+        "freq_span_mhz": 200.0
+      },
+      {
+        "zipcode": "86045",
+        "stations": 5,
+        "unique_frequencies": 4,
+        "efficiency": 1.25,
+        "freq_span_mhz": 300.0
+      },
+      {
+        "zipcode": "86510",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86538",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "86544",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "87013",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "87325",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      },
+      {
+        "zipcode": "87549",
+        "stations": 1,
+        "unique_frequencies": 1,
+        "efficiency": 1.0,
+        "freq_span_mhz": 0.0
+      }
+    ]
+  }
+}

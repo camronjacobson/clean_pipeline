@@ -1,0 +1,28 @@
+# Fast microwave configuration - reduced complexity for quicker solving
+# Simplified version with fewer channels for faster optimization
+
+band:
+  min_mhz: 12700.0   # 12.7 GHz - Based on apps_13.parquet dataset min frequency
+  max_mhz: 13250.0   # 13.25 GHz - Based on apps_13.parquet dataset max frequency  
+  step_khz: 50000    # 50 MHz channel spacing (doubled from 25 MHz for fewer channels)
+
+# Directional geometry parameters
+geometry:
+  r_main_km: 30      # Main lobe interference radius
+  r_off_km: 5        # Off-lobe interference radius
+  az_tolerance_deg: 2.0  # Angular tolerance for microwave beams
+
+# Adjacent channel protection
+interference:
+  guard_offsets: [-1, 1]  # Protect ±1 adjacent channels
+  
+# Solver parameters - reduced timeout and simplified search
+solver:
+  timeout_seconds: 30  # Shorter timeout for faster results
+  num_workers: 4
+  
+# Optimization weights - simplified
+weights:
+  w_span: 10       # Lower weight for faster solving
+  w_count: 10      # Balanced weight
+  w_surplus: 1     # Minimal surplus weight
